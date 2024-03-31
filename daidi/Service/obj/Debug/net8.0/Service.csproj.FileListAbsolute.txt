@@ -1,0 +1,15 @@
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\bin\Debug\net8.0\Service.deps.json
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\bin\Debug\net8.0\Service.dll
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\bin\Debug\net8.0\Service.pdb
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\Service.AssemblyInfoInputs.cache
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\Service.dll
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\refint\Service.dll
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\Service.pdb
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\ref\Service.dll
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\bin\Debug\net8.0\Repon.dll
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\bin\Debug\net8.0\Repon.pdb
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\Service.csproj.AssemblyReference.cache
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\Service.csproj.CopyComplete

@@ -1,0 +1,14 @@
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\bin\Debug\net8.0\Repon.deps.json
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\bin\Debug\net8.0\Repon.dll
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\bin\Debug\net8.0\Repon.pdb
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\obj\Debug\net8.0\Repon.GeneratedMSBuildEditorConfig.editorconfig
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\obj\Debug\net8.0\Repon.AssemblyInfoInputs.cache
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\obj\Debug\net8.0\Repon.AssemblyInfo.cs
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\obj\Debug\net8.0\Repon.csproj.CoreCompileInputs.cache
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\obj\Debug\net8.0\Repon.dll
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\obj\Debug\net8.0\refint\Repon.dll
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\obj\Debug\net8.0\Repon.pdb
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\obj\Debug\net8.0\ref\Repon.dll
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\bin\Debug\net8.0\Repon.runtimeconfig.json
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\obj\Debug\net8.0\Repon.csproj.AssemblyReference.cache
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Repon\obj\Debug\net8.0\Repon.genruntimeconfig.cache
