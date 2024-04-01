@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "daidi", "daidi\daidi.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{E033CA8B-8584-46D6-9795-1D55AF3A8C41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repon", "Repon\Repon.csproj", "{E61222AB-A9C3-4F7B-A185-807D28A1F382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repon", "Repon\Repon.csproj", "{E61222AB-A9C3-4F7B-A185-807D28A1F382}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
