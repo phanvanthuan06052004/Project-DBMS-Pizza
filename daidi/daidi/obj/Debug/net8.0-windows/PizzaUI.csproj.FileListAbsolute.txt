@@ -1,0 +1,13 @@
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\PizzaUI.csproj.AssemblyReference.cache
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmMenu.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmOption.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmOrder.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.FrmPizzaManagement.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmRevenue.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.Login.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\PizzaUI.Properties.Resources.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\PizzaUI.csproj.GenerateResource.cache
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\PizzaUI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\PizzaUI.AssemblyInfoInputs.cache
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\PizzaUI.AssemblyInfo.cs
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\PizzaUI.csproj.CoreCompileInputs.cache

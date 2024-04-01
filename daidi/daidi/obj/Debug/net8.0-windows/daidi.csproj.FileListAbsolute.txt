@@ -61,4 +61,9 @@ D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\bin\Debug\net8.0-windows\Serv
 D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\bin\Debug\net8.0-windows\Repon.pdb
 D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\bin\Debug\net8.0-windows\Service.pdb
 D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.Login.resources
-D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.Home.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.FrmPizzaManagement.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmOption.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmMenu.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmOrder.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmRevenue.resources
+D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmEmployManagement.resources
