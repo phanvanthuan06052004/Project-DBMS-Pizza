@@ -12,6 +12,7 @@ namespace daidi
 {
     public partial class frmOption : Form
     {
+        frmRevenue Revenue;
         FrmPizzaManagement frmPizzaMana;
         frmEmployManagement employee;
         public frmOption()
@@ -31,6 +32,12 @@ namespace daidi
         {
             employee = new frmEmployManagement();
             employee.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Revenue = new frmRevenue();
+            Revenue.Show();
         }
     }
 }

@@ -13,3 +13,19 @@ D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\bin\Debug\net8.0\Repon.dll
 D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\bin\Debug\net8.0\Repon.pdb
 D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\Service.csproj.AssemblyReference.cache
 D:\Kì 2 năm 2\Hệ quản trị CSDL\daidi\Service\obj\Debug\net8.0\Service.csproj.CopyComplete
+D:\Project-DBMS-Pizza\daidi\Service\bin\Debug\net8.0\Service.deps.json
+D:\Project-DBMS-Pizza\daidi\Service\bin\Debug\net8.0\Service.dll
+D:\Project-DBMS-Pizza\daidi\Service\bin\Debug\net8.0\Service.pdb
+D:\Project-DBMS-Pizza\daidi\Service\bin\Debug\net8.0\Repon.dll
+D:\Project-DBMS-Pizza\daidi\Service\bin\Debug\net8.0\Repon.pdb
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\Service.csproj.AssemblyReference.cache
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\Service.AssemblyInfoInputs.cache
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\Service.sourcelink.json
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\Service.csproj.CopyComplete
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\Service.dll
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\refint\Service.dll
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\Service.pdb
+D:\Project-DBMS-Pizza\daidi\Service\obj\Debug\net8.0\ref\Service.dll

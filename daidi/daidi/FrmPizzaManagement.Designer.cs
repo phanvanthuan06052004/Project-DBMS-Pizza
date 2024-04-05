@@ -45,8 +45,6 @@
             btnOrder = new Button();
             pnlMenu = new Panel();
             btnMenu = new Button();
-            pnlRevenue = new Panel();
-            btnRevenue = new Button();
             sibarTimer = new System.Windows.Forms.Timer(components);
             panel2 = new Panel();
             panel1.SuspendLayout();
@@ -56,7 +54,6 @@
             pnlHome.SuspendLayout();
             pnlOrder.SuspendLayout();
             pnlMenu.SuspendLayout();
-            pnlRevenue.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -113,9 +110,8 @@
             pnlSibar.BackColor = Color.DarkGray;
             pnlSibar.Controls.Add(pnlLogout);
             pnlSibar.Controls.Add(pnlHome);
-            pnlSibar.Controls.Add(pnlOrder);
             pnlSibar.Controls.Add(pnlMenu);
-            pnlSibar.Controls.Add(pnlRevenue);
+            pnlSibar.Controls.Add(pnlOrder);
             pnlSibar.Dock = DockStyle.Left;
             pnlSibar.Location = new Point(0, 43);
             pnlSibar.MaximumSize = new Size(247, 564);
@@ -128,7 +124,7 @@
             // 
             pnlLogout.BackColor = Color.Transparent;
             pnlLogout.Controls.Add(btnLogout);
-            pnlLogout.Location = new Point(9, 298);
+            pnlLogout.Location = new Point(4, 250);
             pnlLogout.Name = "pnlLogout";
             pnlLogout.Size = new Size(229, 62);
             pnlLogout.TabIndex = 7;
@@ -151,7 +147,7 @@
             // 
             pnlHome.BackColor = Color.Transparent;
             pnlHome.Controls.Add(btnHome);
-            pnlHome.Location = new Point(9, 26);
+            pnlHome.Location = new Point(4, 29);
             pnlHome.Name = "pnlHome";
             pnlHome.Size = new Size(229, 62);
             pnlHome.TabIndex = 2;
@@ -174,7 +170,7 @@
             // 
             pnlOrder.BackColor = Color.Transparent;
             pnlOrder.Controls.Add(btnOrder);
-            pnlOrder.Location = new Point(9, 162);
+            pnlOrder.Location = new Point(4, 165);
             pnlOrder.Name = "pnlOrder";
             pnlOrder.Size = new Size(229, 62);
             pnlOrder.TabIndex = 5;
@@ -198,7 +194,7 @@
             // 
             pnlMenu.BackColor = Color.Transparent;
             pnlMenu.Controls.Add(btnMenu);
-            pnlMenu.Location = new Point(9, 94);
+            pnlMenu.Location = new Point(4, 97);
             pnlMenu.Name = "pnlMenu";
             pnlMenu.Size = new Size(229, 62);
             pnlMenu.TabIndex = 4;
@@ -217,29 +213,6 @@
             btnMenu.Text = "Menu";
             btnMenu.UseVisualStyleBackColor = true;
             btnMenu.Click += btnMenu_Click;
-            // 
-            // pnlRevenue
-            // 
-            pnlRevenue.BackColor = Color.Transparent;
-            pnlRevenue.Controls.Add(btnRevenue);
-            pnlRevenue.Location = new Point(9, 230);
-            pnlRevenue.Name = "pnlRevenue";
-            pnlRevenue.Size = new Size(229, 62);
-            pnlRevenue.TabIndex = 6;
-            // 
-            // btnRevenue
-            // 
-            btnRevenue.FlatStyle = FlatStyle.Flat;
-            btnRevenue.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btnRevenue.Image = (Image)resources.GetObject("btnRevenue.Image");
-            btnRevenue.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRevenue.Location = new Point(-27, -21);
-            btnRevenue.Name = "btnRevenue";
-            btnRevenue.Padding = new Padding(30, 0, 0, 0);
-            btnRevenue.Size = new Size(290, 100);
-            btnRevenue.TabIndex = 3;
-            btnRevenue.Text = "revenue";
-            btnRevenue.UseVisualStyleBackColor = true;
             // 
             // sibarTimer
             // 
@@ -278,7 +251,6 @@
             pnlHome.ResumeLayout(false);
             pnlOrder.ResumeLayout(false);
             pnlMenu.ResumeLayout(false);
-            pnlRevenue.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -295,8 +267,6 @@
         private Button btnMenu;
         private Panel pnlOrder;
         private Button btnOrder;
-        private Panel pnlRevenue;
-        private Button btnRevenue;
         private Panel pnlLogout;
         private Button btnLogout;
         private System.Windows.Forms.Timer sibarTimer;

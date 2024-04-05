@@ -56,7 +56,6 @@ namespace daidi
 
                     pnlHome.Width = pnlSibar.Width;
                     pnlMenu.Width = pnlSibar.Width;
-                    pnlRevenue.Width = pnlSibar.Width;
                     pnlLogout.Width = pnlSibar.Width;
                     pnlOrder.Width = pnlSibar.Width;
                 }
@@ -71,7 +70,6 @@ namespace daidi
 
                     pnlHome.Width = pnlSibar.Width;
                     pnlMenu.Width = pnlSibar.Width;
-                    pnlRevenue.Width = pnlSibar.Width;
                     pnlLogout.Width = pnlSibar.Width;
                     pnlOrder.Width = pnlSibar.Width;
                 }

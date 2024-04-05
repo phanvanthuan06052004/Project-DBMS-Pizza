@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TPlw4iIuRkxzXy0Ch6YdCwj+bXwqvUdKk234RFEAfkrY06xkbVGBc2Si8koX86d8vPaschQPoBuBNXofOQaiQg==",
+  "dgSpecHash": "eK7FVsulJ2PDCQ1YltM7kRnMsaFLQmR2tpQjWi/NrnR8/zDGs/zGKY+DvSVKWghS6OLAMUD77eGrl2pDSb63Pw==",
   "success": true,
-  "projectFilePath": "D:\\Kì 2 năm 2\\Hệ quản trị CSDL\\daidi\\daidi\\daidi.csproj",
+  "projectFilePath": "D:\\Project-DBMS-Pizza\\daidi\\daidi\\daidi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
