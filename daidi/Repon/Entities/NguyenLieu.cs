@@ -9,9 +9,11 @@ public partial class NguyenLieu
 
     public string TenNl { get; set; } = null!;
 
-    public int SoLuong { get; set; }
+    public int? SoLuong { get; set; }
 
-    public string DonVi { get; set; } = null!;
+    public string? DonVi { get; set; }
+
+    public decimal? DonGia { get; set; }
 
     public virtual ICollection<CheBien> CheBiens { get; set; } = new List<CheBien>();
 

@@ -98,9 +98,9 @@ CREATE TABLE NhanVien
 CREATE TABLE TaiKhoan
 (
   UserName VARCHAR(20) NOT NULL,
-  Password VARCHAR(20) NOT NULL,
-  MaNV CHAR(10) NOT NULL,
-  Role int NOT NULL,
+  Password VARCHAR(20) NOT NULL,---**************FIXXXXX***********************
+  MaNV CHAR(10) NOT NULL,   -- nên để MaNV và Role là null bởi vì lúc đăng kí mình chỉ quan tâm 
+  Role int NOT NULL,		-- admin chứ còn nhân viên hồi mình tự thêm đươi data, Hoặc để số tự tăng
   CONSTRAINT Pk_TaiKhoan_UserName PRIMARY KEY(UserName),
   CONSTRAINT Fk_TaiKhoan_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV)
 );

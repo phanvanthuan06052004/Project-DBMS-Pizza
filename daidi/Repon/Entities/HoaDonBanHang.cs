@@ -7,11 +7,11 @@ public partial class HoaDonBanHang
 {
     public string MaHd { get; set; } = null!;
 
+    public DateTime NgayGioDat { get; set; }
+
     public string MaNv { get; set; } = null!;
 
     public string MaKh { get; set; } = null!;
-
-    public DateTime NgayGioDat { get; set; }
 
     public virtual ICollection<ChiTietHd> ChiTietHds { get; set; } = new List<ChiTietHd>();
 

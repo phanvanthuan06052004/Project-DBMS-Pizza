@@ -11,5 +11,5 @@ public partial class Ca
 
     public TimeOnly GioKetThuc { get; set; }
 
-    public virtual ICollection<NhanVien> MaNvs { get; set; } = new List<NhanVien>();
+    public virtual ICollection<ChiTietCaTruc> ChiTietCaTrucs { get; set; } = new List<ChiTietCaTruc>();
 }

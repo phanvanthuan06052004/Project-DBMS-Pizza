@@ -5,7 +5,9 @@ namespace Repon.Entities;
 
 public partial class ChiTietKichCo
 {
-    public decimal DonGia { get; set; }
+    public int? SoLuong { get; set; }
+
+    public decimal? DonGia { get; set; }
 
     public string MaSp { get; set; } = null!;
 

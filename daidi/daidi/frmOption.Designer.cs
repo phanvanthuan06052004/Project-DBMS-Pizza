@@ -121,6 +121,7 @@
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox2.Size = new Size(65, 37);
             guna2ControlBox2.TabIndex = 2;
+            guna2ControlBox2.Click += guna2ControlBox2_Click;
             // 
             // panel2
             // 

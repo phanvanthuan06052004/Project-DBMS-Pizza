@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Repon\Repon.csproj" />
     <ProjectReference Include="..\Service\Service.csproj" />
   </ItemGroup>
 

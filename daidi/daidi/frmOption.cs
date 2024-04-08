@@ -39,5 +39,10 @@ namespace daidi
             Revenue = new frmRevenue();
             Revenue.Show();
         }
+
+        private void guna2ControlBox2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
