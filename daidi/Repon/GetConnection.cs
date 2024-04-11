@@ -11,8 +11,9 @@ namespace Repon
 
         public  GetConnection()
         {   
+            //chuỗi kết nối
             mConn = new SqlConnection("Data Source=LAPTOP-PTKCCTJC;" +
-                "Initial Catalog=quanlipizaV1;Integrated Security=True;" +
+                "Initial Catalog=QuanLyPizza;Integrated Security=True;" +
                 "Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;" +
                 "Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
@@ -20,6 +21,7 @@ namespace Repon
 
         public void SQLDB(string strSQL)
         {
+            //phần xử lí truyền srtSQL câu truy vấn xuống thao tác với Database
             try
             {
                 mDataAdapter = new SqlDataAdapter(new SqlCommand(strSQL, mConn));
@@ -38,6 +40,7 @@ namespace Repon
         }
         public void ClearRes()
         {
+            //giải phóng tài nguyên mDataAdapter khi thao tác xong
             mDataAdapter.Dispose();
             mDataAdapter = null;
             mDataSet.Dispose();

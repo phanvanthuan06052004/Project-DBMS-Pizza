@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Kì 2 năm 2\\Hệ quản trị CSDL\\daidi\\Repon\\Repon.csproj": {}
+    "D:\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj": {}
   },
   "projects": {
-    "D:\\Kì 2 năm 2\\Hệ quản trị CSDL\\daidi\\Repon\\Repon.csproj": {
+    "D:\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Kì 2 năm 2\\Hệ quản trị CSDL\\daidi\\Repon\\Repon.csproj",
+        "projectUniqueName": "D:\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj",
         "projectName": "Repon",
-        "projectPath": "D:\\Kì 2 năm 2\\Hệ quản trị CSDL\\daidi\\Repon\\Repon.csproj",
+        "projectPath": "D:\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Kì 2 năm 2\\Hệ quản trị CSDL\\daidi\\Repon\\obj\\",
+        "outputPath": "D:\\Project-DBMS-Pizza\\daidi\\Repon\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,23 +42,23 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.3, )"
             }
           },
           "imports": [

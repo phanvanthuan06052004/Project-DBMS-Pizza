@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOption));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
@@ -83,7 +83,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1103, 40);
+            panel1.Size = new Size(1103, 37);
             panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -112,15 +112,16 @@
             guna2ControlBox2.BackColor = Color.Transparent;
             guna2ControlBox2.Cursor = Cursors.Hand;
             guna2ControlBox2.CustomIconSize = 20F;
-            guna2ControlBox2.CustomizableEdges = customizableEdges3;
+            guna2ControlBox2.CustomizableEdges = customizableEdges1;
             guna2ControlBox2.FillColor = Color.Transparent;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.IconColor = Color.Black;
             guna2ControlBox2.Location = new Point(1025, 2);
             guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox2.Size = new Size(65, 37);
             guna2ControlBox2.TabIndex = 2;
+            guna2ControlBox2.Click += guna2ControlBox2_Click;
             // 
             // panel2
             // 
@@ -128,9 +129,9 @@
             panel2.Controls.Add(panel3);
             panel2.Controls.Add(pnlLogout);
             panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 40);
+            panel2.Location = new Point(0, 37);
             panel2.Name = "panel2";
-            panel2.Size = new Size(247, 567);
+            panel2.Size = new Size(247, 570);
             panel2.TabIndex = 1;
             // 
             // panel3
@@ -238,6 +239,7 @@
             pictureBox5.Size = new Size(177, 101);
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // panel9
             // 

@@ -196,7 +196,7 @@
             btnReload.Cursor = Cursors.Hand;
             btnReload.FlatAppearance.BorderSize = 0;
             btnReload.FlatStyle = FlatStyle.Flat;
-            btnReload.Font = new Font("Times New Roman", 10.2F);
+            btnReload.Font = new Font("Arial Rounded MT Bold", 9F);
             btnReload.Location = new Point(746, 486);
             btnReload.Name = "btnReload";
             btnReload.Size = new Size(69, 35);
@@ -211,7 +211,7 @@
             btnUpdate.Cursor = Cursors.Hand;
             btnUpdate.FlatAppearance.BorderSize = 0;
             btnUpdate.FlatStyle = FlatStyle.Flat;
-            btnUpdate.Font = new Font("Times New Roman", 10.2F);
+            btnUpdate.Font = new Font("Arial Rounded MT Bold", 9F);
             btnUpdate.Location = new Point(655, 486);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(69, 35);
@@ -225,7 +225,7 @@
             btnDelete.Cursor = Cursors.Hand;
             btnDelete.FlatAppearance.BorderSize = 0;
             btnDelete.FlatStyle = FlatStyle.Flat;
-            btnDelete.Font = new Font("Times New Roman", 10.2F);
+            btnDelete.Font = new Font("Arial Rounded MT Bold", 9F);
             btnDelete.Location = new Point(557, 486);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(69, 35);
@@ -239,7 +239,7 @@
             btnAdd.Cursor = Cursors.Hand;
             btnAdd.FlatAppearance.BorderSize = 0;
             btnAdd.FlatStyle = FlatStyle.Flat;
-            btnAdd.Font = new Font("Times New Roman", 10.2F);
+            btnAdd.Font = new Font("Arial Rounded MT Bold", 9F);
             btnAdd.Location = new Point(463, 486);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(69, 35);

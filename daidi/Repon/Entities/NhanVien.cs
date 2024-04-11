@@ -17,7 +17,7 @@ public partial class NhanVien
 
     public string? GioiTinh { get; set; }
 
-    public string? SoDt { get; set; }
+    public string SoDt { get; set; } = null!;
 
     public string DiaChi { get; set; } = null!;
 
@@ -27,6 +27,8 @@ public partial class NhanVien
 
     public string MaChucVu { get; set; } = null!;
 
+    public virtual ICollection<ChiTietCaTruc> ChiTietCaTrucs { get; set; } = new List<ChiTietCaTruc>();
+
     public virtual ICollection<HoaDonBanHang> HoaDonBanHangs { get; set; } = new List<HoaDonBanHang>();
 
     public virtual ChucVu MaChucVuNavigation { get; set; } = null!;
@@ -34,6 +36,4 @@ public partial class NhanVien
     public virtual ICollection<PhieuNhap> PhieuNhaps { get; set; } = new List<PhieuNhap>();
 
     public virtual ICollection<TaiKhoan> TaiKhoans { get; set; } = new List<TaiKhoan>();
-
-    public virtual ICollection<Ca> MaCas { get; set; } = new List<Ca>();
 }

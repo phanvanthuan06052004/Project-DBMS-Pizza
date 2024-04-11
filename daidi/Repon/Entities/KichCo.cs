@@ -9,5 +9,7 @@ public partial class KichCo
 
     public string TenKichCo { get; set; } = null!;
 
+    public virtual ICollection<ChiTietHd> ChiTietHds { get; set; } = new List<ChiTietHd>();
+
     public virtual ICollection<ChiTietKichCo> ChiTietKichCos { get; set; } = new List<ChiTietKichCo>();
 }

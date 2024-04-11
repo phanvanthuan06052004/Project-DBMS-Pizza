@@ -9,7 +9,7 @@ public partial class ChucVu
 
     public string TenChucVu { get; set; } = null!;
 
-    public int Luong { get; set; }
+    public decimal Luong { get; set; }
 
     public virtual ICollection<NhanVien> NhanViens { get; set; } = new List<NhanVien>();
 }

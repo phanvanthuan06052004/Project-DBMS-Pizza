@@ -9,7 +9,7 @@ public partial class KhachHang
 
     public string TenKh { get; set; } = null!;
 
-    public string? SoDt { get; set; }
+    public string SoDt { get; set; } = null!;
 
     public virtual ICollection<HoaDonBanHang> HoaDonBanHangs { get; set; } = new List<HoaDonBanHang>();
 }
