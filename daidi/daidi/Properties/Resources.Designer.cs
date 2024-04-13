@@ -83,6 +83,16 @@ namespace daidi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap browsing {
+            get {
+                object obj = ResourceManager.GetObject("browsing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap business {
             get {
                 object obj = ResourceManager.GetObject("business", resourceCulture);
@@ -116,6 +126,16 @@ namespace daidi.Properties {
         internal static System.Drawing.Bitmap employees__1_ {
             get {
                 object obj = ResourceManager.GetObject("employees (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap filter {
+            get {
+                object obj = ResourceManager.GetObject("filter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace daidi.Properties {
         internal static System.Drawing.Bitmap pizza__1_ {
             get {
                 object obj = ResourceManager.GetObject("pizza (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pizza__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("pizza (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

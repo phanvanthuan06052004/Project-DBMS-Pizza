@@ -9,7 +9,7 @@ namespace Repon
         public DataSet mDataSet = new DataSet();
         public SqlConnection mConn;
 
-        public  GetConnection()
+        public GetConnection()
         {   
             //chuỗi kết nối
             mConn = new SqlConnection("Data Source=LAPTOP-PTKCCTJC;" +
@@ -19,7 +19,7 @@ namespace Repon
         }
 
 
-        public void SQLDB(string strSQL)
+        public DataSet SQLDB(string strSQL)
         {
             //phần xử lí truyền srtSQL câu truy vấn xuống thao tác với Database
             try
@@ -27,6 +27,7 @@ namespace Repon
                 mDataAdapter = new SqlDataAdapter(new SqlCommand(strSQL, mConn));
                 mDataSet = new DataSet();
                 mDataAdapter.Fill(mDataSet);
+                return mDataSet;
             }
             catch (Exception ex)
             {
