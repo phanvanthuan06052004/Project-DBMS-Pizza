@@ -16,7 +16,13 @@
     <Compile Update="FrmPizzaManagement.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmRepoManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmShiftManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login.cs">

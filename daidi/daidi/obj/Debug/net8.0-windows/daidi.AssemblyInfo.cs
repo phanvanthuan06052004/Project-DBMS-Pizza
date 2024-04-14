@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("daidi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8621180b15a981b222dc3e9db7173049da5252a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49fd1d29fd5921a9fa9b44fec82bbbb1a90cd54a")]
 [assembly: System.Reflection.AssemblyProductAttribute("daidi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("daidi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

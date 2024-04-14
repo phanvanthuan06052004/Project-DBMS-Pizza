@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOption));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
@@ -41,6 +41,11 @@
             label2 = new Label();
             panel4 = new Panel();
             panel6 = new Panel();
+            panel13 = new Panel();
+            label7 = new Label();
+            ptrShiftManagement = new PictureBox();
+            panel12 = new Panel();
+            panel11 = new Panel();
             panel10 = new Panel();
             label6 = new Label();
             pictureBox5 = new PictureBox();
@@ -48,37 +53,32 @@
             label5 = new Label();
             pictureBox4 = new PictureBox();
             panel5 = new Panel();
+            panel16 = new Panel();
+            panel15 = new Panel();
+            pictureBox2 = new PictureBox();
+            label3 = new Label();
+            panel8 = new Panel();
             label4 = new Label();
             pictureBox3 = new PictureBox();
-            label3 = new Label();
-            pictureBox2 = new PictureBox();
-            panel11 = new Panel();
-            panel12 = new Panel();
-            panel13 = new Panel();
-            panel14 = new Panel();
             panel7 = new Panel();
-            panel8 = new Panel();
-            panel15 = new Panel();
-            panel16 = new Panel();
-            pictureBox6 = new PictureBox();
-            label7 = new Label();
+            panel14 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             pnlLogout.SuspendLayout();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
+            panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptrShiftManagement).BeginInit();
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel13.SuspendLayout();
-            panel8.SuspendLayout();
             panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -119,13 +119,13 @@
             guna2ControlBox2.BackColor = Color.Transparent;
             guna2ControlBox2.Cursor = Cursors.Hand;
             guna2ControlBox2.CustomIconSize = 20F;
-            guna2ControlBox2.CustomizableEdges = customizableEdges3;
+            guna2ControlBox2.CustomizableEdges = customizableEdges1;
             guna2ControlBox2.FillColor = Color.Transparent;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1207, 2);
+            guna2ControlBox2.Location = new Point(1208, 3);
             guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox2.Size = new Size(65, 37);
             guna2ControlBox2.TabIndex = 2;
             guna2ControlBox2.Click += guna2ControlBox2_Click;
@@ -194,6 +194,54 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(801, 163);
             panel6.TabIndex = 1;
+            // 
+            // panel13
+            // 
+            panel13.BackColor = Color.FromArgb(255, 224, 192);
+            panel13.Controls.Add(label7);
+            panel13.Controls.Add(ptrShiftManagement);
+            panel13.Dock = DockStyle.Fill;
+            panel13.Location = new Point(291, 0);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(219, 163);
+            panel13.TabIndex = 4;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
+            label7.Location = new Point(25, 127);
+            label7.Name = "label7";
+            label7.Size = new Size(170, 25);
+            label7.TabIndex = 2;
+            label7.Text = "Shift Management";
+            // 
+            // ptrShiftManagement
+            // 
+            ptrShiftManagement.BackgroundImage = Properties.Resources.browsing;
+            ptrShiftManagement.BackgroundImageLayout = ImageLayout.Zoom;
+            ptrShiftManagement.Location = new Point(23, 17);
+            ptrShiftManagement.Name = "ptrShiftManagement";
+            ptrShiftManagement.Size = new Size(177, 101);
+            ptrShiftManagement.TabIndex = 0;
+            ptrShiftManagement.TabStop = false;
+            ptrShiftManagement.Click += ptrShiftManagement_Click;
+            // 
+            // panel12
+            // 
+            panel12.Dock = DockStyle.Right;
+            panel12.Location = new Point(510, 0);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(45, 163);
+            panel12.TabIndex = 3;
+            // 
+            // panel11
+            // 
+            panel11.Dock = DockStyle.Left;
+            panel11.Location = new Point(246, 0);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(45, 163);
+            panel11.TabIndex = 2;
             // 
             // panel10
             // 
@@ -271,6 +319,57 @@
             panel5.Size = new Size(801, 155);
             panel5.TabIndex = 0;
             // 
+            // panel16
+            // 
+            panel16.Dock = DockStyle.Fill;
+            panel16.Location = new Point(323, 0);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(155, 155);
+            panel16.TabIndex = 6;
+            // 
+            // panel15
+            // 
+            panel15.BackColor = Color.FromArgb(255, 224, 192);
+            panel15.Controls.Add(pictureBox2);
+            panel15.Controls.Add(label3);
+            panel15.Dock = DockStyle.Right;
+            panel15.Location = new Point(478, 0);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(246, 155);
+            panel15.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources.pizza__1_;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(38, 13);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(177, 101);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
+            label3.Location = new Point(71, 121);
+            label3.Name = "label3";
+            label3.Size = new Size(110, 25);
+            label3.TabIndex = 1;
+            label3.Text = "Order Pizza";
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.FromArgb(255, 224, 192);
+            panel8.Controls.Add(label4);
+            panel8.Controls.Add(pictureBox3);
+            panel8.Dock = DockStyle.Left;
+            panel8.Location = new Point(77, 0);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(246, 155);
+            panel8.TabIndex = 4;
+            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -292,62 +391,6 @@
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
-            label3.Location = new Point(71, 121);
-            label3.Name = "label3";
-            label3.Size = new Size(110, 25);
-            label3.TabIndex = 1;
-            label3.Text = "Order Pizza";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = Properties.Resources.pizza__1_;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(38, 13);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(177, 101);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
-            // 
-            // panel11
-            // 
-            panel11.Dock = DockStyle.Left;
-            panel11.Location = new Point(246, 0);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(45, 163);
-            panel11.TabIndex = 2;
-            // 
-            // panel12
-            // 
-            panel12.Dock = DockStyle.Right;
-            panel12.Location = new Point(510, 0);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(45, 163);
-            panel12.TabIndex = 3;
-            // 
-            // panel13
-            // 
-            panel13.BackColor = Color.FromArgb(255, 224, 192);
-            panel13.Controls.Add(label7);
-            panel13.Controls.Add(pictureBox6);
-            panel13.Dock = DockStyle.Fill;
-            panel13.Location = new Point(291, 0);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(219, 163);
-            panel13.TabIndex = 4;
-            // 
-            // panel14
-            // 
-            panel14.Dock = DockStyle.Left;
-            panel14.Location = new Point(0, 0);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(77, 155);
-            panel14.TabIndex = 2;
-            // 
             // panel7
             // 
             panel7.Dock = DockStyle.Right;
@@ -356,55 +399,13 @@
             panel7.Size = new Size(77, 155);
             panel7.TabIndex = 3;
             // 
-            // panel8
+            // panel14
             // 
-            panel8.BackColor = Color.FromArgb(255, 224, 192);
-            panel8.Controls.Add(label4);
-            panel8.Controls.Add(pictureBox3);
-            panel8.Dock = DockStyle.Left;
-            panel8.Location = new Point(77, 0);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(246, 155);
-            panel8.TabIndex = 4;
-            // 
-            // panel15
-            // 
-            panel15.BackColor = Color.FromArgb(255, 224, 192);
-            panel15.Controls.Add(pictureBox2);
-            panel15.Controls.Add(label3);
-            panel15.Dock = DockStyle.Right;
-            panel15.Location = new Point(478, 0);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(246, 155);
-            panel15.TabIndex = 5;
-            // 
-            // panel16
-            // 
-            panel16.Dock = DockStyle.Fill;
-            panel16.Location = new Point(323, 0);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(155, 155);
-            panel16.TabIndex = 6;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.BackgroundImage = Properties.Resources.browsing;
-            pictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox6.Location = new Point(23, 17);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(177, 101);
-            pictureBox6.TabIndex = 0;
-            pictureBox6.TabStop = false;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
-            label7.Location = new Point(25, 127);
-            label7.Name = "label7";
-            label7.Size = new Size(170, 25);
-            label7.TabIndex = 2;
-            label7.Text = "Shift Management";
+            panel14.Dock = DockStyle.Left;
+            panel14.Location = new Point(0, 0);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(77, 155);
+            panel14.TabIndex = 2;
             // 
             // frmOption
             // 
@@ -426,6 +427,9 @@
             pnlLogout.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel6.ResumeLayout(false);
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptrShiftManagement).EndInit();
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -433,15 +437,12 @@
             panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel13.ResumeLayout(false);
-            panel13.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
             panel15.ResumeLayout(false);
             panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -474,7 +475,7 @@
         private Panel panel11;
         private Panel panel14;
         private Label label7;
-        private PictureBox pictureBox6;
+        private PictureBox ptrShiftManagement;
         private Panel panel16;
         private Panel panel15;
         private Panel panel8;

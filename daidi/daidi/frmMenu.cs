@@ -60,13 +60,13 @@ namespace daidi
 
         public void Additem(string productName, string Price, Image ptcProduct, ComboBox product)
         {
-            pnlProduct.Controls.Add(new UserControl1
-            {
-                ProductName = productName,
-                Price = Price,
-                ptcProduct = ptcProduct,
-                ProductComboBox = product
-            });
+            //pnlProduct.Controls.Add(new UserControl1
+            //{
+            //    ProductName = productName,
+            //    Price = Price,
+            //    ptcProduct = ptcProduct,
+            //    ProductComboBox = product
+            //});
         }
     }
 }
