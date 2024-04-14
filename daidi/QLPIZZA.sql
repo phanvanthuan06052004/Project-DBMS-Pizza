@@ -15,9 +15,8 @@ CREATE TABLE NguyenLieu
 (
   MaNL CHAR(10),
   TenNL NVARCHAR(30) NOT NULL,
-  SoLuong INT,
+  SoLuong DECIMAL(50,2),
   DonVi NVARCHAR(20),
-  DonGia MONEY,
   CONSTRAINT Pk_NguyenLieu_MaNL PRIMARY KEY (MaNL),
   CONSTRAINT Ck_NguyenLieu_SoLuong CHECK (SoLuong > 0)
 );
@@ -78,7 +77,6 @@ CREATE TABLE NhanVien
 (
   MaNV CHAR(10) ,----MANV tự tăng----
   HoNV NVARCHAR(10) NOT NULL,
-  TenLotNV NVARCHAR(20) NOT NULL, --------CHỈNH LẠI PHẦN NULL TÊN LÓT CÓ THỂ KHÔNG CÓ
   TenNV NVARCHAR(20) NOT NULL,
   NgaySinh DATE NOT NULL ,
   GioiTinh NVARCHAR(3),
@@ -102,8 +100,8 @@ CREATE TABLE TaiKhoan
 (
   UserName VARCHAR(20) NOT NULL,
   Password VARCHAR(20) NOT NULL,---**************FIXXXXX***********************
-  MaNV CHAR(10) NOT NULL,   -- nên để MaNV và Role là null bởi vì lúc đăng kí mình chỉ quan tâm 
-  Role int NOT NULL,		-- admin chứ còn nhân viên hồi mình tự thêm đươi data, Hoặc để số tự tăng
+  MaNV CHAR(10),   -- nên để MaNV và Role là null bởi vì lúc đăng kí mình chỉ quan tâm 
+  Role int ,		-- admin chứ còn nhân viên hồi mình tự thêm đươi data, Hoặc để số tự tăng
   CONSTRAINT Pk_TaiKhoan_UserName PRIMARY KEY(UserName),
   CONSTRAINT Fk_TaiKhoan_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV)
 );
@@ -113,6 +111,7 @@ CREATE TABLE SanPham
   MaSP CHAR(10),
   TenSP NVARCHAR(30) NOT NULL,
   MaLoaiSP CHAR(10) NOT NULL,
+  HinhAnh NVARCHAR(MAX),
   CONSTRAINT Pk_SanPham_MaSP PRIMARY KEY (MaSP),
   CONSTRAINT FK_SanPham_LoaiSanPham_MaLoaiSP FOREIGN KEY (MaLoaiSP) REFERENCES LoaiSanPham(MaLoaiSP)
 );
@@ -145,6 +144,7 @@ CREATE TABLE ChiTietPN
   SoLuong INT,
   MaPhieu CHAR(10) CONSTRAINT Fk_ChiTietPN_PhieuNhap_MaPhieu FOREIGN KEY (MaPhieu) REFERENCES PhieuNhap(MaPhieu),
   MaNL CHAR(10) CONSTRAINT Fk_ChiTietPN_NguyenLieu_MaNL FOREIGN KEY (MaNL) REFERENCES NguyenLieu(MaNL),
+  DonGia MONEY,
   CONSTRAINT Pk_ChiTietPN_MaPhieu_MaNL PRIMARY KEY (MaPhieu, MaNL),
   CONSTRAINT CK_ChiTietPN_SoLuong CHECK (SoLuong > 0),
 );
@@ -163,7 +163,7 @@ CREATE TABLE ChiTietHD
 );
 CREATE TABLE CheBien
 (
-	LieuLuong int,
+	LieuLuong decimal(50,2),
 	DonVi varchar(10),
 	MaNL CHAR(10) CONSTRAINT Fk_CheBien_NguyenLieu_MaNL FOREIGN KEY (MaNL) REFERENCES NguyenLieu(MaNL),
 	MaSP CHAR(10) CONSTRAINT Fk_CheBien_SanPham_MaSP FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP),
@@ -197,19 +197,19 @@ VALUES
 --SELECT * FROM ChucVu
 --DELETE ChucVu
 -- Chèn dữ liệu vào bảng NguyenLieu
-INSERT INTO NguyenLieu (MaNL, TenNL, SoLuong, DonVi, DonGia)
+INSERT INTO NguyenLieu (MaNL, TenNL, SoLuong, DonVi)
 VALUES 
-('NL001', N'Bột mỳ', 70, N'Kg', 30000),
-('NL002', N'Sốt cà chua', 20, N'Lon', 60000),
-('NL003', N'Phô mai', 10, N'Túi', 50000),
-('NL004', N'Men Nở', 10, N'Gam', 5000),
-('NL005', N'Thịt heo', 50, N'Kg', 160000),
-('NL006', N'Dầu Oliu', 50, N'Lít', 15000),
-('NL007', N'Hành Tây', 90, N'Kg', 35000),
-('NL008', N'Muối', 1, N'kg', 10000),
-('NL009', N'Tiêu', 30, N'kg', 100000),
-('NL0010', N'CoCa', 10, N'Thùng', 235000),
-('NL0011', N'Suối', 10, N'Thùng', 120000)
+('NL001', N'Bột mỳ', 70, N'Kg'),
+('NL002', N'Sốt cà chua', 20, N'Lon'),
+('NL003', N'Phô mai', 10, N'Túi'),
+('NL004', N'Men Nở', 10, N'Gam'),
+('NL005', N'Thịt heo', 50, N'Kg'),
+('NL006', N'Dầu Oliu', 50, N'Lít'),
+('NL007', N'Hành Tây', 90, N'Kg'),
+('NL008', N'Muối', 1, N'kg'),
+('NL009', N'Tiêu', 30, N'kg'),
+('NL0010', N'CoCa', 10, N'Lon'),
+('NL0011', N'Suối', 10, N'Chai')
 --SELECT * FROM NguyenLieu
 
 
@@ -276,17 +276,17 @@ VALUES
 --SELECT * FROM ChiTietCungCap
 
 -- Chèn dữ liệu vào bảng NhanVien
-INSERT INTO NhanVien (MaNV, HoNV, TenLotNV, TenNV, NgaySinh, GioiTinh, SoDT, DiaChi, Email, CCCD, MaChucVu)
+INSERT INTO NhanVien (MaNV, HoNV, TenNV, NgaySinh, GioiTinh, SoDT, DiaChi, Email, CCCD, MaChucVu)
 VALUES 
-('NV001', N'Nguyễn', N'Văn', N'Thuận', '1990-05-15', N'Nam', '0123456789', N'123 Đường ABC, Quận 1, TP. Hồ Chí Minh', 'nva@gmail.com', '123456789012', 'CV001'),
-('NV002', N'Trần', N'Văn', N'Nam', '1995-08-20', N'Nam', '0987654321', N'456 Đường XYZ, Quận 2, TP. Hồ Chí Minh', 'ttb@gmail.com', '234567890123', 'CV002'),
-('NV003', N'Lê', N'Văn', N'Phát', '1988-03-10', N'Nam', '0369852147', N'789 Đường DEF, Quận 3, TP. Hồ Chí Minh', 'lvc@gmail.com', '345678901234', 'CV002'),
-('NV004', N'Phạm', N'Văn', N'Ngọc', '1992-11-25', N'Nam', '0541236987', N'321 Đường GHI, Quận 4, TP. Hồ Chí Minh', 'ptd@gmail.com', '456789012345', 'CV002'),
-('NV005', N'Huỳnh', N'Văn', N'Trúc', '1997-07-03', N'Nam', '0321456987', N'654 Đường JKL, Quận 5, TP. Hồ Chí Minh', 'hve@gmail.com', '567890123456', 'CV002'),
-('NV006', N'Đặng', N'Văn', N'Xuân', '1993-09-18', N'Nam', '0123456987', N'987 Đường MNO, Quận 6, TP. Hồ Chí Minh', 'dtf@gmail.com', '678901234567', 'CV003'),
-('NV007', N'Võ', N'Văn', N'Ngân', '1991-02-28', N'Nam', '0365987412', N'234 Đường PQR, Quận 7, TP. Hồ Chí Minh', 'vvg@gmail.com', '789012345678', 'CV003'),
-('NV008', N'Bùi', N'Thị', N'Xuân', '1996-06-13', N'Nữ', '0896541237', N'567 Đường STU, Quận 8, TP. Hồ Chí Minh', 'bth@gmail.com', '890123456789', 'CV004'),
-('NV009', N'Lê', N'Thị', N'Mai', '1994-04-05', N'Nữ', '0456987312', N'890 Đường VWX, Quận 9, TP. Hồ Chí Minh', 'lvi@gmail.com', '901234567890', 'CV004')
+('NV001', N'Nguyễn', N'Thuận', '1990-05-15', N'Nam', '0123456789', N'123 Đường ABC, Quận 1, TP. Hồ Chí Minh', 'nva@gmail.com', '123456789012', 'CV001'),
+('NV002', N'Trần', N'Nam', '1995-08-20', N'Nam', '0987654321', N'456 Đường XYZ, Quận 2, TP. Hồ Chí Minh', 'ttb@gmail.com', '234567890123', 'CV002'),
+('NV003', N'Lê', N'Phát', '1988-03-10', N'Nam', '0369852147', N'789 Đường DEF, Quận 3, TP. Hồ Chí Minh', 'lvc@gmail.com', '345678901234', 'CV002'),
+('NV004', N'Phạm', N'Ngọc', '1992-11-25', N'Nam', '0541236987', N'321 Đường GHI, Quận 4, TP. Hồ Chí Minh', 'ptd@gmail.com', '456789012345', 'CV002'),
+('NV005', N'Huỳnh', N'Trúc', '1997-07-03', N'Nam', '0321456987', N'654 Đường JKL, Quận 5, TP. Hồ Chí Minh', 'hve@gmail.com', '567890123456', 'CV002'),
+('NV006', N'Đặng', N'Xuân', '1993-09-18', N'Nam', '0123456987', N'987 Đường MNO, Quận 6, TP. Hồ Chí Minh', 'dtf@gmail.com', '678901234567', 'CV003'),
+('NV007', N'Võ', N'Ngân', '1991-02-28', N'Nam', '0365987412', N'234 Đường PQR, Quận 7, TP. Hồ Chí Minh', 'vvg@gmail.com', '789012345678', 'CV003'),
+('NV008', N'Bùi', N'Xuân', '1996-06-13', N'Nữ', '0896541237', N'567 Đường STU, Quận 8, TP. Hồ Chí Minh', 'bth@gmail.com', '890123456789', 'CV004'),
+('NV009', N'Lê', N'Mai', '1994-04-05', N'Nữ', '0456987312', N'890 Đường VWX, Quận 9, TP. Hồ Chí Minh', 'lvi@gmail.com', '901234567890', 'CV004')
 --select * from NhanVien
 -- Chèn dữ liệu vào bảng TaiKhoan
 INSERT INTO TaiKhoan (UserName, Password, MaNV, Role)
@@ -328,21 +328,20 @@ VALUES
 ('PN002', '2016-03-19', 8000000, 'NV001', 'NCC002'),
 ('PN003', '2017-03-20', 3550000, 'NV001', 'NCC003')
 --SELECT * FROM PhieuNhap
-
 -- Chèn dữ liệu vào bảng ChiTietPN
-INSERT INTO ChiTietPN (SoLuong, MaPhieu, MaNL)
+INSERT INTO ChiTietPN (SoLuong, MaPhieu, MaNL, DonGia)
 VALUES 
-(70, 'PN001', 'NL001'),
-(20, 'PN001', 'NL002'),
-(10, 'PN001', 'NL003'),
-(10, 'PN001', 'NL004'),
-(50, 'PN002', 'NL005'),
-(50, 'PN001', 'NL006'),
-(90, 'PN001', 'NL007'),
-(1, 'PN001', 'NL008'),
-(30, 'PN001', 'NL009'),
-(10, 'PN003', 'NL0010'),
-(10, 'PN003', 'NL0011')
+(70, 'PN001', 'NL001',30000 ),
+(20, 'PN001', 'NL002', 60000),
+(10, 'PN001', 'NL003', 50000),
+(10, 'PN001', 'NL004', 5000),
+(50, 'PN002', 'NL005', 160000),				---
+(50, 'PN001', 'NL006', 15000),
+(90, 'PN001', 'NL007', 35000),
+(1, 'PN001', 'NL008', 10000),
+(30, 'PN001', 'NL009', 100000),
+(10, 'PN003', 'NL0010', 235000),
+(10, 'PN003', 'NL0011', 120000)
 --SELECT * FROM ChiTietPN
 -- Chèn dữ liệu vào bảng ChiTietHD
 INSERT INTO ChiTietHD(SoLuong,TriGia,MaHD,MaKichCo,MaSP)
@@ -362,7 +361,7 @@ VALUES
 (5, 100000, 'HD006', 'KC002','SP005')
 --SELECT * FROM ChiTietHD
 -- Chèn dữ liệu vào bảng CheBien
-INSERT INTO CheBien (LieuLuong, DonVi, MaNL, MaSP)
+INSERT INTO CheBien (LieuLuong, DonVi, MaNL, MaSP) ---------------------------FIXXXXXXX----------------------------
 VALUES 
 (100, N'Kg', 'NL001', 'SP001'),
 (200, N'Kg', 'NL002', 'SP002'),
@@ -390,7 +389,7 @@ VALUES
 --SELECT * FROM ChiTietCaTruc
 -- Chèn dữ liệu vào bảng ChiTietKichCo
 
-INSERT INTO ChiTietKichCo (SoLuong, DonGia, MaSP, MaKichCo)--Chi tiet ma co so luong ????,sua lai soluong nua la xong
+INSERT INTO ChiTietKichCo (SoLuong, DonGia, MaSP, MaKichCo)
 VALUES 
 (1, 100000, 'SP001', 'KC001'),
 (2, 75000, 'SP001', 'KC002'),
