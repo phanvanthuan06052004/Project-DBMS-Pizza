@@ -30,14 +30,19 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployManagement));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployManagement));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel2 = new Panel();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            label11 = new Label();
+            textBox7 = new TextBox();
             label9 = new Label();
             textBox6 = new TextBox();
             label8 = new Label();
@@ -57,17 +62,25 @@
             textBox1 = new TextBox();
             pictureBox2 = new PictureBox();
             panel3 = new Panel();
+            btnSearch = new FontAwesome.Sharp.IconButton();
+            txtKeySearach = new Guna.UI2.WinForms.Guna2TextBox();
+            cmbSearchOption = new Guna.UI2.WinForms.Guna2ComboBox();
+            label10 = new Label();
             panel4 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvListEmployee = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             panel1 = new Panel();
+            btnAdd = new FontAwesome.Sharp.IconButton();
+            btnDelete = new FontAwesome.Sharp.IconButton();
+            btnUpdate = new FontAwesome.Sharp.IconButton();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel3.SuspendLayout();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvListEmployee).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -75,10 +88,11 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(255, 224, 192);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnUpdate);
+            panel2.Controls.Add(btnDelete);
+            panel2.Controls.Add(btnAdd);
+            panel2.Controls.Add(label11);
+            panel2.Controls.Add(textBox7);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(textBox6);
             panel2.Controls.Add(label8);
@@ -100,49 +114,29 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 40);
             panel2.Name = "panel2";
-            panel2.Size = new Size(375, 567);
+            panel2.Size = new Size(375, 682);
             panel2.TabIndex = 3;
             // 
-            // button4
+            // label11
             // 
-            button4.Location = new Point(288, 512);
-            button4.Name = "button4";
-            button4.Size = new Size(67, 36);
-            button4.TabIndex = 23;
-            button4.Text = "Save";
-            button4.UseVisualStyleBackColor = true;
+            label11.AutoSize = true;
+            label11.Location = new Point(7, 178);
+            label11.Name = "label11";
+            label11.Size = new Size(83, 20);
+            label11.TabIndex = 25;
+            label11.Text = "First Name:";
             // 
-            // button3
+            // textBox7
             // 
-            button3.Location = new Point(199, 512);
-            button3.Name = "button3";
-            button3.Size = new Size(67, 36);
-            button3.TabIndex = 22;
-            button3.Text = "Update";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(110, 512);
-            button2.Name = "button2";
-            button2.Size = new Size(67, 36);
-            button2.TabIndex = 21;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(19, 512);
-            button1.Name = "button1";
-            button1.Size = new Size(67, 36);
-            button1.TabIndex = 20;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = true;
+            textBox7.Location = new Point(110, 176);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(224, 27);
+            textBox7.TabIndex = 24;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(48, 469);
+            label9.Location = new Point(48, 508);
             label9.Name = "label9";
             label9.Size = new Size(50, 20);
             label9.TabIndex = 19;
@@ -150,7 +144,7 @@
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(110, 467);
+            textBox6.Location = new Point(110, 506);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(224, 27);
             textBox6.TabIndex = 18;
@@ -158,7 +152,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(48, 417);
+            label8.Location = new Point(48, 456);
             label8.Name = "label8";
             label8.Size = new Size(49, 20);
             label8.TabIndex = 17;
@@ -166,7 +160,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(110, 415);
+            textBox5.Location = new Point(110, 454);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(224, 27);
             textBox5.TabIndex = 16;
@@ -174,7 +168,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(43, 373);
+            label7.Location = new Point(43, 412);
             label7.Name = "label7";
             label7.Size = new Size(65, 20);
             label7.TabIndex = 15;
@@ -182,7 +176,7 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(110, 371);
+            textBox4.Location = new Point(110, 410);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(224, 27);
             textBox4.TabIndex = 14;
@@ -190,7 +184,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(48, 320);
+            label6.Location = new Point(48, 359);
             label6.Name = "label6";
             label6.Size = new Size(53, 20);
             label6.TabIndex = 13;
@@ -198,14 +192,14 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(110, 318);
+            textBox3.Location = new Point(110, 357);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(224, 27);
             textBox3.TabIndex = 12;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(110, 272);
+            dateTimePicker1.Location = new Point(110, 311);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(154, 27);
             dateTimePicker1.TabIndex = 11;
@@ -213,7 +207,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(48, 277);
+            label5.Location = new Point(48, 316);
             label5.Name = "label5";
             label5.Size = new Size(47, 20);
             label5.TabIndex = 10;
@@ -222,7 +216,7 @@
             // checkBox2
             // 
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(214, 225);
+            checkBox2.Location = new Point(214, 264);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(82, 24);
             checkBox2.TabIndex = 8;
@@ -232,7 +226,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(127, 226);
+            checkBox1.Location = new Point(127, 265);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(60, 24);
             checkBox1.TabIndex = 7;
@@ -242,7 +236,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(62, 226);
+            label4.Location = new Point(62, 265);
             label4.Name = "label4";
             label4.Size = new Size(35, 20);
             label4.TabIndex = 6;
@@ -251,15 +245,15 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(48, 178);
+            label3.Location = new Point(7, 227);
             label3.Name = "label3";
-            label3.Size = new Size(52, 20);
+            label3.Size = new Size(82, 20);
             label3.TabIndex = 4;
-            label3.Text = "Name:";
+            label3.Text = "Last Name:";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(110, 176);
+            textBox2.Location = new Point(110, 223);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(224, 27);
             textBox2.TabIndex = 3;
@@ -293,30 +287,137 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(255, 224, 192);
+            panel3.Controls.Add(btnSearch);
+            panel3.Controls.Add(txtKeySearach);
+            panel3.Controls.Add(cmbSearchOption);
+            panel3.Controls.Add(label10);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(375, 40);
             panel3.Name = "panel3";
-            panel3.Size = new Size(728, 89);
+            panel3.Size = new Size(910, 114);
             panel3.TabIndex = 4;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackgroundImage = Properties.Resources.search2;
+            btnSearch.BackgroundImageLayout = ImageLayout.Zoom;
+            btnSearch.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnSearch.IconColor = Color.Black;
+            btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSearch.Location = new Point(583, 28);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(69, 36);
+            btnSearch.TabIndex = 27;
+            btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // txtKeySearach
+            // 
+            txtKeySearach.CustomizableEdges = customizableEdges1;
+            txtKeySearach.DefaultText = "";
+            txtKeySearach.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtKeySearach.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtKeySearach.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtKeySearach.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtKeySearach.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtKeySearach.Font = new Font("Segoe UI", 9F);
+            txtKeySearach.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtKeySearach.Location = new Point(356, 28);
+            txtKeySearach.Margin = new Padding(3, 4, 3, 4);
+            txtKeySearach.Name = "txtKeySearach";
+            txtKeySearach.PasswordChar = '\0';
+            txtKeySearach.PlaceholderText = "";
+            txtKeySearach.SelectedText = "";
+            txtKeySearach.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtKeySearach.Size = new Size(187, 36);
+            txtKeySearach.TabIndex = 26;
+            // 
+            // cmbSearchOption
+            // 
+            cmbSearchOption.BackColor = Color.Transparent;
+            cmbSearchOption.CustomizableEdges = customizableEdges3;
+            cmbSearchOption.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbSearchOption.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSearchOption.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbSearchOption.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbSearchOption.Font = new Font("Segoe UI", 10F);
+            cmbSearchOption.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbSearchOption.ItemHeight = 30;
+            cmbSearchOption.Location = new Point(121, 28);
+            cmbSearchOption.Name = "cmbSearchOption";
+            cmbSearchOption.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cmbSearchOption.Size = new Size(181, 36);
+            cmbSearchOption.TabIndex = 25;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(34, 35);
+            label10.Name = "label10";
+            label10.Size = new Size(56, 20);
+            label10.TabIndex = 24;
+            label10.Text = "Search:";
             // 
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Controls.Add(dataGridView1);
+            panel4.Controls.Add(dgvListEmployee);
             panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(375, 129);
+            panel4.Location = new Point(375, 154);
             panel4.Name = "panel4";
-            panel4.Size = new Size(728, 478);
+            panel4.Size = new Size(910, 568);
             panel4.TabIndex = 5;
             // 
-            // dataGridView1
+            // dgvListEmployee
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(28, 60);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(677, 301);
-            dataGridView1.TabIndex = 0;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dgvListEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvListEmployee.BackgroundColor = Color.Gainsboro;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvListEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvListEmployee.ColumnHeadersHeight = 4;
+            dgvListEmployee.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvListEmployee.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvListEmployee.GridColor = Color.FromArgb(231, 229, 255);
+            dgvListEmployee.Location = new Point(67, 89);
+            dgvListEmployee.Name = "dgvListEmployee";
+            dgvListEmployee.RowHeadersVisible = false;
+            dgvListEmployee.RowHeadersWidth = 51;
+            dgvListEmployee.Size = new Size(796, 435);
+            dgvListEmployee.TabIndex = 0;
+            dgvListEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvListEmployee.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvListEmployee.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvListEmployee.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvListEmployee.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvListEmployee.ThemeStyle.BackColor = Color.Gainsboro;
+            dgvListEmployee.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvListEmployee.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvListEmployee.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvListEmployee.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvListEmployee.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvListEmployee.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvListEmployee.ThemeStyle.HeaderStyle.Height = 4;
+            dgvListEmployee.ThemeStyle.ReadOnly = false;
+            dgvListEmployee.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvListEmployee.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvListEmployee.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvListEmployee.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvListEmployee.ThemeStyle.RowsStyle.Height = 29;
+            dgvListEmployee.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvListEmployee.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // guna2ControlBox2
             // 
@@ -324,15 +425,15 @@
             guna2ControlBox2.BackColor = Color.Transparent;
             guna2ControlBox2.Cursor = Cursors.Hand;
             guna2ControlBox2.CustomIconSize = 20F;
-            guna2ControlBox2.CustomizableEdges = customizableEdges1;
+            guna2ControlBox2.CustomizableEdges = customizableEdges5;
             guna2ControlBox2.FillColor = Color.IndianRed;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.ForeColor = Color.IndianRed;
             guna2ControlBox2.IconColor = Color.IndianRed;
-            guna2ControlBox2.Location = new Point(1928, 2);
+            guna2ControlBox2.Location = new Point(2110, 2);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.PressedColor = Color.IndianRed;
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2ControlBox2.Size = new Size(65, 37);
             guna2ControlBox2.TabIndex = 2;
             // 
@@ -362,13 +463,13 @@
             guna2ControlBox1.BackColor = Color.Transparent;
             guna2ControlBox1.Cursor = Cursors.Hand;
             guna2ControlBox1.CustomIconSize = 20F;
-            guna2ControlBox1.CustomizableEdges = customizableEdges3;
+            guna2ControlBox1.CustomizableEdges = customizableEdges7;
             guna2ControlBox1.FillColor = Color.Transparent;
             guna2ControlBox1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox1.IconColor = Color.Black;
-            guna2ControlBox1.Location = new Point(1028, 1);
+            guna2ControlBox1.Location = new Point(1210, 1);
             guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2ControlBox1.Size = new Size(65, 37);
             guna2ControlBox1.TabIndex = 3;
             // 
@@ -382,14 +483,50 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1103, 40);
+            panel1.Size = new Size(1285, 40);
             panel1.TabIndex = 1;
+            // 
+            // btnAdd
+            // 
+            btnAdd.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnAdd.IconColor = Color.Black;
+            btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAdd.Location = new Point(16, 568);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(92, 38);
+            btnAdd.TabIndex = 26;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            btnDelete.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnDelete.IconColor = Color.Black;
+            btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnDelete.Location = new Point(138, 568);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(92, 38);
+            btnDelete.TabIndex = 27;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnUpdate.IconColor = Color.Black;
+            btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnUpdate.Location = new Point(255, 568);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(92, 38);
+            btnUpdate.TabIndex = 28;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
             // 
             // frmEmployManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1103, 607);
+            ClientSize = new Size(1285, 722);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -401,8 +538,10 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvListEmployee).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -414,7 +553,6 @@
         private PictureBox pictureBox2;
         private Panel panel3;
         private Panel panel4;
-        private DataGridView dataGridView1;
         private Label label4;
         private Label label3;
         private TextBox textBox2;
@@ -440,6 +578,15 @@
         private Button button4;
         private Button button3;
         private Button button2;
-        private Button button1;
+        private Guna.UI2.WinForms.Guna2TextBox txtKeySearach;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbSearchOption;
+        private Label label10;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvListEmployee;
+        private FontAwesome.Sharp.IconButton btnSearch;
+        private Label label11;
+        private TextBox textBox7;
+        private FontAwesome.Sharp.IconButton btnUpdate;
+        private FontAwesome.Sharp.IconButton btnDelete;
+        private FontAwesome.Sharp.IconButton btnAdd;
     }
 }

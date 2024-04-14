@@ -76,9 +76,9 @@ CREATE TABLE ChiTietCungCap
 
 CREATE TABLE NhanVien
 (
-  MaNV CHAR(10) ,
+  MaNV CHAR(10) ,----MANV tự tăng----
   HoNV NVARCHAR(10) NOT NULL,
-  TenLotNV NVARCHAR(20) NOT NULL,
+  TenLotNV NVARCHAR(20) NOT NULL, --------CHỈNH LẠI PHẦN NULL TÊN LÓT CÓ THỂ KHÔNG CÓ
   TenNV NVARCHAR(20) NOT NULL,
   NgaySinh DATE NOT NULL ,
   GioiTinh NVARCHAR(3),
@@ -94,6 +94,9 @@ CREATE TABLE NhanVien
   CONSTRAINT Ck_NhanVien_CCCD CHECK(len(CCCD)=12),--CCCD đúng định dạng
   CONSTRAINT Ck_NhanVien_Email CHECK (Email like '%@gmail.com')
 );
+
+
+
 
 CREATE TABLE TaiKhoan
 (
@@ -696,7 +699,33 @@ BEGIN
 END
 
 ------------------------------------------VEIW----------------------------------------------
+select * from ChiTietCaTruc
+select * from Ca
 
+
+GO
+CREATE VIEW vw_XemThongTinCatruc
+		AS
+		SELECT * FROM Ca;
+GO
+
+GO
+--select * from vw_XemThongTinPhanCaTruc
+--drop view vw_XemThongTinPhanCaTruc
+--CREATE VIEW vw_XemThongTinPhanCaTruc
+--AS
+--SELECT c.*, nv.MaNV, nv.HoNV, nv.TenNV, ct.Ngay 
+--FROM Ca c 
+--JOIN ChiTietCaTruc ct ON c.MaCa = ct.MaCa
+--JOIN NhanVien nv ON nv.MaNV = ct.MaNV
+--ORDER BY c.MaCa;
+
+GO
+Go
+CREATE VIEW vw_XemThongTinNhanVien
+		AS
+		SELECT * FROM [dbo].[NhanVien];
+GO
 GO
 
 		CREATE VIEW vw_XemThongTinKhachHang 
@@ -718,20 +747,20 @@ GO
 SELECT * FROM vw_XemDanhSachSanPham
 ----------------------------------------------------------------------------------------------
 go
-
-CREATE VIEW vw_XemCaLamViecTheoNgay 
-AS
-SELECT
-	ct.Ngay, nv.HoNV, nv.TenLotNV,
-    nv.TenNV, Ca.GioBatDau,	Ca.GioKetThuc
-FROM
-    (ChiTietCaTruc ct join Ca on ct.MaCa = Ca.MaCa) 
-	join NhanVien nv on nv.MaNV = ct.MaNV
-GROUP BY 
-	DAY(ct.Ngay), nv.HoNV, nv.TenLotNV, nv.TenNV, 
-	Ca.GioBatDau, ct.Ngay, Ca.GioKetThuc;
-GO
-select * from vw_XemCaLamViecTheoNgay
+--drop view vw_XemCaLamViecTheoNgay
+--CREATE VIEW vw_XemCaLamViecTheoNgay 
+--AS
+--SELECT
+--	ct.Ngay, nv.HoNV, nv.TenLotNV,
+--    nv.TenNV, Ca.GioBatDau,	Ca.GioKetThuc
+--FROM
+--    (ChiTietCaTruc ct join Ca on ct.MaCa = Ca.MaCa) 
+--	join NhanVien nv on nv.MaNV = ct.MaNV
+--GROUP BY 
+--	DAY(ct.Ngay), nv.HoNV, nv.TenLotNV, nv.TenNV, 
+--	Ca.GioBatDau, ct.Ngay, Ca.GioKetThuc;
+--GO
+--select * from vw_XemCaLamViecTheoNgay
 ----------------------------------------------------------------------------------------------
 go
 

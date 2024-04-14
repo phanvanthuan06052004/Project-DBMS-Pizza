@@ -46,8 +46,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             pictureBox1 = new PictureBox();
@@ -60,8 +58,6 @@
             txtEmployID = new Guna.UI2.WinForms.Guna2TextBox();
             txtMaCa = new Guna.UI2.WinForms.Guna2TextBox();
             label3 = new Label();
-            label4 = new Label();
-            DtpShift = new Guna.UI2.WinForms.Guna2DateTimePicker();
             btnSearch = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -218,7 +214,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(266, 69);
+            label2.Location = new Point(392, 69);
             label2.Name = "label2";
             label2.Size = new Size(97, 20);
             label2.TabIndex = 6;
@@ -235,7 +231,7 @@
             txtEmployID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmployID.Font = new Font("Segoe UI", 9F);
             txtEmployID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmployID.Location = new Point(369, 65);
+            txtEmployID.Location = new Point(495, 65);
             txtEmployID.Margin = new Padding(3, 4, 3, 4);
             txtEmployID.Name = "txtEmployID";
             txtEmployID.PasswordChar = '\0';
@@ -256,7 +252,7 @@
             txtMaCa.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMaCa.Font = new Font("Segoe UI", 9F);
             txtMaCa.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMaCa.Location = new Point(611, 65);
+            txtMaCa.Location = new Point(737, 65);
             txtMaCa.Margin = new Padding(3, 4, 3, 4);
             txtMaCa.Name = "txtMaCa";
             txtMaCa.PasswordChar = '\0';
@@ -269,48 +265,24 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(525, 69);
+            label3.Location = new Point(651, 69);
             label3.Name = "label3";
             label3.Size = new Size(61, 20);
             label3.TabIndex = 8;
             label3.Text = "Shift ID:";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(780, 69);
-            label4.Name = "label4";
-            label4.Size = new Size(44, 20);
-            label4.TabIndex = 10;
-            label4.Text = "Date:";
-            // 
-            // DtpShift
-            // 
-            DtpShift.Checked = true;
-            DtpShift.CustomizableEdges = customizableEdges13;
-            DtpShift.Font = new Font("Segoe UI", 9F);
-            DtpShift.Format = DateTimePickerFormat.Long;
-            DtpShift.Location = new Point(866, 63);
-            DtpShift.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            DtpShift.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            DtpShift.Name = "DtpShift";
-            DtpShift.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            DtpShift.Size = new Size(127, 28);
-            DtpShift.TabIndex = 11;
-            DtpShift.Value = new DateTime(2024, 4, 14, 8, 2, 23, 913);
-            // 
             // btnSearch
             // 
-            btnSearch.CustomizableEdges = customizableEdges15;
+            btnSearch.CustomizableEdges = customizableEdges13;
             btnSearch.DisabledState.BorderColor = Color.DarkGray;
             btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnSearch.Font = new Font("Segoe UI", 9F);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(1022, 57);
+            btnSearch.Location = new Point(924, 57);
             btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnSearch.Size = new Size(57, 38);
             btnSearch.TabIndex = 12;
             btnSearch.Text = "OK";
@@ -321,8 +293,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1285, 722);
             Controls.Add(btnSearch);
-            Controls.Add(DtpShift);
-            Controls.Add(label4);
             Controls.Add(txtMaCa);
             Controls.Add(label3);
             Controls.Add(txtEmployID);
@@ -358,8 +328,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmployID;
         private Guna.UI2.WinForms.Guna2TextBox txtMaCa;
         private Label label3;
-        private Label label4;
-        private Guna.UI2.WinForms.Guna2DateTimePicker DtpShift;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
     }
 }

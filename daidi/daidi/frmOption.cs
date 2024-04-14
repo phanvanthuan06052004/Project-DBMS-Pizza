@@ -56,5 +56,11 @@ namespace daidi
             frmShift = new frmShiftManagement();
             frmShift.Show();
         }
+
+        private void ptrEmployeeManagement_Click(object sender, EventArgs e)
+        {
+            employee = new frmEmployManagement();
+            employee.Show();
+        }
     }
 }

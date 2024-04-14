@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOption));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
@@ -59,7 +59,7 @@
             label3 = new Label();
             panel8 = new Panel();
             label4 = new Label();
-            pictureBox3 = new PictureBox();
+            ptrEmployeeManagement = new PictureBox();
             panel7 = new Panel();
             panel14 = new Panel();
             panel1.SuspendLayout();
@@ -78,7 +78,7 @@
             panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptrEmployeeManagement).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -119,13 +119,13 @@
             guna2ControlBox2.BackColor = Color.Transparent;
             guna2ControlBox2.Cursor = Cursors.Hand;
             guna2ControlBox2.CustomIconSize = 20F;
-            guna2ControlBox2.CustomizableEdges = customizableEdges1;
+            guna2ControlBox2.CustomizableEdges = customizableEdges3;
             guna2ControlBox2.FillColor = Color.Transparent;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.IconColor = Color.Black;
             guna2ControlBox2.Location = new Point(1208, 3);
             guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2ControlBox2.Size = new Size(65, 37);
             guna2ControlBox2.TabIndex = 2;
             guna2ControlBox2.Click += guna2ControlBox2_Click;
@@ -363,7 +363,7 @@
             // 
             panel8.BackColor = Color.FromArgb(255, 224, 192);
             panel8.Controls.Add(label4);
-            panel8.Controls.Add(pictureBox3);
+            panel8.Controls.Add(ptrEmployeeManagement);
             panel8.Dock = DockStyle.Left;
             panel8.Location = new Point(77, 0);
             panel8.Name = "panel8";
@@ -380,16 +380,16 @@
             label4.TabIndex = 1;
             label4.Text = "Employee Management";
             // 
-            // pictureBox3
+            // ptrEmployeeManagement
             // 
-            pictureBox3.BackgroundImage = Properties.Resources.employees__1_;
-            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox3.Location = new Point(37, 13);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(177, 101);
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
+            ptrEmployeeManagement.BackgroundImage = Properties.Resources.employees__1_;
+            ptrEmployeeManagement.BackgroundImageLayout = ImageLayout.Zoom;
+            ptrEmployeeManagement.Location = new Point(37, 13);
+            ptrEmployeeManagement.Name = "ptrEmployeeManagement";
+            ptrEmployeeManagement.Size = new Size(177, 101);
+            ptrEmployeeManagement.TabIndex = 0;
+            ptrEmployeeManagement.TabStop = false;
+            ptrEmployeeManagement.Click += ptrEmployeeManagement_Click;
             // 
             // panel7
             // 
@@ -442,7 +442,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptrEmployeeManagement).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -466,7 +466,7 @@
         private Panel panel9;
         private PictureBox pictureBox4;
         private Label label4;
-        private PictureBox pictureBox3;
+        private PictureBox ptrEmployeeManagement;
         private Label label3;
         private Label label6;
         private Label label5;

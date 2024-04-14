@@ -148,9 +148,5 @@ D:\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\refint\daidi.dll
 D:\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.pdb
 D:\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.genruntimeconfig.cache
 D:\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\ref\daidi.dll
-D:\Project-DBMS-Pizza\daidi\daidi\bin\Debug\net8.0-windows\System.Web.DataVisualization.Design.dll
-D:\Project-DBMS-Pizza\daidi\daidi\bin\Debug\net8.0-windows\System.Web.DataVisualization.dll
-D:\Project-DBMS-Pizza\daidi\daidi\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.Design.dll
-D:\Project-DBMS-Pizza\daidi\daidi\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.dll
 D:\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmShiftManagement.resources
 D:\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmRepoManagement.resources

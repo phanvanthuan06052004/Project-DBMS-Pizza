@@ -84,21 +84,6 @@
           }
         }
       },
-      "Microsoft.Chart.Controls/4.7.2046": {
-        "type": "package",
-        "compile": {
-          "lib/net35/System.Web.DataVisualization.Design.dll": {},
-          "lib/net35/System.Web.DataVisualization.dll": {},
-          "lib/net35/System.Windows.Forms.DataVisualization.Design.dll": {},
-          "lib/net35/System.Windows.Forms.DataVisualization.dll": {}
-        },
-        "runtime": {
-          "lib/net35/System.Web.DataVisualization.Design.dll": {},
-          "lib/net35/System.Web.DataVisualization.dll": {},
-          "lib/net35/System.Windows.Forms.DataVisualization.Design.dll": {},
-          "lib/net35/System.Windows.Forms.DataVisualization.dll": {}
-        }
-      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -1272,22 +1257,6 @@
         "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "Microsoft.Chart.Controls/4.7.2046": {
-      "sha512": "tSNkrA2zBGiRFC5Xmb2pnowds+2919zGyuiNMZf5cP1OpKi/Q1qPbQ8xWr2jnr8hCfBFiRV9WeIdCANMpo/jRw==",
-      "type": "package",
-      "path": "microsoft.chart.controls/4.7.2046",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Supplemental Redist License_English.docx",
-        "lib/net35/System.Web.DataVisualization.Design.dll",
-        "lib/net35/System.Web.DataVisualization.dll",
-        "lib/net35/System.Windows.Forms.DataVisualization.Design.dll",
-        "lib/net35/System.Windows.Forms.DataVisualization.dll",
-        "microsoft.chart.controls.4.7.2046.nupkg.sha512",
-        "microsoft.chart.controls.nuspec"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -3107,7 +3076,6 @@
     "net8.0-windows7.0": [
       "FontAwesome.Sharp >= 6.3.0",
       "Guna.UI2.WinForms >= 2.0.4.6",
-      "Microsoft.Chart.Controls >= 4.7.2046",
       "Service >= 1.0.0"
     ]
   },
@@ -3161,10 +3129,6 @@
           "Guna.UI2.WinForms": {
             "target": "Package",
             "version": "[2.0.4.6, )"
-          },
-          "Microsoft.Chart.Controls": {
-            "target": "Package",
-            "version": "[4.7.2046, )"
           }
         },
         "imports": [
@@ -3189,17 +3153,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Chart.Controls 4.7.2046' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.Chart.Controls",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    }
-  ]
+  }
 }

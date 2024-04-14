@@ -48,14 +48,12 @@
             txtMinPrice = new Guna.UI2.WinForms.Guna2TextBox();
             panel2 = new Panel();
             lblPriceTotal = new Label();
-            label2 = new Label();
             btnReload = new Button();
             btnUpdate = new Button();
             dgvOrder = new Guna.UI2.WinForms.Guna2DataGridView();
             Item = new DataGridViewTextBoxColumn();
             Quantity = new DataGridViewTextBoxColumn();
             Cost = new DataGridViewTextBoxColumn();
-            label1 = new Label();
             pnlProduct = new FlowLayoutPanel();
             userControl11 = new UserControl1();
             userControl12 = new UserControl1();
@@ -66,6 +64,8 @@
             btnSearch = new Button();
             label6 = new Label();
             txtSearch = new TextBox();
+            label7 = new Label();
+            label1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOrder).BeginInit();
@@ -76,6 +76,7 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(label7);
             panel1.Controls.Add(btnFilter);
             panel1.Controls.Add(cbrType);
             panel1.Controls.Add(label5);
@@ -85,7 +86,6 @@
             panel1.Controls.Add(txtMinPrice);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(dgvOrder);
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(pnlProduct);
             panel1.Controls.Add(btnSearch);
             panel1.Controls.Add(label6);
@@ -100,7 +100,7 @@
             // 
             btnFilter.BackgroundImage = (Image)resources.GetObject("btnFilter.BackgroundImage");
             btnFilter.BackgroundImageLayout = ImageLayout.Zoom;
-            btnFilter.Location = new Point(391, 137);
+            btnFilter.Location = new Point(495, 137);
             btnFilter.Name = "btnFilter";
             btnFilter.Size = new Size(70, 36);
             btnFilter.TabIndex = 30;
@@ -164,7 +164,7 @@
             txtMaxPrice.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMaxPrice.Font = new Font("Segoe UI", 10.2F);
             txtMaxPrice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMaxPrice.Location = new Point(323, 81);
+            txtMaxPrice.Location = new Point(320, 84);
             txtMaxPrice.Margin = new Padding(4, 7, 4, 7);
             txtMaxPrice.Name = "txtMaxPrice";
             txtMaxPrice.PasswordChar = '\0';
@@ -199,8 +199,8 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(label1);
             panel2.Controls.Add(lblPriceTotal);
-            panel2.Controls.Add(label2);
             panel2.Controls.Add(btnReload);
             panel2.Controls.Add(btnUpdate);
             panel2.Location = new Point(635, 553);
@@ -218,15 +218,6 @@
             lblPriceTotal.Text = "000.000";
             lblPriceTotal.Click += label3_Click;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(49, 16);
-            label2.Name = "label2";
-            label2.Size = new Size(45, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Total:";
-            // 
             // btnReload
             // 
             btnReload.BackColor = Color.FromArgb(128, 255, 128);
@@ -234,7 +225,7 @@
             btnReload.FlatAppearance.BorderSize = 0;
             btnReload.FlatStyle = FlatStyle.Flat;
             btnReload.Font = new Font("Arial Rounded MT Bold", 9F);
-            btnReload.Location = new Point(46, 57);
+            btnReload.Location = new Point(49, 57);
             btnReload.Name = "btnReload";
             btnReload.Size = new Size(102, 35);
             btnReload.TabIndex = 4;
@@ -248,7 +239,7 @@
             btnUpdate.FlatAppearance.BorderSize = 0;
             btnUpdate.FlatStyle = FlatStyle.Flat;
             btnUpdate.Font = new Font("Arial Rounded MT Bold", 9F);
-            btnUpdate.Location = new Point(222, 57);
+            btnUpdate.Location = new Point(217, 57);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(102, 35);
             btnUpdate.TabIndex = 3;
@@ -325,15 +316,6 @@
             Cost.MinimumWidth = 6;
             Cost.Name = "Cost";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(767, 183);
-            label1.Name = "label1";
-            label1.Size = new Size(125, 20);
-            label1.TabIndex = 21;
-            label1.Text = "CURRENT ORDER";
-            // 
             // pnlProduct
             // 
             pnlProduct.AutoScroll = true;
@@ -355,6 +337,8 @@
             userControl11.BorderStyle = BorderStyle.FixedSingle;
             userControl11.Location = new Point(3, 3);
             userControl11.Name = "userControl11";
+            userControl11.Price = "000.0000";
+            userControl11.ProductImg = null;
             userControl11.Size = new Size(256, 253);
             userControl11.TabIndex = 0;
             // 
@@ -364,6 +348,8 @@
             userControl12.BorderStyle = BorderStyle.FixedSingle;
             userControl12.Location = new Point(265, 3);
             userControl12.Name = "userControl12";
+            userControl12.Price = "000.0000";
+            userControl12.ProductImg = null;
             userControl12.Size = new Size(256, 253);
             userControl12.TabIndex = 1;
             // 
@@ -373,6 +359,8 @@
             userControl13.BorderStyle = BorderStyle.FixedSingle;
             userControl13.Location = new Point(3, 262);
             userControl13.Name = "userControl13";
+            userControl13.Price = "000.0000";
+            userControl13.ProductImg = null;
             userControl13.Size = new Size(256, 253);
             userControl13.TabIndex = 2;
             // 
@@ -382,6 +370,8 @@
             userControl14.BorderStyle = BorderStyle.FixedSingle;
             userControl14.Location = new Point(265, 262);
             userControl14.Name = "userControl14";
+            userControl14.Price = "000.0000";
+            userControl14.ProductImg = null;
             userControl14.Size = new Size(256, 253);
             userControl14.TabIndex = 3;
             // 
@@ -391,6 +381,8 @@
             userControl15.BorderStyle = BorderStyle.FixedSingle;
             userControl15.Location = new Point(3, 521);
             userControl15.Name = "userControl15";
+            userControl15.Price = "000.0000";
+            userControl15.ProductImg = null;
             userControl15.Size = new Size(256, 253);
             userControl15.TabIndex = 4;
             // 
@@ -400,6 +392,8 @@
             userControl16.BorderStyle = BorderStyle.FixedSingle;
             userControl16.Location = new Point(265, 521);
             userControl16.Name = "userControl16";
+            userControl16.Price = "000.0000";
+            userControl16.ProductImg = null;
             userControl16.Size = new Size(256, 253);
             userControl16.TabIndex = 5;
             // 
@@ -407,7 +401,7 @@
             // 
             btnSearch.BackgroundImage = Properties.Resources.search;
             btnSearch.BackgroundImageLayout = ImageLayout.Zoom;
-            btnSearch.Location = new Point(391, 38);
+            btnSearch.Location = new Point(495, 34);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(70, 36);
             btnSearch.TabIndex = 17;
@@ -429,6 +423,26 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(272, 27);
             txtSearch.TabIndex = 15;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(718, 187);
+            label7.Name = "label7";
+            label7.Size = new Size(216, 27);
+            label7.TabIndex = 31;
+            label7.Text = "CURRENT ORDER";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 9F);
+            label1.Location = new Point(64, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(49, 17);
+            label1.TabIndex = 32;
+            label1.Text = "Total:";
             // 
             // frmMenu
             // 
@@ -470,13 +484,11 @@
         private UserControl1 userControl15;
         private UserControl1 userControl16;
         private Guna.UI2.WinForms.Guna2DataGridView dgvOrder;
-        private Label label1;
         private Panel panel2;
         private DataGridViewTextBoxColumn Item;
         private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn Cost;
         private Label lblPriceTotal;
-        private Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtMinPrice;
         private Label label3;
         private Label label4;
@@ -484,5 +496,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbrType;
         private Label label5;
         private Button btnFilter;
+        private Label label7;
+        private Label label1;
     }
 }
