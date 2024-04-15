@@ -16,6 +16,7 @@ namespace daidi
         frmRevenue Revenue;
         FrmPizzaManagement frmPizzaMana;
         frmEmployManagement employee;
+        Management management;
         public frmOption()
         {
             InitializeComponent();
@@ -61,6 +62,17 @@ namespace daidi
         {
             employee = new frmEmployManagement();
             employee.Show();
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            management = new Management();
+            management.Show();
         }
     }
 }

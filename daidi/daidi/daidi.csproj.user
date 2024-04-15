@@ -28,6 +28,21 @@
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManagementImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManagementOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManagemrentCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManageSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
