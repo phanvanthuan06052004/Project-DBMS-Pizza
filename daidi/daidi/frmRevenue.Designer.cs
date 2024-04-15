@@ -33,7 +33,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRevenue));
             panel1 = new Panel();
             panel3 = new Panel();
-            panel4 = new Panel();
             btnOk = new Button();
             txtYear = new TextBox();
             label2 = new Label();
@@ -62,7 +61,6 @@
             // panel3
             // 
             panel3.BackColor = Color.LightGray;
-            panel3.Controls.Add(panel4);
             panel3.Controls.Add(btnOk);
             panel3.Controls.Add(txtYear);
             panel3.Controls.Add(label2);
@@ -72,14 +70,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(1103, 573);
             panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.White;
-            panel4.Location = new Point(154, 214);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(798, 296);
-            panel4.TabIndex = 5;
             // 
             // btnOk
             // 
@@ -198,6 +188,5 @@
         private Button btnOk;
         private TextBox txtYear;
         private Label label2;
-        private Panel panel4;
     }
 }

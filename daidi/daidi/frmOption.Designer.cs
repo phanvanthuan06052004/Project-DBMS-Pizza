@@ -285,6 +285,7 @@
             panel9.Name = "panel9";
             panel9.Size = new Size(246, 163);
             panel9.TabIndex = 0;
+            panel9.Paint += panel9_Paint;
             // 
             // label5
             // 
@@ -305,6 +306,7 @@
             pictureBox4.Size = new Size(177, 101);
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // panel5
             // 
