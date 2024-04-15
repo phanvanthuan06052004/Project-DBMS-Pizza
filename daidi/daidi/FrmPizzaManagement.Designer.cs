@@ -41,10 +41,10 @@
             btnLogout = new Button();
             pnlHome = new Panel();
             btnHome = new Button();
-            pnlOrder = new Panel();
-            btnOrder = new Button();
             pnlMenu = new Panel();
             btnMenu = new Button();
+            pnlOrder = new Panel();
+            btnOrder = new Button();
             sibarTimer = new System.Windows.Forms.Timer(components);
             panel2 = new Panel();
             panel1.SuspendLayout();
@@ -52,8 +52,8 @@
             pnlSibar.SuspendLayout();
             pnlLogout.SuspendLayout();
             pnlHome.SuspendLayout();
-            pnlOrder.SuspendLayout();
             pnlMenu.SuspendLayout();
+            pnlOrder.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -65,7 +65,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1103, 43);
+            panel1.Size = new Size(1285, 43);
             panel1.TabIndex = 0;
             // 
             // guna2ControlBox1
@@ -78,7 +78,7 @@
             guna2ControlBox1.FillColor = Color.Transparent;
             guna2ControlBox1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox1.IconColor = Color.Black;
-            guna2ControlBox1.Location = new Point(1026, 3);
+            guna2ControlBox1.Location = new Point(1208, 3);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox1.Size = new Size(65, 37);
@@ -166,30 +166,6 @@
             btnHome.Text = "Home";
             btnHome.UseVisualStyleBackColor = true;
             // 
-            // pnlOrder
-            // 
-            pnlOrder.BackColor = Color.Transparent;
-            pnlOrder.Controls.Add(btnOrder);
-            pnlOrder.Location = new Point(4, 165);
-            pnlOrder.Name = "pnlOrder";
-            pnlOrder.Size = new Size(229, 62);
-            pnlOrder.TabIndex = 5;
-            // 
-            // btnOrder
-            // 
-            btnOrder.FlatStyle = FlatStyle.Flat;
-            btnOrder.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btnOrder.Image = (Image)resources.GetObject("btnOrder.Image");
-            btnOrder.ImageAlign = ContentAlignment.MiddleLeft;
-            btnOrder.Location = new Point(-27, -21);
-            btnOrder.Name = "btnOrder";
-            btnOrder.Padding = new Padding(30, 0, 0, 0);
-            btnOrder.Size = new Size(290, 100);
-            btnOrder.TabIndex = 3;
-            btnOrder.Text = "Order";
-            btnOrder.UseVisualStyleBackColor = true;
-            btnOrder.Click += btnOrder_Click;
-            // 
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.Transparent;
@@ -214,6 +190,30 @@
             btnMenu.UseVisualStyleBackColor = true;
             btnMenu.Click += btnMenu_Click;
             // 
+            // pnlOrder
+            // 
+            pnlOrder.BackColor = Color.Transparent;
+            pnlOrder.Controls.Add(btnOrder);
+            pnlOrder.Location = new Point(4, 165);
+            pnlOrder.Name = "pnlOrder";
+            pnlOrder.Size = new Size(229, 62);
+            pnlOrder.TabIndex = 5;
+            // 
+            // btnOrder
+            // 
+            btnOrder.FlatStyle = FlatStyle.Flat;
+            btnOrder.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btnOrder.Image = (Image)resources.GetObject("btnOrder.Image");
+            btnOrder.ImageAlign = ContentAlignment.MiddleLeft;
+            btnOrder.Location = new Point(-27, -21);
+            btnOrder.Name = "btnOrder";
+            btnOrder.Padding = new Padding(30, 0, 0, 0);
+            btnOrder.Size = new Size(290, 100);
+            btnOrder.TabIndex = 3;
+            btnOrder.Text = "Order";
+            btnOrder.UseVisualStyleBackColor = true;
+            btnOrder.Click += btnOrder_Click;
+            // 
             // sibarTimer
             // 
             sibarTimer.Interval = 10;
@@ -225,15 +225,15 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(247, 43);
             panel2.Name = "panel2";
-            panel2.Size = new Size(856, 564);
+            panel2.Size = new Size(1038, 679);
             panel2.TabIndex = 2;
             // 
             // FrmPizzaManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 224, 192);
-            ClientSize = new Size(1103, 607);
+            BackColor = Color.DarkGray;
+            ClientSize = new Size(1285, 722);
             ControlBox = false;
             Controls.Add(panel2);
             Controls.Add(pnlSibar);
@@ -249,8 +249,8 @@
             pnlSibar.ResumeLayout(false);
             pnlLogout.ResumeLayout(false);
             pnlHome.ResumeLayout(false);
-            pnlOrder.ResumeLayout(false);
             pnlMenu.ResumeLayout(false);
+            pnlOrder.ResumeLayout(false);
             ResumeLayout(false);
         }
 

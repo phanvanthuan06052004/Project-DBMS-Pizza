@@ -1,0 +1,2 @@
+-------------TRIGGER---------------
+CREATE TRIGGER 

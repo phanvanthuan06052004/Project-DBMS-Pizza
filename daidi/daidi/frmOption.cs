@@ -12,6 +12,7 @@ namespace daidi
 {
     public partial class frmOption : Form
     {
+        frmShiftManagement frmShift;
         frmRevenue Revenue;
         FrmPizzaManagement frmPizzaMana;
         frmEmployManagement employee;
@@ -43,6 +44,23 @@ namespace daidi
         private void guna2ControlBox2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ptrShiftManagement_Click(object sender, EventArgs e)
+        {
+            frmShift = new frmShiftManagement();
+            frmShift.Show();
+        }
+
+        private void ptrEmployeeManagement_Click(object sender, EventArgs e)
+        {
+            employee = new frmEmployManagement();
+            employee.Show();
         }
     }
 }
