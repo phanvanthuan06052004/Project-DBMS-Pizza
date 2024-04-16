@@ -73,7 +73,7 @@
             btnUpdateCus.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnUpdateCus.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnUpdateCus.FillColor = Color.FromArgb(192, 192, 0);
-            btnUpdateCus.Font = new Font("Segoe UI", 10.2F);
+            btnUpdateCus.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnUpdateCus.ForeColor = Color.White;
             btnUpdateCus.Location = new Point(971, 491);
             btnUpdateCus.Name = "btnUpdateCus";
@@ -92,7 +92,7 @@
             btnDeleteCus.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDeleteCus.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDeleteCus.FillColor = Color.FromArgb(255, 128, 128);
-            btnDeleteCus.Font = new Font("Segoe UI", 10.2F);
+            btnDeleteCus.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnDeleteCus.ForeColor = Color.White;
             btnDeleteCus.Location = new Point(834, 491);
             btnDeleteCus.Name = "btnDeleteCus";
@@ -110,7 +110,7 @@
             btnAddCus.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddCus.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAddCus.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAddCus.Font = new Font("Segoe UI", 10.2F);
+            btnAddCus.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnAddCus.ForeColor = Color.White;
             btnAddCus.Location = new Point(703, 491);
             btnAddCus.Name = "btnAddCus";
@@ -143,9 +143,10 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Arial", 9F, FontStyle.Bold);
             label7.Location = new Point(707, 349);
             label7.Name = "label7";
-            label7.Size = new Size(66, 20);
+            label7.Size = new Size(68, 18);
             label7.TabIndex = 37;
             label7.Text = "Number:";
             // 
@@ -173,9 +174,10 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Arial", 9F, FontStyle.Bold);
             label6.Location = new Point(707, 280);
             label6.Name = "label6";
-            label6.Size = new Size(116, 20);
+            label6.Size = new Size(123, 18);
             label6.TabIndex = 35;
             label6.Text = "Customer name:";
             // 
@@ -203,9 +205,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Arial", 9F, FontStyle.Bold);
             label5.Location = new Point(707, 204);
             label5.Name = "label5";
-            label5.Size = new Size(94, 20);
+            label5.Size = new Size(100, 18);
             label5.TabIndex = 33;
             label5.Text = "Customer ID:";
             // 
@@ -218,7 +221,7 @@
             btnSearchCus.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearchCus.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSearchCus.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearchCus.Font = new Font("Segoe UI", 10.2F);
+            btnSearchCus.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnSearchCus.ForeColor = Color.White;
             btnSearchCus.Location = new Point(399, 45);
             btnSearchCus.Name = "btnSearchCus";
@@ -251,9 +254,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Arial", 9F, FontStyle.Bold);
             label2.Location = new Point(45, 50);
             label2.Name = "label2";
-            label2.Size = new Size(116, 20);
+            label2.Size = new Size(123, 18);
             label2.TabIndex = 25;
             label2.Text = "Customer name:";
             // 

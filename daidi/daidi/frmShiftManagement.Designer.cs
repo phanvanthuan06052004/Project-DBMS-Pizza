@@ -86,7 +86,7 @@
             guna2ControlBox2.FillColor = Color.Transparent;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1220, 0);
+            guna2ControlBox2.Location = new Point(1217, 0);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox2.Size = new Size(65, 37);

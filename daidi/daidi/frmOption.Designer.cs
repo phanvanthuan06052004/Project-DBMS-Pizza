@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOption));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
@@ -119,13 +119,13 @@
             guna2ControlBox2.BackColor = Color.Transparent;
             guna2ControlBox2.Cursor = Cursors.Hand;
             guna2ControlBox2.CustomIconSize = 20F;
-            guna2ControlBox2.CustomizableEdges = customizableEdges3;
+            guna2ControlBox2.CustomizableEdges = customizableEdges1;
             guna2ControlBox2.FillColor = Color.Transparent;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.IconColor = Color.Black;
             guna2ControlBox2.Location = new Point(1208, 3);
             guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox2.Size = new Size(65, 37);
             guna2ControlBox2.TabIndex = 2;
             guna2ControlBox2.Click += guna2ControlBox2_Click;
@@ -177,9 +177,9 @@
             // 
             panel4.Controls.Add(panel6);
             panel4.Controls.Add(panel5);
-            panel4.Location = new Point(406, 236);
+            panel4.Location = new Point(366, 236);
             panel4.Name = "panel4";
-            panel4.Size = new Size(801, 362);
+            panel4.Size = new Size(847, 362);
             panel4.TabIndex = 3;
             // 
             // panel6
@@ -192,7 +192,7 @@
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(0, 199);
             panel6.Name = "panel6";
-            panel6.Size = new Size(801, 163);
+            panel6.Size = new Size(847, 163);
             panel6.TabIndex = 1;
             // 
             // panel13
@@ -201,16 +201,16 @@
             panel13.Controls.Add(label7);
             panel13.Controls.Add(ptrShiftManagement);
             panel13.Dock = DockStyle.Fill;
-            panel13.Location = new Point(291, 0);
+            panel13.Location = new Point(299, 0);
             panel13.Name = "panel13";
-            panel13.Size = new Size(219, 163);
+            panel13.Size = new Size(249, 163);
             panel13.TabIndex = 4;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
-            label7.Location = new Point(25, 127);
+            label7.Location = new Point(35, 127);
             label7.Name = "label7";
             label7.Size = new Size(170, 25);
             label7.TabIndex = 2;
@@ -220,7 +220,7 @@
             // 
             ptrShiftManagement.BackgroundImage = Properties.Resources.browsing;
             ptrShiftManagement.BackgroundImageLayout = ImageLayout.Zoom;
-            ptrShiftManagement.Location = new Point(23, 17);
+            ptrShiftManagement.Location = new Point(30, 17);
             ptrShiftManagement.Name = "ptrShiftManagement";
             ptrShiftManagement.Size = new Size(177, 101);
             ptrShiftManagement.TabIndex = 0;
@@ -230,9 +230,9 @@
             // panel12
             // 
             panel12.Dock = DockStyle.Right;
-            panel12.Location = new Point(510, 0);
+            panel12.Location = new Point(548, 0);
             panel12.Name = "panel12";
-            panel12.Size = new Size(45, 163);
+            panel12.Size = new Size(53, 163);
             panel12.TabIndex = 3;
             // 
             // panel11
@@ -240,7 +240,7 @@
             panel11.Dock = DockStyle.Left;
             panel11.Location = new Point(246, 0);
             panel11.Name = "panel11";
-            panel11.Size = new Size(45, 163);
+            panel11.Size = new Size(53, 163);
             panel11.TabIndex = 2;
             // 
             // panel10
@@ -249,7 +249,7 @@
             panel10.Controls.Add(label6);
             panel10.Controls.Add(pictureBox5);
             panel10.Dock = DockStyle.Right;
-            panel10.Location = new Point(555, 0);
+            panel10.Location = new Point(601, 0);
             panel10.Name = "panel10";
             panel10.Size = new Size(246, 163);
             panel10.TabIndex = 1;
@@ -318,7 +318,7 @@
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(801, 155);
+            panel5.Size = new Size(847, 155);
             panel5.TabIndex = 0;
             // 
             // panel16
@@ -326,7 +326,7 @@
             panel16.Dock = DockStyle.Fill;
             panel16.Location = new Point(323, 0);
             panel16.Name = "panel16";
-            panel16.Size = new Size(155, 155);
+            panel16.Size = new Size(201, 155);
             panel16.TabIndex = 6;
             // 
             // panel15
@@ -335,7 +335,7 @@
             panel15.Controls.Add(pictureBox2);
             panel15.Controls.Add(label3);
             panel15.Dock = DockStyle.Right;
-            panel15.Location = new Point(478, 0);
+            panel15.Location = new Point(524, 0);
             panel15.Name = "panel15";
             panel15.Size = new Size(246, 155);
             panel15.TabIndex = 5;
@@ -396,7 +396,7 @@
             // panel7
             // 
             panel7.Dock = DockStyle.Right;
-            panel7.Location = new Point(724, 0);
+            panel7.Location = new Point(770, 0);
             panel7.Name = "panel7";
             panel7.Size = new Size(77, 155);
             panel7.TabIndex = 3;

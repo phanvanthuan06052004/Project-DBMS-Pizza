@@ -1,7 +1,7 @@
 ﻿--DROP DATABASE QuanLyPizza
 --CREATE DATABASE QuanLyPizza
 --USE QuanLyPizza
---USE northwind
+--USE northwindS
 CREATE TABLE ChucVu
 (
   MaChucVu CHAR(10),
@@ -10,12 +10,12 @@ CREATE TABLE ChucVu
   CONSTRAINT Ck_ChucVu_Luong CHECK (Luong > 0),
   CONSTRAINT Pk_ChucVu_MaChucVu PRIMARY KEY (MaChucVu) 
 );
---drop table NguyenLieu
+--drop table NguyenLieuS
 CREATE TABLE NguyenLieu
 (
   MaNL CHAR(10),
   TenNL NVARCHAR(30) NOT NULL,
-  SoLuong DECIMAL(50,2),
+  SoLuong DECIMAL(30,2),
   DonVi NVARCHAR(20),
   CONSTRAINT Pk_NguyenLieu_MaNL PRIMARY KEY (MaNL),
   CONSTRAINT Ck_NguyenLieu_SoLuong CHECK (SoLuong > 0)
@@ -103,7 +103,7 @@ CREATE TABLE TaiKhoan
   MaNV CHAR(10),   -- nên để MaNV và Role là null bởi vì lúc đăng kí mình chỉ quan tâm 
   Role int ,		-- admin chứ còn nhân viên hồi mình tự thêm đươi data, Hoặc để số tự tăng
   CONSTRAINT Pk_TaiKhoan_UserName PRIMARY KEY(UserName),
-  CONSTRAINT Fk_TaiKhoan_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV)
+  CONSTRAINT Fk_TaiKhoan_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV) ON DELETE SET NULL
 );
 
 CREATE TABLE SanPham
@@ -120,11 +120,12 @@ CREATE TABLE HoaDonBanHang
 (
   MaHD CHAR(10),
   NgayGioDat DATETIME NOT NULL,
-  MaNV CHAR(10) NOT NULL,
+  MaNV CHAR(10),
   MaKH CHAR(10) NOT NULL,
   CONSTRAINT Pk_HoaDonBanHang_MaHD PRIMARY KEY (MaHD),
-  CONSTRAINT Fk_HoaDonBanHang_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
-  CONSTRAINT FK_HoaDonBanHang_KhachHang_MaKH FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)
+  CONSTRAINT Fk_HoaDonBanHang_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV) ON DELETE SET NULL,
+  CONSTRAINT FK_HoaDonBanHang_KhachHang_MaKH FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH) 
+ 
 );
 
 CREATE TABLE PhieuNhap
@@ -132,13 +133,14 @@ CREATE TABLE PhieuNhap
   MaPhieu CHAR(10),
   NgayNhap DATE NOT NULL,
   TriGiaDonNH MONEY NOT NULL,
-  MaNV CHAR(10) NOT NULL,
+  MaNV CHAR(10),
   MaNCC CHAR(10) NOT NULL,
   CONSTRAINT Pk_PhieuNhap_MaPhieu PRIMARY KEY (MaPhieu),
-  CONSTRAINT Fk_PhieuNhap_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
+  CONSTRAINT Fk_PhieuNhap_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV) ON DELETE SET NULL,
   CONSTRAINT Fk_PhieuNhap_NhaCungCap_MaNCC FOREIGN KEY (MaNCC) REFERENCES NhaCungCap(MaNCC),
   CONSTRAINT Ck_PhieuNhap_TriGiaDonNH CHECK (TriGiaDonNH > 0)
 );
+---sua lai khoa ngoai null dc
 CREATE TABLE ChiTietPN
 (
   SoLuong INT,
@@ -152,6 +154,7 @@ CREATE TABLE ChiTietPN
 CREATE TABLE ChiTietHD
 (
   SoLuong INT NOT NULL,
+
   TriGia MONEY NOT NULL,
   MaKichCo CHAR(10) NOT NULL,
   MaHD CHAR(10) CONSTRAINT Fk_ChiTietHD_HoaDonBanHang_MaHD FOREIGN KEY (MaHD) REFERENCES HoaDonBanHang(MaHD),
@@ -163,21 +166,36 @@ CREATE TABLE ChiTietHD
 );
 CREATE TABLE CheBien
 (
-	LieuLuong decimal(50,2),
+	LieuLuong DECIMAL(30,2),
 	DonVi varchar(10),
+	MaKichCo CHAR(10) CONSTRAINT Fk_CheBien_KichCo_MaKichCo FOREIGN KEY (MaKichCo) REFERENCES KichCo(MaKichCo),
 	MaNL CHAR(10) CONSTRAINT Fk_CheBien_NguyenLieu_MaNL FOREIGN KEY (MaNL) REFERENCES NguyenLieu(MaNL),
 	MaSP CHAR(10) CONSTRAINT Fk_CheBien_SanPham_MaSP FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP),
-	CONSTRAINT Pk_CheBien_MaNL_MaSP PRIMARY KEY (MaNL, MaSP)
+	CONSTRAINT Pk_CheBien_MaNL_MaSP PRIMARY KEY (MaNL, MaSP, MaKichCo)
 );
 
 CREATE TABLE ChiTietCaTruc
 (
-  MaNV CHAR(10) CONSTRAINT Fk_ChiTietCaTruc_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
+  MaNV CHAR(10) CONSTRAINT Fk_ChiTietCaTruc_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV) ON DELETE CASCADE,
   MaCa CHAR(10) CONSTRAINT Fk_ChiTietCaTruc_Ca_MaCa FOREIGN KEY (MaCa) REFERENCES Ca(MaCa),
   Ngay Date NOT NULL,
   CONSTRAINT Pk_ChiTietCaTruc_MaNV_MaCa PRIMARY KEY (MaNV, MaCa)
 );
 
+-----------------------------------------------------
+-- Add the ON DELETE SET NULL to an existing foreign key constraint
+-- Step 1: Drop the existing foreign key constraint
+--ALTER TABLE ChiTietCaTruc
+--DROP CONSTRAINT Fk_ChiTietCaTruc_NhanVien_MaNV;
+
+-- Step 2: Add the foreign key constraint with ON DELETE SET DEFAULT
+--ALTER TABLE ChiTietCaTruc
+--ADD CONSTRAINT Fk_ChiTietCaTruc_NhanVien_MaNV 
+--FOREIGN KEY (MaNV) 
+--REFERENCES NhanVien(MaNV)
+--ON DELETE CASCADE
+
+-------------------------------------------------
 CREATE TABLE ChiTietKichCo
 (
   SoLuong int,
@@ -301,7 +319,7 @@ VALUES
 
 --SELECT * FROM TaiKhoan
 -- Chèn dữ liệu vào bảng SanPham
-INSERT INTO SanPham (MaSP, TenSP, MaLoaiSP)
+INSERT INTO SanPham (MaSP, TenSP, MaLoaiSP)--------------------------------HÌNH ẢNH ---------------------
 VALUES 
 ('SP001', N'Neapolitan pizza', 'LSP001'),
 ('SP002', N'Pizza phô mai.', 'LSP001'),
@@ -359,20 +377,28 @@ VALUES
 (9, 540000, 'HD006', 'KC002','SP002'),
 (10, 500000, 'HD006', 'KC003','SP001'),
 (5, 100000, 'HD006', 'KC002','SP005')
+--SELECT * FROM HoaDonBanHang
 --SELECT * FROM ChiTietHD
 -- Chèn dữ liệu vào bảng CheBien
-INSERT INTO CheBien (LieuLuong, DonVi, MaNL, MaSP) ---------------------------FIXXXXXXX----------------------------
+-- Thêm dữ liệu cho bảng CheBien
+INSERT INTO CheBien (LieuLuong, DonVi, MaKichCo, MaNL, MaSP)
 VALUES 
-(100, N'Kg', 'NL001', 'SP001'),
-(200, N'Kg', 'NL002', 'SP002'),
-(300, N'Kg', 'NL003', 'SP003'),
-(400, N'Kg', 'NL004', 'SP004'),
-(500, N'Kg', 'NL005', 'SP005'),
-(600, N'Quả', 'NL006', 'SP006'),
-(700, N'Kg', 'NL007', 'SP007'),
-(800, N'Kg', 'NL008', 'SP008'),
-(900, N'Lít', 'NL009', 'SP009'),
-(1000, N'Kg', 'NL010', 'SP010');
+(0.5, 'Kg', 'KC001', 'NL001', 'SP001'),  -- 0.5 Kg bột mỳ để chế biến pizza Neapolitan
+(0.2, 'Lon', 'KC001', 'NL002', 'SP001'),  -- 0.2 lon sốt cà chua để chế biến pizza Neapolitan
+(0.1, 'Túi', 'KC001', 'NL003', 'SP001'),  -- 0.1 túi phô mai để chế biến pizza Neapolitan
+(0.01, 'Gam', 'KC001', 'NL004', 'SP001'),  -- 0.01 gam men nở để chế biến pizza Neapolitan
+
+(0.2, 'Kg', 'KC001', 'NL001', 'SP002'),  -- 0.2 Kg bột mỳ để chế biến pizza phô mai
+(0.1, 'Lon', 'KC001', 'NL003', 'SP002'),  -- 0.1 lon sốt cà chua để chế biến pizza phô mai
+(0.1, 'Túi', 'KC001', 'NL004', 'SP002'),  -- 0.1 túi phô mai để chế biến pizza phô mai
+(0.01, 'Kg', 'KC001', 'NL005', 'SP002'),  -- 0.01 kg thịt heo để chế biến pizza phô mai
+
+(0.3, 'Kg', 'KC002', 'NL001', 'SP003'),  -- 0.3 Kg bột mỳ để chế biến pizza nhân thịt sốt cà chua
+(0.1, 'Lon', 'KC002', 'NL002', 'SP003'),  -- 0.1 lon sốt cà chua để chế biến pizza nhân thịt sốt cà chua
+(0.05, 'Túi', 'KC002', 'NL003', 'SP003'),  -- 0.05 túi phô mai để chế biến pizza nhân thịt sốt cà chua
+(0.005, 'Kg', 'KC002', 'NL005', 'SP003'),  -- 0.005 kg thịt heo để chế biến pizza nhân thịt sốt cà chua
+(1, 'Chai', 'KC001', 'NL0011', 'SP004'), ---- 1 chai nước suối để chế biến nước suối
+(1, 'Lon', 'KC001', 'NL0010', 'SP005');  -- 0.1 lon coca để chế biến coca
 
 -- Chèn dữ liệu vào bảng ChiTietCaTruc
 INSERT INTO ChiTietCaTruc (MaNV, MaCa, Ngay)

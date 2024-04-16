@@ -68,7 +68,7 @@
             btnUpdateSize.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnUpdateSize.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnUpdateSize.FillColor = Color.FromArgb(192, 192, 0);
-            btnUpdateSize.Font = new Font("Segoe UI", 10.2F);
+            btnUpdateSize.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnUpdateSize.ForeColor = Color.White;
             btnUpdateSize.Location = new Point(971, 491);
             btnUpdateSize.Name = "btnUpdateSize";
@@ -87,7 +87,7 @@
             btnDeleteSize.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDeleteSize.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDeleteSize.FillColor = Color.FromArgb(255, 128, 128);
-            btnDeleteSize.Font = new Font("Segoe UI", 10.2F);
+            btnDeleteSize.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnDeleteSize.ForeColor = Color.White;
             btnDeleteSize.Location = new Point(834, 491);
             btnDeleteSize.Name = "btnDeleteSize";
@@ -105,7 +105,7 @@
             btnAddSize.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddSize.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAddSize.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAddSize.Font = new Font("Segoe UI", 10.2F);
+            btnAddSize.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnAddSize.ForeColor = Color.White;
             btnAddSize.Location = new Point(703, 491);
             btnAddSize.Name = "btnAddSize";
@@ -138,9 +138,10 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Arial Rounded MT Bold", 9F);
             label6.Location = new Point(722, 274);
             label6.Name = "label6";
-            label6.Size = new Size(83, 20);
+            label6.Size = new Size(91, 17);
             label6.TabIndex = 35;
             label6.Text = "SIze Name:";
             // 
@@ -153,7 +154,7 @@
             btnSearchSize.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearchSize.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSearchSize.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearchSize.Font = new Font("Segoe UI", 10.2F);
+            btnSearchSize.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnSearchSize.ForeColor = Color.White;
             btnSearchSize.Location = new Point(397, 51);
             btnSearchSize.Name = "btnSearchSize";
@@ -186,9 +187,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Arial Rounded MT Bold", 9F);
             label2.Location = new Point(43, 56);
             label2.Name = "label2";
-            label2.Size = new Size(84, 20);
+            label2.Size = new Size(92, 17);
             label2.TabIndex = 25;
             label2.Text = "Size name: ";
             // 
@@ -247,9 +249,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Arial Rounded MT Bold", 9F);
             label5.Location = new Point(722, 198);
             label5.Name = "label5";
-            label5.Size = new Size(58, 20);
+            label5.Size = new Size(64, 17);
             label5.TabIndex = 33;
             label5.Text = "Size ID:";
             // 

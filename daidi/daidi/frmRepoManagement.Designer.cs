@@ -137,9 +137,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Arial Rounded MT Bold", 10.2F);
             label2.Location = new Point(48, 35);
             label2.Name = "label2";
-            label2.Size = new Size(122, 23);
+            label2.Size = new Size(128, 20);
             label2.TabIndex = 3;
             label2.Text = "Product name:";
             // 
@@ -173,7 +174,7 @@
             btnSearchPro.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearchPro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSearchPro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearchPro.Font = new Font("Segoe UI", 10.2F);
+            btnSearchPro.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnSearchPro.ForeColor = Color.White;
             btnSearchPro.Location = new Point(402, 30);
             btnSearchPro.Name = "btnSearchPro";
@@ -206,18 +207,20 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Arial Rounded MT Bold", 10.2F);
             label3.Location = new Point(48, 116);
             label3.Name = "label3";
-            label3.Size = new Size(51, 23);
+            label3.Size = new Size(57, 20);
             label3.TabIndex = 6;
             label3.Text = "Price:";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Arial Rounded MT Bold", 10.2F);
             label4.Location = new Point(333, 120);
             label4.Name = "label4";
-            label4.Size = new Size(26, 23);
+            label4.Size = new Size(25, 20);
             label4.TabIndex = 8;
             label4.Text = "to";
             // 
@@ -251,7 +254,7 @@
             btnfilterPro.DisabledState.CustomBorderColor = Color.DarkGray;
             btnfilterPro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnfilterPro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnfilterPro.Font = new Font("Segoe UI", 10.2F);
+            btnfilterPro.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnfilterPro.ForeColor = Color.White;
             btnfilterPro.Location = new Point(582, 105);
             btnfilterPro.Name = "btnfilterPro";
@@ -284,9 +287,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Arial Rounded MT Bold", 10.2F);
             label5.Location = new Point(706, 158);
             label5.Name = "label5";
-            label5.Size = new Size(96, 23);
+            label5.Size = new Size(101, 20);
             label5.TabIndex = 11;
             label5.Text = "Product ID:";
             // 
@@ -314,9 +318,10 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Arial Rounded MT Bold", 10.2F);
             label6.Location = new Point(706, 234);
             label6.Name = "label6";
-            label6.Size = new Size(122, 23);
+            label6.Size = new Size(128, 20);
             label6.TabIndex = 13;
             label6.Text = "Product name:";
             // 
@@ -344,27 +349,30 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Arial Rounded MT Bold", 10.2F);
             label7.Location = new Point(706, 303);
             label7.Name = "label7";
-            label7.Size = new Size(51, 23);
+            label7.Size = new Size(57, 20);
             label7.TabIndex = 15;
             label7.Text = "Price:";
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Arial Rounded MT Bold", 10.2F);
             label8.Location = new Point(706, 370);
             label8.Name = "label8";
-            label8.Size = new Size(49, 23);
+            label8.Size = new Size(55, 20);
             label8.TabIndex = 17;
             label8.Text = "Type:";
             // 
             // label9
             // 
             label9.AutoSize = true;
+            label9.Font = new Font("Arial Rounded MT Bold", 10.2F);
             label9.Location = new Point(705, 442);
             label9.Name = "label9";
-            label9.Size = new Size(44, 23);
+            label9.Size = new Size(49, 20);
             label9.TabIndex = 18;
             label9.Text = "Size:";
             // 
@@ -411,7 +419,7 @@
             btnAddPro.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddPro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAddPro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAddPro.Font = new Font("Segoe UI", 10.2F);
+            btnAddPro.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnAddPro.ForeColor = Color.White;
             btnAddPro.Location = new Point(719, 499);
             btnAddPro.Name = "btnAddPro";
@@ -430,7 +438,7 @@
             btnDeletePro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDeletePro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDeletePro.FillColor = Color.FromArgb(255, 128, 128);
-            btnDeletePro.Font = new Font("Segoe UI", 10.2F);
+            btnDeletePro.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnDeletePro.ForeColor = Color.White;
             btnDeletePro.Location = new Point(850, 499);
             btnDeletePro.Name = "btnDeletePro";
@@ -449,7 +457,7 @@
             btnUpdatePro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnUpdatePro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnUpdatePro.FillColor = Color.FromArgb(192, 192, 0);
-            btnUpdatePro.Font = new Font("Segoe UI", 10.2F);
+            btnUpdatePro.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnUpdatePro.ForeColor = Color.White;
             btnUpdatePro.Location = new Point(987, 499);
             btnUpdatePro.Name = "btnUpdatePro";

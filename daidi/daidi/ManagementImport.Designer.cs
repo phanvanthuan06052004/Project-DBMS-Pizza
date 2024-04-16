@@ -85,18 +85,20 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.Font = new Font("Arial Rounded MT Bold", 9F);
             label9.Location = new Point(689, 434);
             label9.Name = "label9";
-            label9.Size = new Size(86, 20);
+            label9.Size = new Size(96, 17);
             label9.TabIndex = 40;
             label9.Text = "Provider ID:";
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Arial Rounded MT Bold", 9F);
             label8.Location = new Point(690, 362);
             label8.Name = "label8";
-            label8.Size = new Size(97, 20);
+            label8.Size = new Size(104, 17);
             label8.TabIndex = 39;
             label8.Text = "Employee ID:";
             // 
@@ -124,9 +126,10 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Arial Rounded MT Bold", 9F);
             label7.Location = new Point(690, 295);
             label7.Name = "label7";
-            label7.Size = new Size(44, 20);
+            label7.Size = new Size(52, 17);
             label7.TabIndex = 37;
             label7.Text = "Price:";
             // 
@@ -154,9 +157,10 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Arial Rounded MT Bold", 9F);
             label6.Location = new Point(690, 226);
             label6.Name = "label6";
-            label6.Size = new Size(44, 20);
+            label6.Size = new Size(47, 17);
             label6.TabIndex = 35;
             label6.Text = "Date:";
             label6.Click += label6_Click;
@@ -185,27 +189,30 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Arial Rounded MT Bold", 9F);
             label5.Location = new Point(690, 150);
             label5.Name = "label5";
-            label5.Size = new Size(69, 20);
+            label5.Size = new Size(77, 17);
             label5.TabIndex = 33;
             label5.Text = "Order ID:";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Arial Rounded MT Bold", 9F);
             label4.Location = new Point(317, 112);
             label4.Name = "label4";
-            label4.Size = new Size(23, 20);
+            label4.Size = new Size(22, 17);
             label4.TabIndex = 30;
             label4.Text = "to";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Arial Rounded MT Bold", 9F);
             label3.Location = new Point(32, 108);
             label3.Name = "label3";
-            label3.Size = new Size(44, 20);
+            label3.Size = new Size(52, 17);
             label3.TabIndex = 28;
             label3.Text = "Price:";
             // 
@@ -233,9 +240,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Arial Rounded MT Bold", 9F);
             label2.Location = new Point(32, 27);
             label2.Name = "label2";
-            label2.Size = new Size(111, 20);
+            label2.Size = new Size(122, 17);
             label2.TabIndex = 25;
             label2.Text = "Provider Name:";
             // 
@@ -343,7 +351,7 @@
             btnUpdateImp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnUpdateImp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnUpdateImp.FillColor = Color.FromArgb(192, 192, 0);
-            btnUpdateImp.Font = new Font("Segoe UI", 10.2F);
+            btnUpdateImp.Font = new Font("Arial Rounded MT Bold", 9F);
             btnUpdateImp.ForeColor = Color.White;
             btnUpdateImp.Location = new Point(965, 491);
             btnUpdateImp.Name = "btnUpdateImp";
@@ -362,7 +370,7 @@
             btnDeleteImp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDeleteImp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDeleteImp.FillColor = Color.FromArgb(255, 128, 128);
-            btnDeleteImp.Font = new Font("Segoe UI", 10.2F);
+            btnDeleteImp.Font = new Font("Arial Rounded MT Bold", 9F);
             btnDeleteImp.ForeColor = Color.White;
             btnDeleteImp.Location = new Point(828, 491);
             btnDeleteImp.Name = "btnDeleteImp";
@@ -380,7 +388,7 @@
             btnAddImp.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddImp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAddImp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAddImp.Font = new Font("Segoe UI", 10.2F);
+            btnAddImp.Font = new Font("Arial Rounded MT Bold", 9F);
             btnAddImp.ForeColor = Color.White;
             btnAddImp.Location = new Point(697, 491);
             btnAddImp.Name = "btnAddImp";
@@ -440,7 +448,7 @@
             btnSearchImp.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearchImp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSearchImp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearchImp.Font = new Font("Segoe UI", 10.2F);
+            btnSearchImp.Font = new Font("Arial Rounded MT Bold", 9F);
             btnSearchImp.ForeColor = Color.White;
             btnSearchImp.Location = new Point(378, 16);
             btnSearchImp.Name = "btnSearchImp";
@@ -458,7 +466,7 @@
             btnFilterImp.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFilterImp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnFilterImp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFilterImp.Font = new Font("Segoe UI", 10.2F);
+            btnFilterImp.Font = new Font("Arial Rounded MT Bold", 9F);
             btnFilterImp.ForeColor = Color.White;
             btnFilterImp.Location = new Point(578, 94);
             btnFilterImp.Name = "btnFilterImp";

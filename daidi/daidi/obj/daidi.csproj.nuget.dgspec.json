@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project-DBMS-Pizza\\daidi\\daidi\\daidi.csproj": {}
+    "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\daidi\\daidi.csproj": {}
   },
   "projects": {
-    "D:\\Project-DBMS-Pizza\\daidi\\daidi\\daidi.csproj": {
+    "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\daidi\\daidi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project-DBMS-Pizza\\daidi\\daidi\\daidi.csproj",
+        "projectUniqueName": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\daidi\\daidi.csproj",
         "projectName": "daidi",
-        "projectPath": "D:\\Project-DBMS-Pizza\\daidi\\daidi\\daidi.csproj",
+        "projectPath": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\daidi\\daidi.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Project-DBMS-Pizza\\daidi\\daidi\\obj\\",
+        "outputPath": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\daidi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "D:\\Project-DBMS-Pizza\\daidi\\Service\\Service.csproj": {
-                "projectPath": "D:\\Project-DBMS-Pizza\\daidi\\Service\\Service.csproj"
+              "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Service\\Service.csproj": {
+                "projectPath": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Service\\Service.csproj"
               }
             }
           }
@@ -38,11 +38,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -109,18 +104,18 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj": {
+    "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj",
+        "projectUniqueName": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj",
         "projectName": "Repon",
-        "projectPath": "D:\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj",
+        "projectPath": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Project-DBMS-Pizza\\daidi\\Repon\\obj\\",
+        "outputPath": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Repon\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -143,11 +138,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -191,18 +181,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Project-DBMS-Pizza\\daidi\\Service\\Service.csproj": {
+    "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project-DBMS-Pizza\\daidi\\Service\\Service.csproj",
+        "projectUniqueName": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "D:\\Project-DBMS-Pizza\\daidi\\Service\\Service.csproj",
+        "projectPath": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Project-DBMS-Pizza\\daidi\\Service\\obj\\",
+        "outputPath": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -219,8 +209,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj": {
-                "projectPath": "D:\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj"
+              "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj": {
+                "projectPath": "D:\\Project-DBMS-Pizza\\Project-DBMS-Pizza\\daidi\\Repon\\Repon.csproj"
               }
             }
           }
@@ -229,11 +219,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -255,7 +240,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
