@@ -7,33 +7,35 @@
             InitializeComponent();
         }
 
-        public string ProductName
-        {
-            get => lblProduct.Text;
-            set => lblProduct.Text = value;
-        }
+       
 
-        public string Price
-        {
-            get => lblPrice.Text;
-            set => lblPrice.Text = value;
-        }
+        //public string ProductName
+        //{
+        //    get => lblProductName.Text;
+        //    set => lblProductName.Text = value;
+        //}
 
-        public Image ProductImg
-        {
-            get => ptcProduct.Image;
-            set => ptcProduct.Image = value;
-        }
+        //public string Price
+        //{
+        //    get => lblPrice.Text;
+        //    set => lblPrice.Text = value;
+        //}
 
-        public ComboBox ProductComboBox
-        {
-            set => cbnProduct.DataSource = value.DataSource;
-        }
+        //public Image ProductImg
+        //{
+        //    get => ptcProduct.Image;
+        //    set => ptcProduct.Image = value;
+        //}
 
-        public PictureBox ProductPictureBox // This property exposes ptcProduct
-        {
-            get => ptcProduct;
-        }
+        //public ComboBox ProductComboBox
+        //{
+        //    set => cbnProduct.DataSource = value.DataSource;
+        //}
+
+        //public PictureBox ProductPictureBox // This property exposes ptcProduct
+        //{
+        //    get => ptcProduct;
+        //}
     }
 }
 

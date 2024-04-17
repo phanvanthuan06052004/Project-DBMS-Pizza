@@ -2,6 +2,7 @@
 --CREATE DATABASE QuanLyPizza
 --USE QuanLyPizza
 --USE northwindS
+GO
 CREATE TABLE ChucVu
 (
   MaChucVu CHAR(10),
@@ -10,6 +11,7 @@ CREATE TABLE ChucVu
   CONSTRAINT Ck_ChucVu_Luong CHECK (Luong > 0),
   CONSTRAINT Pk_ChucVu_MaChucVu PRIMARY KEY (MaChucVu) 
 );
+GO
 --drop table NguyenLieuS
 CREATE TABLE NguyenLieu
 (
@@ -20,7 +22,7 @@ CREATE TABLE NguyenLieu
   CONSTRAINT Pk_NguyenLieu_MaNL PRIMARY KEY (MaNL),
   CONSTRAINT Ck_NguyenLieu_SoLuong CHECK (SoLuong > 0)
 );
-
+GO
 CREATE TABLE NhaCungCap
 (
   MaNCC CHAR(10),
@@ -31,7 +33,7 @@ CREATE TABLE NhaCungCap
   CONSTRAINT Ck_NhaCungCap_SoDT CHECK (LEN(SoDT) = 10 AND SoDT NOT LIKE '%[^0-9]%')
 --So dien thoai phai la chu so va do dai la 10
 );
-
+GO
 CREATE TABLE KhachHang
 (
   MaKH CHAR(10),
@@ -40,7 +42,7 @@ CREATE TABLE KhachHang
   CONSTRAINT Pk_KhachHang_MaKH PRIMARY KEY (MaKH),
   CONSTRAINT Ck_KhachHang_SoDT CHECK (LEN(SoDT) = 10 AND SoDT NOT LIKE '%[^0-9]%')
 );
-
+GO
 CREATE TABLE Ca
 (
   MaCa CHAR(10),
@@ -48,21 +50,21 @@ CREATE TABLE Ca
   GioKetThuc TIME NOT NULL,
   CONSTRAINT Pk_Ca_MaCa PRIMARY KEY (MaCa)
 );
-
+GO
 CREATE TABLE LoaiSanPham
 (
   MaLoaiSP CHAR(10),
   TenLoaiSP NVARCHAR(30) NOT NULL ,
   CONSTRAINT Pk_LoaiSanPham_MaLoaiSP PRIMARY KEY (MaLoaiSP)
 );
-
+GO
 CREATE TABLE KichCo
 (
   MaKichCo CHAR(10),
   TenKichCo NVARCHAR(30) NOT NULL,
   CONSTRAINT Pk_KichCo_MaKichCo PRIMARY KEY (MaKichCo)
 );
-
+GO
 CREATE TABLE ChiTietCungCap
 (
   MaNCC CHAR(10) NOT NULL,
@@ -71,8 +73,7 @@ CREATE TABLE ChiTietCungCap
   CONSTRAINT Fk_ChiTietCungCap_NhaCungCap_MaNCC FOREIGN KEY (MaNCC) REFERENCES NhaCungCap(MaNCC),
   CONSTRAINT Fk_ChiTietCungCap_NguyenLieu_MaNL FOREIGN KEY (MaNL) REFERENCES NguyenLieu(MaNL)
 );
-
-
+GO
 CREATE TABLE NhanVien
 (
   MaNV CHAR(10) ,----MANV tự tăng----
@@ -92,10 +93,7 @@ CREATE TABLE NhanVien
   CONSTRAINT Ck_NhanVien_CCCD CHECK(len(CCCD)=12),--CCCD đúng định dạng
   CONSTRAINT Ck_NhanVien_Email CHECK (Email like '%@gmail.com')
 );
-
-
-
-
+GO
 CREATE TABLE TaiKhoan
 (
   UserName VARCHAR(20) NOT NULL,
@@ -105,7 +103,7 @@ CREATE TABLE TaiKhoan
   CONSTRAINT Pk_TaiKhoan_UserName PRIMARY KEY(UserName),
   CONSTRAINT Fk_TaiKhoan_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV) ON DELETE SET NULL
 );
-
+GO
 CREATE TABLE SanPham
 (
   MaSP CHAR(10),
@@ -115,7 +113,7 @@ CREATE TABLE SanPham
   CONSTRAINT Pk_SanPham_MaSP PRIMARY KEY (MaSP),
   CONSTRAINT FK_SanPham_LoaiSanPham_MaLoaiSP FOREIGN KEY (MaLoaiSP) REFERENCES LoaiSanPham(MaLoaiSP)
 );
-
+GO
 CREATE TABLE HoaDonBanHang
 (
   MaHD CHAR(10),
@@ -125,9 +123,8 @@ CREATE TABLE HoaDonBanHang
   CONSTRAINT Pk_HoaDonBanHang_MaHD PRIMARY KEY (MaHD),
   CONSTRAINT Fk_HoaDonBanHang_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV) ON DELETE SET NULL,
   CONSTRAINT FK_HoaDonBanHang_KhachHang_MaKH FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH) 
- 
 );
-
+GO
 CREATE TABLE PhieuNhap
 (
   MaPhieu CHAR(10),
@@ -140,6 +137,7 @@ CREATE TABLE PhieuNhap
   CONSTRAINT Fk_PhieuNhap_NhaCungCap_MaNCC FOREIGN KEY (MaNCC) REFERENCES NhaCungCap(MaNCC),
   CONSTRAINT Ck_PhieuNhap_TriGiaDonNH CHECK (TriGiaDonNH > 0)
 );
+GO
 ---sua lai khoa ngoai null dc
 CREATE TABLE ChiTietPN
 (
@@ -150,7 +148,7 @@ CREATE TABLE ChiTietPN
   CONSTRAINT Pk_ChiTietPN_MaPhieu_MaNL PRIMARY KEY (MaPhieu, MaNL),
   CONSTRAINT CK_ChiTietPN_SoLuong CHECK (SoLuong > 0),
 );
-
+GO
 CREATE TABLE ChiTietHD
 (
   SoLuong INT NOT NULL,
@@ -164,6 +162,7 @@ CREATE TABLE ChiTietHD
   CONSTRAINT Ck_ChiTietHD_TriGia CHECK (TriGia > 0),
   CONSTRAINT FK_ChiTietHD_KichCo_MaKichCo FOREIGN KEY (MaKichCo) REFERENCES KichCo(MaKichCo)
 );
+GO
 CREATE TABLE CheBien
 (
 	LieuLuong DECIMAL(30,2),
@@ -173,7 +172,7 @@ CREATE TABLE CheBien
 	MaSP CHAR(10) CONSTRAINT Fk_CheBien_SanPham_MaSP FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP),
 	CONSTRAINT Pk_CheBien_MaNL_MaSP PRIMARY KEY (MaNL, MaSP, MaKichCo)
 );
-
+GO
 CREATE TABLE ChiTietCaTruc
 (
   MaNV CHAR(10) CONSTRAINT Fk_ChiTietCaTruc_NhanVien_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV) ON DELETE CASCADE,
@@ -181,7 +180,7 @@ CREATE TABLE ChiTietCaTruc
   Ngay Date NOT NULL,
   CONSTRAINT Pk_ChiTietCaTruc_MaNV_MaCa PRIMARY KEY (MaNV, MaCa)
 );
-
+GO
 -----------------------------------------------------
 -- Add the ON DELETE SET NULL to an existing foreign key constraint
 -- Step 1: Drop the existing foreign key constraint
@@ -204,7 +203,7 @@ CREATE TABLE ChiTietKichCo
   MaKichCo CHAR(10) CONSTRAINT Fk_ChiTietKichCo_KichCo_MaKichCo FOREIGN KEY (MaKichCo) REFERENCES KichCo(MaKichCo),
   CONSTRAINT Pk_ChiTietKichCo_MaSP_MaKichCo PRIMARY KEY (MaSP, MaKichCo)
 );
-
+GO
 -- Chèn dữ liệu vào bảng ChucVu
 INSERT INTO ChucVu (MaChucVu, TenChucVu, Luong)
 VALUES 
@@ -270,9 +269,9 @@ VALUES
 -- Chèn dữ liệu vào bảng KichCo
 INSERT INTO KichCo (MaKichCo, TenKichCo)
 VALUES 
-('KC001', N'Nhỏ'),
-('KC002', N'Vừa'),
-('KC003', N'Lớn')
+('KC001', N'Nhỏ'), --s
+('KC002', N'Vừa'), --m
+('KC003', N'Lớn')  --l
 --SELECT * FROM KichCo
 
 
@@ -723,131 +722,7 @@ BEGIN
     END CATCH
 END
 
-------------------------------------------VEIW----------------------------------------------
-select * from ChiTietCaTruc
-select * from Ca
 
-
-GO
-CREATE VIEW vw_XemThongTinCatruc
-		AS
-		SELECT * FROM Ca;
-GO
-
-GO
---select * from vw_XemThongTinPhanCaTruc
---drop view vw_XemThongTinPhanCaTruc
---CREATE VIEW vw_XemThongTinPhanCaTruc
---AS
---SELECT c.*, nv.MaNV, nv.HoNV, nv.TenNV, ct.Ngay 
---FROM Ca c 
---JOIN ChiTietCaTruc ct ON c.MaCa = ct.MaCa
---JOIN NhanVien nv ON nv.MaNV = ct.MaNV
---ORDER BY c.MaCa;
-
-GO
-Go
-CREATE VIEW vw_XemThongTinNhanVien
-		AS
-		SELECT * FROM [dbo].[NhanVien];
-GO
-GO
-
-		CREATE VIEW vw_XemThongTinKhachHang 
-		AS
-		SELECT * FROM KhachHang;
-
-GO
-SELECT * FROM vw_XemThongTinKhachHang
------------------------------------------------------------------------------------------------
-GO
-CREATE VIEW vw_XemDanhSachSanPham
-AS
-SELECT SP.MaSP, SP.TenSP, SP.MaLoaiSP, CK.TenKichCo, CTKC.DonGia AS DonGiaKichCo, LSP.TenLoaiSP
-FROM SanPham SP
-JOIN ChiTietKichCo CTKC ON SP.MaSP = CTKC.MaSP
-JOIN KichCo CK ON CTKC.MaKichCo = CK.MaKichCo
-JOIN LoaiSanPham LSP ON SP.MaLoaiSP = LSP.MaLoaiSP;
-GO
-SELECT * FROM vw_XemDanhSachSanPham
-----------------------------------------------------------------------------------------------
-go
---drop view vw_XemCaLamViecTheoNgay
---CREATE VIEW vw_XemCaLamViecTheoNgay 
---AS
---SELECT
---	ct.Ngay, nv.HoNV, nv.TenLotNV,
---    nv.TenNV, Ca.GioBatDau,	Ca.GioKetThuc
---FROM
---    (ChiTietCaTruc ct join Ca on ct.MaCa = Ca.MaCa) 
---	join NhanVien nv on nv.MaNV = ct.MaNV
---GROUP BY 
---	DAY(ct.Ngay), nv.HoNV, nv.TenLotNV, nv.TenNV, 
---	Ca.GioBatDau, ct.Ngay, Ca.GioKetThuc;
---GO
---select * from vw_XemCaLamViecTheoNgay
-----------------------------------------------------------------------------------------------
-go
-
-CREATE VIEW vw_XemDoanhThuTheoNgayThangNam AS
-SELECT
-    YEAR(NgayGioDat) AS Nam,
-    MONTH(NgayGioDat) AS Thang,
-	DAY(NgayGioDat) AS Ngay,
-    SUM(TriGia) AS DoanhThu
-FROM
-    HoaDonBanHang hd JOIN 
-    ChiTietHD ct ON hd.MaHD = ct.MaHD
-GROUP BY
-    YEAR(NgayGioDat),
-    MONTH(NgayGioDat),
-	DAY(NgayGioDat);
-	
-go
-select * from vw_XemDoanhThuTheoNgayThangNam
-----------------------------------------------------------------------------------------------------
-go
-CREATE VIEW vw_XemSoLuongSanPhamDaBanTrongNgay AS 
-SELECT  
-    DATEPART(YEAR, HoaDonBanHang.NgayGioDat) AS Nam,
-    DATEPART(MONTH, HoaDonBanHang.NgayGioDat) AS Thang,
-    DATEPART(DAY, HoaDonBanHang.NgayGioDat) AS Ngay,
-    SanPham.TenSP, 
-    SUM(ChiTietHD.SoLuong) AS SoLuongBan
-FROM 
-    (HoaDonBanHang 
-    JOIN ChiTietHD ON ChiTietHD.MaHD = HoaDonBanHang.MaHD) 
-    JOIN SanPham ON SanPham.MaSP = ChiTietHD.MaSP
-GROUP BY
-    DATEPART(YEAR, HoaDonBanHang.NgayGioDat),
-    DATEPART(MONTH, HoaDonBanHang.NgayGioDat),
-    DATEPART(DAY, HoaDonBanHang.NgayGioDat), --DATEPART là lấy chính xác phần cần lấy từ mốc thời gian
-    SanPham.TenSP;
-
-go
-select * from vw_XemSoLuongSanPhamDaBanTrongNgay
-go
-CREATE VIEW vw_XemSoLuongNguyenLieuDaNhapTrongNgay AS 
-SELECT  
-    DATEPART(YEAR, PhieuNhap.NgayNhap) AS Nam,
-    DATEPART(MONTH, PhieuNhap.NgayNhap) AS Thang,
-    DATEPART(DAY, PhieuNhap.NgayNhap) AS Ngay,
-    NguyenLieu.TenNL,
-    SUM(ChiTietPN.SoLuong) AS TongSoLuong,
-	NguyenLieu.DonVi
-FROM 
-    (ChiTietPN 
-    JOIN NguyenLieu ON ChiTietPN.MaNL = NguyenLieu.MaNL)
-    JOIN PhieuNhap ON PhieuNhap.MaPhieu = ChiTietPN.MaPhieu
-GROUP BY
-    DATEPART(YEAR, PhieuNhap.NgayNhap),
-    DATEPART(MONTH, PhieuNhap.NgayNhap),
-    DATEPART(DAY, PhieuNhap.NgayNhap),
-    NguyenLieu.TenNL,NguyenLieu.DonVi;
-
-	go
-select * from vw_XemSoLuongNguyenLieuDaNhapTrongNgay
-go
 --------------------------------------TRIGGER---------------------
 /*
 CREATE TRIGGER TG_SanPhamDaHet

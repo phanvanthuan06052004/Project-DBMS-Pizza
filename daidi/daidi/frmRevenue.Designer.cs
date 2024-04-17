@@ -55,7 +55,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1103, 607);
+            panel1.Size = new Size(1285, 722);
             panel1.TabIndex = 0;
             // 
             // panel3
@@ -68,13 +68,13 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 34);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1103, 573);
+            panel3.Size = new Size(1285, 688);
             panel3.TabIndex = 2;
             // 
             // btnOk
             // 
             btnOk.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnOk.Location = new Point(824, 97);
+            btnOk.Location = new Point(916, 100);
             btnOk.Name = "btnOk";
             btnOk.Size = new Size(78, 28);
             btnOk.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             // txtYear
             // 
-            txtYear.Location = new Point(570, 98);
+            txtYear.Location = new Point(662, 101);
             txtYear.Name = "txtYear";
             txtYear.Size = new Size(192, 27);
             txtYear.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(412, 108);
+            label2.Location = new Point(504, 111);
             label2.Name = "label2";
             label2.Size = new Size(138, 17);
             label2.TabIndex = 2;
@@ -102,7 +102,7 @@
             // 
             pictureBox2.BackgroundImage = Properties.Resources.money;
             pictureBox2.BackgroundImageLayout = ImageLayout.Center;
-            pictureBox2.Location = new Point(154, 39);
+            pictureBox2.Location = new Point(246, 42);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(226, 169);
             pictureBox2.TabIndex = 1;
@@ -117,7 +117,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1103, 34);
+            panel2.Size = new Size(1285, 34);
             panel2.TabIndex = 1;
             // 
             // guna2ControlBox2
@@ -130,7 +130,7 @@
             guna2ControlBox2.FillColor = Color.Transparent;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1031, 1);
+            guna2ControlBox2.Location = new Point(1213, 1);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox2.Size = new Size(65, 37);
@@ -160,7 +160,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1103, 607);
+            ClientSize = new Size(1285, 722);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmRevenue";

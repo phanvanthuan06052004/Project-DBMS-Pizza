@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace daidi
 {
-    public partial class frmOrder : Form
+    public partial class frmHomePizza : Form
     {
-        public frmOrder()
+        public frmHomePizza()
         {
             InitializeComponent();
         }

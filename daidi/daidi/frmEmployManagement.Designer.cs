@@ -32,15 +32,24 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployManagement));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel2 = new Panel();
+            btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+            btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            btnAdd = new Guna.UI2.WinForms.Guna2Button();
             label11 = new Label();
             textBox7 = new TextBox();
             label9 = new Label();
@@ -73,9 +82,6 @@
             pictureBox1 = new PictureBox();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             panel1 = new Panel();
-            btnAdd = new FontAwesome.Sharp.IconButton();
-            btnDelete = new FontAwesome.Sharp.IconButton();
-            btnUpdate = new FontAwesome.Sharp.IconButton();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel3.SuspendLayout();
@@ -117,12 +123,69 @@
             panel2.Size = new Size(375, 682);
             panel2.TabIndex = 3;
             // 
+            // btnUpdate
+            // 
+            btnUpdate.BorderRadius = 12;
+            btnUpdate.Cursor = Cursors.Hand;
+            btnUpdate.CustomizableEdges = customizableEdges1;
+            btnUpdate.DisabledState.BorderColor = Color.DarkGray;
+            btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnUpdate.FillColor = Color.FromArgb(192, 192, 0);
+            btnUpdate.Font = new Font("Arial Rounded MT Bold", 9F);
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(268, 586);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnUpdate.Size = new Size(98, 38);
+            btnUpdate.TabIndex = 53;
+            btnUpdate.Text = "Update";
+            // 
+            // btnDelete
+            // 
+            btnDelete.BorderRadius = 12;
+            btnDelete.Cursor = Cursors.Hand;
+            btnDelete.CustomizableEdges = customizableEdges3;
+            btnDelete.DisabledState.BorderColor = Color.DarkGray;
+            btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDelete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDelete.FillColor = Color.FromArgb(255, 128, 128);
+            btnDelete.Font = new Font("Arial Rounded MT Bold", 9F);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(135, 586);
+            btnDelete.Name = "btnDelete";
+            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnDelete.Size = new Size(98, 38);
+            btnDelete.TabIndex = 52;
+            btnDelete.Text = "Delete";
+            // 
+            // btnAdd
+            // 
+            btnAdd.BorderRadius = 12;
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.CustomizableEdges = customizableEdges5;
+            btnAdd.DisabledState.BorderColor = Color.DarkGray;
+            btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAdd.Font = new Font("Arial Rounded MT Bold", 9F);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(8, 586);
+            btnAdd.Name = "btnAdd";
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnAdd.Size = new Size(98, 38);
+            btnAdd.TabIndex = 51;
+            btnAdd.Text = "Add";
+            // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(7, 178);
+            label11.Font = new Font("Arial Rounded MT Bold", 9F);
+            label11.Location = new Point(3, 176);
             label11.Name = "label11";
-            label11.Size = new Size(83, 20);
+            label11.Size = new Size(92, 17);
             label11.TabIndex = 25;
             label11.Text = "First Name:";
             // 
@@ -136,9 +199,10 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(48, 508);
+            label9.Font = new Font("Arial Rounded MT Bold", 9F);
+            label9.Location = new Point(32, 508);
             label9.Name = "label9";
-            label9.Size = new Size(50, 20);
+            label9.Size = new Size(57, 17);
             label9.TabIndex = 19;
             label9.Text = "CCCD:";
             // 
@@ -152,9 +216,10 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(48, 456);
+            label8.Font = new Font("Arial Rounded MT Bold", 9F);
+            label8.Location = new Point(37, 456);
             label8.Name = "label8";
-            label8.Size = new Size(49, 20);
+            label8.Size = new Size(53, 17);
             label8.TabIndex = 17;
             label8.Text = "Email:";
             // 
@@ -168,9 +233,10 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(43, 412);
+            label7.Font = new Font("Arial Rounded MT Bold", 9F);
+            label7.Location = new Point(16, 412);
             label7.Name = "label7";
-            label7.Size = new Size(65, 20);
+            label7.Size = new Size(74, 17);
             label7.TabIndex = 15;
             label7.Text = "Address:";
             // 
@@ -184,9 +250,10 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(48, 359);
+            label6.Font = new Font("Arial Rounded MT Bold", 9F);
+            label6.Location = new Point(33, 359);
             label6.Name = "label6";
-            label6.Size = new Size(53, 20);
+            label6.Size = new Size(59, 17);
             label6.TabIndex = 13;
             label6.Text = "Phone:";
             // 
@@ -207,9 +274,10 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(48, 316);
+            label5.Font = new Font("Arial Rounded MT Bold", 9F);
+            label5.Location = new Point(43, 316);
             label5.Name = "label5";
-            label5.Size = new Size(47, 20);
+            label5.Size = new Size(53, 17);
             label5.TabIndex = 10;
             label5.Text = "Birth: ";
             // 
@@ -236,18 +304,20 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(62, 265);
+            label4.Font = new Font("Arial Rounded MT Bold", 9F);
+            label4.Location = new Point(52, 265);
             label4.Name = "label4";
-            label4.Size = new Size(35, 20);
+            label4.Size = new Size(40, 17);
             label4.TabIndex = 6;
             label4.Text = "Sex:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(7, 227);
+            label3.Font = new Font("Arial Rounded MT Bold", 9F);
+            label3.Location = new Point(4, 227);
             label3.Name = "label3";
-            label3.Size = new Size(82, 20);
+            label3.Size = new Size(90, 17);
             label3.TabIndex = 4;
             label3.Text = "Last Name:";
             // 
@@ -261,9 +331,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(62, 131);
+            label2.Font = new Font("Arial Rounded MT Bold", 9F);
+            label2.Location = new Point(68, 133);
             label2.Name = "label2";
-            label2.Size = new Size(27, 20);
+            label2.Size = new Size(29, 17);
             label2.TabIndex = 2;
             label2.Text = "ID:";
             // 
@@ -312,7 +383,7 @@
             // 
             // txtKeySearach
             // 
-            txtKeySearach.CustomizableEdges = customizableEdges1;
+            txtKeySearach.CustomizableEdges = customizableEdges7;
             txtKeySearach.DefaultText = "";
             txtKeySearach.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtKeySearach.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -327,14 +398,14 @@
             txtKeySearach.PasswordChar = '\0';
             txtKeySearach.PlaceholderText = "";
             txtKeySearach.SelectedText = "";
-            txtKeySearach.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtKeySearach.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtKeySearach.Size = new Size(187, 36);
             txtKeySearach.TabIndex = 26;
             // 
             // cmbSearchOption
             // 
             cmbSearchOption.BackColor = Color.Transparent;
-            cmbSearchOption.CustomizableEdges = customizableEdges3;
+            cmbSearchOption.CustomizableEdges = customizableEdges9;
             cmbSearchOption.DrawMode = DrawMode.OwnerDrawFixed;
             cmbSearchOption.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSearchOption.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -344,22 +415,24 @@
             cmbSearchOption.ItemHeight = 30;
             cmbSearchOption.Location = new Point(121, 28);
             cmbSearchOption.Name = "cmbSearchOption";
-            cmbSearchOption.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cmbSearchOption.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cmbSearchOption.Size = new Size(181, 36);
             cmbSearchOption.TabIndex = 25;
             // 
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new Font("Arial Rounded MT Bold", 9F);
             label10.Location = new Point(34, 35);
             label10.Name = "label10";
-            label10.Size = new Size(56, 20);
+            label10.Size = new Size(66, 17);
             label10.TabIndex = 24;
             label10.Text = "Search:";
             // 
             // panel4
             // 
             panel4.BackColor = Color.White;
+            panel4.BorderStyle = BorderStyle.FixedSingle;
             panel4.Controls.Add(dgvListEmployee);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(375, 154);
@@ -425,15 +498,15 @@
             guna2ControlBox2.BackColor = Color.Transparent;
             guna2ControlBox2.Cursor = Cursors.Hand;
             guna2ControlBox2.CustomIconSize = 20F;
-            guna2ControlBox2.CustomizableEdges = customizableEdges5;
+            guna2ControlBox2.CustomizableEdges = customizableEdges11;
             guna2ControlBox2.FillColor = Color.IndianRed;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.ForeColor = Color.IndianRed;
             guna2ControlBox2.IconColor = Color.IndianRed;
-            guna2ControlBox2.Location = new Point(2110, 2);
+            guna2ControlBox2.Location = new Point(2108, 2);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.PressedColor = Color.IndianRed;
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2ControlBox2.Size = new Size(65, 37);
             guna2ControlBox2.TabIndex = 2;
             // 
@@ -463,19 +536,20 @@
             guna2ControlBox1.BackColor = Color.Transparent;
             guna2ControlBox1.Cursor = Cursors.Hand;
             guna2ControlBox1.CustomIconSize = 20F;
-            guna2ControlBox1.CustomizableEdges = customizableEdges7;
+            guna2ControlBox1.CustomizableEdges = customizableEdges13;
             guna2ControlBox1.FillColor = Color.Transparent;
             guna2ControlBox1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox1.IconColor = Color.Black;
-            guna2ControlBox1.Location = new Point(1210, 1);
+            guna2ControlBox1.Location = new Point(1208, 1);
             guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2ControlBox1.Size = new Size(65, 37);
             guna2ControlBox1.TabIndex = 3;
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(guna2ControlBox1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
@@ -485,42 +559,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1285, 40);
             panel1.TabIndex = 1;
-            // 
-            // btnAdd
-            // 
-            btnAdd.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnAdd.IconColor = Color.Black;
-            btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnAdd.Location = new Point(16, 568);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(92, 38);
-            btnAdd.TabIndex = 26;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            btnDelete.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnDelete.IconColor = Color.Black;
-            btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnDelete.Location = new Point(138, 568);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(92, 38);
-            btnDelete.TabIndex = 27;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            btnUpdate.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnUpdate.IconColor = Color.Black;
-            btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnUpdate.Location = new Point(255, 568);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(92, 38);
-            btnUpdate.TabIndex = 28;
-            btnUpdate.Text = "Update";
-            btnUpdate.UseVisualStyleBackColor = true;
             // 
             // frmEmployManagement
             // 
@@ -585,8 +623,8 @@
         private FontAwesome.Sharp.IconButton btnSearch;
         private Label label11;
         private TextBox textBox7;
-        private FontAwesome.Sharp.IconButton btnUpdate;
-        private FontAwesome.Sharp.IconButton btnDelete;
-        private FontAwesome.Sharp.IconButton btnAdd;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
     }
 }

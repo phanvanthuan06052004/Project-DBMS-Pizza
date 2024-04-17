@@ -22,35 +22,12 @@ namespace daidi
             InitializeComponent();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            frmPizzaMana = new FrmPizzaManagement();
-            //this.Hide();
-            frmPizzaMana.Show();
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            employee = new frmEmployManagement();
-            employee.Show();
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            Revenue = new frmRevenue();
-            Revenue.Show();
-        }
 
         private void guna2ControlBox2_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ptrShiftManagement_Click(object sender, EventArgs e)
         {
@@ -64,15 +41,23 @@ namespace daidi
             employee.Show();
         }
 
-        private void panel9_Paint(object sender, PaintEventArgs e)
+        private void ptrOrderPizza_Click(object sender, EventArgs e)
         {
-
+            frmPizzaMana = new FrmPizzaManagement();
+            //this.Hide();
+            frmPizzaMana.Show();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void ptrRepoManagement_Click(object sender, EventArgs e)
         {
             management = new Management();
             management.Show();
+        }
+
+        private void ptrRevenue_Click(object sender, EventArgs e)
+        {
+            Revenue = new frmRevenue();
+            Revenue.Show();
         }
     }
 }

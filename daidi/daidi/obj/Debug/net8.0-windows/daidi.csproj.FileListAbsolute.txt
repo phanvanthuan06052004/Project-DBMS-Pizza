@@ -238,7 +238,6 @@ D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\da
 D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmEmployManagement.resources
 D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmMenu.resources
 D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmOption.resources
-D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmOrder.resources
 D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.FrmPizzaManagement.resources
 D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmRepoManagement.resources
 D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmRevenue.resources
@@ -263,3 +262,4 @@ D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\re
 D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.pdb
 D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.genruntimeconfig.cache
 D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\ref\daidi.dll
+D:\Project-DBMS-Pizza\Project-DBMS-Pizza\daidi\daidi\obj\Debug\net8.0-windows\daidi.frmHomePizza.resources

@@ -44,8 +44,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             pictureBox1 = new PictureBox();
@@ -58,7 +56,7 @@
             txtEmployID = new Guna.UI2.WinForms.Guna2TextBox();
             txtMaCa = new Guna.UI2.WinForms.Guna2TextBox();
             label3 = new Label();
-            btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            btnSearch = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
@@ -165,49 +163,52 @@
             // 
             // btnListEmploy
             // 
+            btnListEmploy.BorderRadius = 10;
             btnListEmploy.CustomizableEdges = customizableEdges3;
             btnListEmploy.DisabledState.BorderColor = Color.DarkGray;
             btnListEmploy.DisabledState.CustomBorderColor = Color.DarkGray;
             btnListEmploy.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnListEmploy.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnListEmploy.Font = new Font("Segoe UI", 9F);
+            btnListEmploy.Font = new Font("Arial Rounded MT Bold", 9F);
             btnListEmploy.ForeColor = Color.White;
-            btnListEmploy.Location = new Point(298, 113);
+            btnListEmploy.Location = new Point(285, 108);
             btnListEmploy.Name = "btnListEmploy";
             btnListEmploy.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnListEmploy.Size = new Size(208, 32);
+            btnListEmploy.Size = new Size(208, 45);
             btnListEmploy.TabIndex = 3;
             btnListEmploy.Text = "The list of Employee";
             // 
             // btnListShift
             // 
+            btnListShift.BorderRadius = 10;
             btnListShift.CustomizableEdges = customizableEdges5;
             btnListShift.DisabledState.BorderColor = Color.DarkGray;
             btnListShift.DisabledState.CustomBorderColor = Color.DarkGray;
             btnListShift.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnListShift.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnListShift.Font = new Font("Segoe UI", 9F);
+            btnListShift.Font = new Font("Arial Rounded MT Bold", 9F);
             btnListShift.ForeColor = Color.White;
-            btnListShift.Location = new Point(568, 113);
+            btnListShift.Location = new Point(555, 108);
             btnListShift.Name = "btnListShift";
             btnListShift.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnListShift.Size = new Size(208, 32);
+            btnListShift.Size = new Size(208, 45);
             btnListShift.TabIndex = 4;
             btnListShift.Text = "shift list";
             // 
             // btnshiftEmployee
             // 
+            btnshiftEmployee.BorderRadius = 10;
             btnshiftEmployee.CustomizableEdges = customizableEdges7;
             btnshiftEmployee.DisabledState.BorderColor = Color.DarkGray;
             btnshiftEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
             btnshiftEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnshiftEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnshiftEmployee.Font = new Font("Segoe UI", 9F);
+            btnshiftEmployee.Font = new Font("Arial Rounded MT Bold", 9F);
             btnshiftEmployee.ForeColor = Color.White;
-            btnshiftEmployee.Location = new Point(819, 113);
+            btnshiftEmployee.Location = new Point(806, 108);
             btnshiftEmployee.Name = "btnshiftEmployee";
             btnshiftEmployee.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnshiftEmployee.Size = new Size(208, 32);
+            btnshiftEmployee.Size = new Size(208, 45);
             btnshiftEmployee.TabIndex = 5;
             btnshiftEmployee.Text = "shift roster list";
             // 
@@ -273,19 +274,16 @@
             // 
             // btnSearch
             // 
-            btnSearch.CustomizableEdges = customizableEdges13;
-            btnSearch.DisabledState.BorderColor = Color.DarkGray;
-            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearch.Font = new Font("Segoe UI", 9F);
-            btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(924, 57);
+            btnSearch.BackgroundImage = Properties.Resources.search2;
+            btnSearch.BackgroundImageLayout = ImageLayout.Zoom;
+            btnSearch.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnSearch.IconColor = Color.Black;
+            btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSearch.Location = new Point(955, 59);
             btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnSearch.Size = new Size(57, 38);
-            btnSearch.TabIndex = 12;
-            btnSearch.Text = "OK";
+            btnSearch.Size = new Size(69, 36);
+            btnSearch.TabIndex = 28;
+            btnSearch.UseVisualStyleBackColor = true;
             // 
             // frmShiftManagement
             // 
@@ -328,6 +326,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmployID;
         private Guna.UI2.WinForms.Guna2TextBox txtMaCa;
         private Label label3;
-        private Guna.UI2.WinForms.Guna2Button btnSearch;
+        private FontAwesome.Sharp.IconButton btnSearch;
     }
 }

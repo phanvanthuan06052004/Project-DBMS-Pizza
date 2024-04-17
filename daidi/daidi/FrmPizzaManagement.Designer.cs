@@ -43,17 +43,14 @@
             btnHome = new Button();
             pnlMenu = new Panel();
             btnMenu = new Button();
-            pnlOrder = new Panel();
-            btnOrder = new Button();
             sibarTimer = new System.Windows.Forms.Timer(components);
-            panel2 = new Panel();
+            pnPizza = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnSibar).BeginInit();
             pnlSibar.SuspendLayout();
             pnlLogout.SuspendLayout();
             pnlHome.SuspendLayout();
             pnlMenu.SuspendLayout();
-            pnlOrder.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -111,7 +108,6 @@
             pnlSibar.Controls.Add(pnlLogout);
             pnlSibar.Controls.Add(pnlHome);
             pnlSibar.Controls.Add(pnlMenu);
-            pnlSibar.Controls.Add(pnlOrder);
             pnlSibar.Dock = DockStyle.Left;
             pnlSibar.Location = new Point(0, 43);
             pnlSibar.MaximumSize = new Size(247, 564);
@@ -124,7 +120,7 @@
             // 
             pnlLogout.BackColor = Color.Transparent;
             pnlLogout.Controls.Add(btnLogout);
-            pnlLogout.Location = new Point(4, 250);
+            pnlLogout.Location = new Point(9, 143);
             pnlLogout.Name = "pnlLogout";
             pnlLogout.Size = new Size(229, 62);
             pnlLogout.TabIndex = 7;
@@ -142,12 +138,13 @@
             btnLogout.TabIndex = 3;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // pnlHome
             // 
             pnlHome.BackColor = Color.Transparent;
             pnlHome.Controls.Add(btnHome);
-            pnlHome.Location = new Point(4, 29);
+            pnlHome.Location = new Point(9, 7);
             pnlHome.Name = "pnlHome";
             pnlHome.Size = new Size(229, 62);
             pnlHome.TabIndex = 2;
@@ -165,12 +162,13 @@
             btnHome.TabIndex = 3;
             btnHome.Text = "Home";
             btnHome.UseVisualStyleBackColor = true;
+            btnHome.Click += btnHome_Click;
             // 
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.Transparent;
             pnlMenu.Controls.Add(btnMenu);
-            pnlMenu.Location = new Point(4, 97);
+            pnlMenu.Location = new Point(9, 75);
             pnlMenu.Name = "pnlMenu";
             pnlMenu.Size = new Size(229, 62);
             pnlMenu.TabIndex = 4;
@@ -190,43 +188,19 @@
             btnMenu.UseVisualStyleBackColor = true;
             btnMenu.Click += btnMenu_Click;
             // 
-            // pnlOrder
-            // 
-            pnlOrder.BackColor = Color.Transparent;
-            pnlOrder.Controls.Add(btnOrder);
-            pnlOrder.Location = new Point(4, 165);
-            pnlOrder.Name = "pnlOrder";
-            pnlOrder.Size = new Size(229, 62);
-            pnlOrder.TabIndex = 5;
-            // 
-            // btnOrder
-            // 
-            btnOrder.FlatStyle = FlatStyle.Flat;
-            btnOrder.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btnOrder.Image = (Image)resources.GetObject("btnOrder.Image");
-            btnOrder.ImageAlign = ContentAlignment.MiddleLeft;
-            btnOrder.Location = new Point(-27, -21);
-            btnOrder.Name = "btnOrder";
-            btnOrder.Padding = new Padding(30, 0, 0, 0);
-            btnOrder.Size = new Size(290, 100);
-            btnOrder.TabIndex = 3;
-            btnOrder.Text = "Order";
-            btnOrder.UseVisualStyleBackColor = true;
-            btnOrder.Click += btnOrder_Click;
-            // 
             // sibarTimer
             // 
             sibarTimer.Interval = 10;
             sibarTimer.Tick += sibarTimer_Tick;
             // 
-            // panel2
+            // pnPizza
             // 
-            panel2.BackColor = Color.White;
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(247, 43);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1038, 679);
-            panel2.TabIndex = 2;
+            pnPizza.BackColor = Color.White;
+            pnPizza.Dock = DockStyle.Fill;
+            pnPizza.Location = new Point(247, 43);
+            pnPizza.Name = "pnPizza";
+            pnPizza.Size = new Size(1038, 679);
+            pnPizza.TabIndex = 2;
             // 
             // FrmPizzaManagement
             // 
@@ -235,7 +209,7 @@
             BackColor = Color.DarkGray;
             ClientSize = new Size(1285, 722);
             ControlBox = false;
-            Controls.Add(panel2);
+            Controls.Add(pnPizza);
             Controls.Add(pnlSibar);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -250,7 +224,6 @@
             pnlLogout.ResumeLayout(false);
             pnlHome.ResumeLayout(false);
             pnlMenu.ResumeLayout(false);
-            pnlOrder.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -265,11 +238,9 @@
         private Button btnHome;
         private Panel pnlMenu;
         private Button btnMenu;
-        private Panel pnlOrder;
-        private Button btnOrder;
         private Panel pnlLogout;
         private Button btnLogout;
         private System.Windows.Forms.Timer sibarTimer;
-        private Panel panel2;
+        private Panel pnPizza;
     }
 }

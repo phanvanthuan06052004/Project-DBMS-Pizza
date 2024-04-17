@@ -39,6 +39,7 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            label7 = new Label();
             btnFilter = new Button();
             cbrType = new Guna.UI2.WinForms.Guna2ComboBox();
             label5 = new Label();
@@ -47,6 +48,7 @@
             txtMaxPrice = new Guna.UI2.WinForms.Guna2TextBox();
             txtMinPrice = new Guna.UI2.WinForms.Guna2TextBox();
             panel2 = new Panel();
+            label1 = new Label();
             lblPriceTotal = new Label();
             btnReload = new Button();
             btnUpdate = new Button();
@@ -64,8 +66,6 @@
             btnSearch = new Button();
             label6 = new Label();
             txtSearch = new TextBox();
-            label7 = new Label();
-            label1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOrder).BeginInit();
@@ -74,8 +74,9 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.None;
-            panel1.BackColor = Color.Transparent;
+            panel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackColor = Color.FromArgb(150, 255, 192, 128);
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(label7);
             panel1.Controls.Add(btnFilter);
             panel1.Controls.Add(cbrType);
@@ -95,6 +96,16 @@
             panel1.Size = new Size(1038, 679);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(718, 187);
+            label7.Name = "label7";
+            label7.Size = new Size(216, 27);
+            label7.TabIndex = 31;
+            label7.Text = "CURRENT ORDER";
             // 
             // btnFilter
             // 
@@ -207,6 +218,16 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(369, 115);
             panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 9F);
+            label1.Location = new Point(64, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(49, 17);
+            label1.TabIndex = 32;
+            label1.Text = "Total:";
             // 
             // lblPriceTotal
             // 
@@ -337,8 +358,6 @@
             userControl11.BorderStyle = BorderStyle.FixedSingle;
             userControl11.Location = new Point(3, 3);
             userControl11.Name = "userControl11";
-            userControl11.Price = "000.0000";
-            userControl11.ProductImg = null;
             userControl11.Size = new Size(256, 253);
             userControl11.TabIndex = 0;
             // 
@@ -348,8 +367,6 @@
             userControl12.BorderStyle = BorderStyle.FixedSingle;
             userControl12.Location = new Point(265, 3);
             userControl12.Name = "userControl12";
-            userControl12.Price = "000.0000";
-            userControl12.ProductImg = null;
             userControl12.Size = new Size(256, 253);
             userControl12.TabIndex = 1;
             // 
@@ -359,8 +376,6 @@
             userControl13.BorderStyle = BorderStyle.FixedSingle;
             userControl13.Location = new Point(3, 262);
             userControl13.Name = "userControl13";
-            userControl13.Price = "000.0000";
-            userControl13.ProductImg = null;
             userControl13.Size = new Size(256, 253);
             userControl13.TabIndex = 2;
             // 
@@ -370,8 +385,6 @@
             userControl14.BorderStyle = BorderStyle.FixedSingle;
             userControl14.Location = new Point(265, 262);
             userControl14.Name = "userControl14";
-            userControl14.Price = "000.0000";
-            userControl14.ProductImg = null;
             userControl14.Size = new Size(256, 253);
             userControl14.TabIndex = 3;
             // 
@@ -381,8 +394,6 @@
             userControl15.BorderStyle = BorderStyle.FixedSingle;
             userControl15.Location = new Point(3, 521);
             userControl15.Name = "userControl15";
-            userControl15.Price = "000.0000";
-            userControl15.ProductImg = null;
             userControl15.Size = new Size(256, 253);
             userControl15.TabIndex = 4;
             // 
@@ -392,8 +403,6 @@
             userControl16.BorderStyle = BorderStyle.FixedSingle;
             userControl16.Location = new Point(265, 521);
             userControl16.Name = "userControl16";
-            userControl16.Price = "000.0000";
-            userControl16.ProductImg = null;
             userControl16.Size = new Size(256, 253);
             userControl16.TabIndex = 5;
             // 
@@ -423,26 +432,6 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(272, 27);
             txtSearch.TabIndex = 15;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(718, 187);
-            label7.Name = "label7";
-            label7.Size = new Size(216, 27);
-            label7.TabIndex = 31;
-            label7.Text = "CURRENT ORDER";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 9F);
-            label1.Location = new Point(64, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 17);
-            label1.TabIndex = 32;
-            label1.Text = "Total:";
             // 
             // frmMenu
             // 

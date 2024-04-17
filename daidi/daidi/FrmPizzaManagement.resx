@@ -162,33 +162,6 @@
         8mXO8sjTv+EM8ZwURkJT0y8YBjsuTHCdDgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnOrder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAS4SURBVFhHvZdr
-        TFNnGMfbEBmSGee8bMZsE+aNhQ9OnNACiroMyjYTxc65bJ8YbQ/OADO4QIRxh7ihydxgCO1x4MRVjGQ4
-        nC0CZrSOix8YG2RTM6ClBWIol+Ewis/e9/ie3s45nJYP+yf/hLzv4fx+OZcnPRKZRge8Ta3ZIFlk8myq
-        4CJr+qeF1nQzquPF9pT5Va0pc2Em1e3oXiqKHPY0CHbPq1OoEE3RseQQv1I0nLEdQYdRge2qGykgvZbM
-        dMnPyfC6WVNLDudGpqZPYoEote4QWfI5hbb0MAScdId7C7Dd1qk5T/7NM1EaXQYWkFHadLLkUwAk0kJr
-        Ro83XEgAXwnO7cCRa+j3sUBc6Y3BRKPD6EtX143atzabpvnguFgg6Loasv686iER1qHuJlhX5OqanVhg
-        V7ER0Ml96lLaBoqOOg9ouS0HSkaOMX+va6PANDEKAzP/QsXQLacAEpsjWFci1fRGLBCb08QL4ysWOHy7
-        wgk/bf8cLA/HofdBH5SNHAeTw8bA+2dmYZupyCkQeD0ZCNaVCFVVMBaIybzEC+MrFlB2VTkFTtlzYOjh
-        KMzMA4w9moY7s3NIYBa2m4qdcNxgQ/ITgvUMEpiSH63jhfEVC8S1NTgFcMttJ2Bwzs5IDMz8AzvMpR5w
-        3LXtqimC9AwSGMBXQXHtPi/Qu1hgTX0vFFgzPCTwleh78AdE3srlwHG3mlVXCNIzaAa0YoGERgsv0LtY
-        QFI9Akld1R4CbPlew+UtKY/izcnPE6Rn0Kt4Hgu8VX+XF+hdVuAZ+m9I7S8RFQgyfPwkpof6gOC4Yafh
-        m7o+XqB3WQFWIqmzGgosrtvhLvBCK/U4tod6m6D4w07DPZXdvEDvuguwXV3/G/NgHuw6C5tvZkFISx6s
-        bWyAl36wXCAY4bDTcPfpDl6gd/kEhPrKxfEighGOv9PQH4EQ/f2PCEY4/k5DfwRe1dsiCEY4QtMw4Uc7
-        xGY3QtzJdufarhIjbDpQCAEV9xjAsqxmWPdeGQTn/8KBS1HX0xBEMAsHCXCmYcIVK/Nryf3KxHzWABvi
-        M2HJ13cYyIo0PYTuTYdl2QaOQKB2ZJ6cXjwIxJ2GhglIaLKDonncuab4aQyWnxkASZWVgUgrByHgzF8g
-        /XaYI/DsOfssOb14/JmGvj4Dz9WOjpHTLxylUh8g1+gMWCDuizbY803ngg05Ugsvp2hFG5p9dZwghPP0
-        AdR2YLiv3Rh/nLnvYt2iLBEXkGu0x8iJu+VqOlVO6VRiDU8qqgnfX1An2gOFRwlGOAh8AQtEqrQxZOn/
-        jYzS5WMB9BDWyVPpNyKpcxFiDVeWHgpPKv5QtAfL5AQjnB1HvluJBIawhK/1+Rl4N3eAYBZODPX9Cpla
-        l4vu70UE0MsoWr/7y5u/7q3u7d+Z19zCrLn1tX25d7e8c8LCNvRwuX1lZtPUmjS9Y/O+HCu7Hr4/n/9j
-        RCyJxslSt/f+scIwEU22uKm0r0fv/LTr/bdeJjuLD4LijxTn4FEYHV+RLW5qRj5xwZnOS05ZlpLdxQVB
-        W90FEg2ONLLFzVm7wkvAgr7bpGR3cUlsmd6kME6aEXwqscVBK/UQSLb4U20tRuAJ1N/RFRG+XRKJ5D8K
-        NndOxgo9ewAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="sibarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

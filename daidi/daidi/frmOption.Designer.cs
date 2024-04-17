@@ -38,7 +38,7 @@
             panel2 = new Panel();
             pnlLogout = new Panel();
             button5 = new Button();
-            label2 = new Label();
+            panel3 = new Panel();
             panel4 = new Panel();
             panel6 = new Panel();
             panel13 = new Panel();
@@ -48,35 +48,37 @@
             panel11 = new Panel();
             panel10 = new Panel();
             label6 = new Label();
-            pictureBox5 = new PictureBox();
+            ptrRevenue = new PictureBox();
             panel9 = new Panel();
             label5 = new Label();
-            pictureBox4 = new PictureBox();
+            ptrRepoManagement = new PictureBox();
             panel5 = new Panel();
             panel16 = new Panel();
             panel15 = new Panel();
-            pictureBox2 = new PictureBox();
+            ptrOrderPizza = new PictureBox();
             label3 = new Label();
             panel8 = new Panel();
             label4 = new Label();
             ptrEmployeeManagement = new PictureBox();
             panel7 = new Panel();
             panel14 = new Panel();
+            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             pnlLogout.SuspendLayout();
+            panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
             panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptrShiftManagement).BeginInit();
             panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptrRevenue).BeginInit();
             panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptrRepoManagement).BeginInit();
             panel5.SuspendLayout();
             panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptrOrderPizza).BeginInit();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptrEmployeeManagement).BeginInit();
             SuspendLayout();
@@ -84,6 +86,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Silver;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(guna2ControlBox2);
@@ -123,7 +126,7 @@
             guna2ControlBox2.FillColor = Color.Transparent;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1208, 3);
+            guna2ControlBox2.Location = new Point(1206, 3);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox2.Size = new Size(65, 37);
@@ -163,24 +166,25 @@
             button5.Text = "Logout";
             button5.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // panel3
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Nirmala UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(470, 95);
-            label2.Name = "label2";
-            label2.Size = new Size(609, 46);
-            label2.TabIndex = 2;
-            label2.Text = "WELLCOME TO PZZA MANAGEMENT";
+            panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(panel4);
+            panel3.Controls.Add(label2);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(247, 37);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1038, 685);
+            panel3.TabIndex = 2;
             // 
             // panel4
             // 
             panel4.Controls.Add(panel6);
             panel4.Controls.Add(panel5);
-            panel4.Location = new Point(366, 236);
+            panel4.Location = new Point(96, 194);
             panel4.Name = "panel4";
             panel4.Size = new Size(847, 362);
-            panel4.TabIndex = 3;
+            panel4.TabIndex = 5;
             // 
             // panel6
             // 
@@ -198,6 +202,7 @@
             // panel13
             // 
             panel13.BackColor = Color.FromArgb(255, 224, 192);
+            panel13.BorderStyle = BorderStyle.FixedSingle;
             panel13.Controls.Add(label7);
             panel13.Controls.Add(ptrShiftManagement);
             panel13.Dock = DockStyle.Fill;
@@ -220,6 +225,7 @@
             // 
             ptrShiftManagement.BackgroundImage = Properties.Resources.browsing;
             ptrShiftManagement.BackgroundImageLayout = ImageLayout.Zoom;
+            ptrShiftManagement.Cursor = Cursors.Hand;
             ptrShiftManagement.Location = new Point(30, 17);
             ptrShiftManagement.Name = "ptrShiftManagement";
             ptrShiftManagement.Size = new Size(177, 101);
@@ -246,8 +252,9 @@
             // panel10
             // 
             panel10.BackColor = Color.FromArgb(255, 224, 192);
+            panel10.BorderStyle = BorderStyle.FixedSingle;
             panel10.Controls.Add(label6);
-            panel10.Controls.Add(pictureBox5);
+            panel10.Controls.Add(ptrRevenue);
             panel10.Dock = DockStyle.Right;
             panel10.Location = new Point(601, 0);
             panel10.Name = "panel10";
@@ -264,28 +271,29 @@
             label6.TabIndex = 1;
             label6.Text = "Revenue Statistics";
             // 
-            // pictureBox5
+            // ptrRevenue
             // 
-            pictureBox5.BackgroundImage = Properties.Resources.business;
-            pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox5.Location = new Point(39, 16);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(177, 101);
-            pictureBox5.TabIndex = 0;
-            pictureBox5.TabStop = false;
-            pictureBox5.Click += pictureBox5_Click;
+            ptrRevenue.BackgroundImage = Properties.Resources.business;
+            ptrRevenue.BackgroundImageLayout = ImageLayout.Zoom;
+            ptrRevenue.Cursor = Cursors.Hand;
+            ptrRevenue.Location = new Point(39, 16);
+            ptrRevenue.Name = "ptrRevenue";
+            ptrRevenue.Size = new Size(177, 101);
+            ptrRevenue.TabIndex = 0;
+            ptrRevenue.TabStop = false;
+            ptrRevenue.Click += ptrRevenue_Click;
             // 
             // panel9
             // 
             panel9.BackColor = Color.FromArgb(255, 224, 192);
+            panel9.BorderStyle = BorderStyle.FixedSingle;
             panel9.Controls.Add(label5);
-            panel9.Controls.Add(pictureBox4);
+            panel9.Controls.Add(ptrRepoManagement);
             panel9.Dock = DockStyle.Left;
             panel9.Location = new Point(0, 0);
             panel9.Name = "panel9";
             panel9.Size = new Size(246, 163);
             panel9.TabIndex = 0;
-            panel9.Paint += panel9_Paint;
             // 
             // label5
             // 
@@ -297,16 +305,17 @@
             label5.TabIndex = 1;
             label5.Text = "Repository Management";
             // 
-            // pictureBox4
+            // ptrRepoManagement
             // 
-            pictureBox4.BackgroundImage = Properties.Resources.database;
-            pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox4.Location = new Point(38, 16);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(177, 101);
-            pictureBox4.TabIndex = 0;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
+            ptrRepoManagement.BackgroundImage = Properties.Resources.database;
+            ptrRepoManagement.BackgroundImageLayout = ImageLayout.Zoom;
+            ptrRepoManagement.Cursor = Cursors.Hand;
+            ptrRepoManagement.Location = new Point(38, 16);
+            ptrRepoManagement.Name = "ptrRepoManagement";
+            ptrRepoManagement.Size = new Size(177, 101);
+            ptrRepoManagement.TabIndex = 0;
+            ptrRepoManagement.TabStop = false;
+            ptrRepoManagement.Click += ptrRepoManagement_Click;
             // 
             // panel5
             // 
@@ -332,7 +341,8 @@
             // panel15
             // 
             panel15.BackColor = Color.FromArgb(255, 224, 192);
-            panel15.Controls.Add(pictureBox2);
+            panel15.BorderStyle = BorderStyle.FixedSingle;
+            panel15.Controls.Add(ptrOrderPizza);
             panel15.Controls.Add(label3);
             panel15.Dock = DockStyle.Right;
             panel15.Location = new Point(524, 0);
@@ -340,16 +350,17 @@
             panel15.Size = new Size(246, 155);
             panel15.TabIndex = 5;
             // 
-            // pictureBox2
+            // ptrOrderPizza
             // 
-            pictureBox2.BackgroundImage = Properties.Resources.pizza__1_;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(38, 13);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(177, 101);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
+            ptrOrderPizza.BackgroundImage = Properties.Resources.pizza__1_;
+            ptrOrderPizza.BackgroundImageLayout = ImageLayout.Zoom;
+            ptrOrderPizza.Cursor = Cursors.Hand;
+            ptrOrderPizza.Location = new Point(38, 13);
+            ptrOrderPizza.Name = "ptrOrderPizza";
+            ptrOrderPizza.Size = new Size(177, 101);
+            ptrOrderPizza.TabIndex = 0;
+            ptrOrderPizza.TabStop = false;
+            ptrOrderPizza.Click += ptrOrderPizza_Click;
             // 
             // label3
             // 
@@ -364,6 +375,7 @@
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(255, 224, 192);
+            panel8.BorderStyle = BorderStyle.FixedSingle;
             panel8.Controls.Add(label4);
             panel8.Controls.Add(ptrEmployeeManagement);
             panel8.Dock = DockStyle.Left;
@@ -386,6 +398,7 @@
             // 
             ptrEmployeeManagement.BackgroundImage = Properties.Resources.employees__1_;
             ptrEmployeeManagement.BackgroundImageLayout = ImageLayout.Zoom;
+            ptrEmployeeManagement.Cursor = Cursors.Hand;
             ptrEmployeeManagement.Location = new Point(37, 13);
             ptrEmployeeManagement.Name = "ptrEmployeeManagement";
             ptrEmployeeManagement.Size = new Size(177, 101);
@@ -409,13 +422,22 @@
             panel14.Size = new Size(77, 155);
             panel14.TabIndex = 2;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Nirmala UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(200, 91);
+            label2.Name = "label2";
+            label2.Size = new Size(609, 46);
+            label2.TabIndex = 4;
+            label2.Text = "WELLCOME TO PZZA MANAGEMENT";
+            // 
             // frmOption
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1285, 722);
-            Controls.Add(panel4);
-            Controls.Add(label2);
+            Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -427,6 +449,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             pnlLogout.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel13.ResumeLayout(false);
@@ -434,19 +458,18 @@
             ((System.ComponentModel.ISupportInitialize)ptrShiftManagement).EndInit();
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptrRevenue).EndInit();
             panel9.ResumeLayout(false);
             panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptrRepoManagement).EndInit();
             panel5.ResumeLayout(false);
             panel15.ResumeLayout(false);
             panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptrOrderPizza).EndInit();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptrEmployeeManagement).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -458,29 +481,30 @@
         private Panel panel2;
         private Panel pnlLogout;
         private Button button5;
-        private Label label2;
+        private Panel panel3;
         private Panel panel4;
         private Panel panel6;
-        private Panel panel5;
-        private PictureBox pictureBox2;
-        private Panel panel10;
-        private PictureBox pictureBox5;
-        private Panel panel9;
-        private PictureBox pictureBox4;
-        private Label label4;
-        private PictureBox ptrEmployeeManagement;
-        private Label label3;
-        private Label label6;
-        private Label label5;
         private Panel panel13;
-        private Panel panel12;
-        private Panel panel11;
-        private Panel panel14;
         private Label label7;
         private PictureBox ptrShiftManagement;
+        private Panel panel12;
+        private Panel panel11;
+        private Panel panel10;
+        private Label label6;
+        private PictureBox ptrRevenue;
+        private Panel panel9;
+        private Label label5;
+        private PictureBox ptrRepoManagement;
+        private Panel panel5;
         private Panel panel16;
         private Panel panel15;
+        private PictureBox ptrOrderPizza;
+        private Label label3;
         private Panel panel8;
+        private Label label4;
+        private PictureBox ptrEmployeeManagement;
         private Panel panel7;
+        private Panel panel14;
+        private Label label2;
     }
 }

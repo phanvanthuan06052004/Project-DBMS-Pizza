@@ -64,6 +64,7 @@
             // 
             // btnProMana
             // 
+            btnProMana.BorderRadius = 15;
             btnProMana.Cursor = Cursors.Hand;
             btnProMana.CustomizableEdges = customizableEdges1;
             btnProMana.DisabledState.BorderColor = Color.DarkGray;
@@ -82,6 +83,7 @@
             // 
             // btnSizeMana
             // 
+            btnSizeMana.BorderRadius = 15;
             btnSizeMana.Cursor = Cursors.Hand;
             btnSizeMana.CustomizableEdges = customizableEdges3;
             btnSizeMana.DisabledState.BorderColor = Color.DarkGray;
@@ -100,6 +102,7 @@
             // 
             // btnManaCus
             // 
+            btnManaCus.BorderRadius = 15;
             btnManaCus.Cursor = Cursors.Hand;
             btnManaCus.CustomizableEdges = customizableEdges5;
             btnManaCus.DisabledState.BorderColor = Color.DarkGray;
@@ -118,6 +121,7 @@
             // 
             // btnManaImp
             // 
+            btnManaImp.BorderRadius = 15;
             btnManaImp.Cursor = Cursors.Hand;
             btnManaImp.CustomizableEdges = customizableEdges7;
             btnManaImp.DisabledState.BorderColor = Color.DarkGray;
@@ -136,6 +140,7 @@
             // 
             // btnManaOrder
             // 
+            btnManaOrder.BorderRadius = 15;
             btnManaOrder.Cursor = Cursors.Hand;
             btnManaOrder.CustomizableEdges = customizableEdges9;
             btnManaOrder.DisabledState.BorderColor = Color.DarkGray;
