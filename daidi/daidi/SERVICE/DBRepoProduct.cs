@@ -19,6 +19,20 @@ namespace daidi.SERVICE
             return cnt.ExcuteQueryDataSet("SELECT * from SanPham", CommandType.Text, null);
         }
 
+        public DataTable SearchProduct(string Name)
+        {
+            return cnt.ExcuteTableFunction("fn_SearchNameProduct", CommandType.Text,
+                new SqlParameter("@Name", Name)
+                );
+        }
+
+        public bool DeleteProduct(ref string err, string MaSP)
+        {
+            return cnt.MyExecuteNonQuery("sp_DeleteSanPham",
+                CommandType.StoredProcedure, ref err,
+                new SqlParameter("@MaSP", MaSP)
+            );
+        }
         public bool UpdateProduct(ref string err, string MaSP, string TenSP, string MaLoaiSP, byte[] HinhAnh)
         {
                 return cnt.MyExecuteNonQuery("sp_UpdateSanPham",

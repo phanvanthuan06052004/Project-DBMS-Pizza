@@ -164,7 +164,16 @@ namespace daidi
             int r = dgvProduct.CurrentCell.RowIndex;
             tbIdPro.Text = dgvProduct.Rows[r].Cells[0].Value.ToString();
             tbNamePro.Text = dgvProduct.Rows[r].Cells[1].Value.ToString();
-            cbTypePro.Text = dgvProduct.Rows[r].Cells[2].Value.ToString();
+            // Lấy giá trị của cột mã loại sản phẩm từ DataGridView
+            string maLoaiSP = dgvProduct.Rows[r].Cells[2].Value.ToString();
+
+            // Tìm tên loại sản phẩm tương ứng trong DataTable của ComboBox
+            DataRow[] foundRows = dtType.Select($"MaLoaiSP = '{maLoaiSP}'");
+            if (foundRows.Length > 0)
+            {
+                string tenLoaiSP = foundRows[0]["TenLoaiSP"].ToString();
+                cbTypePro.SelectedValue = maLoaiSP; // Gán giá trị cho ComboBox
+            }
             if (dgvProduct.Rows[r].Cells[3].Value != null)
                 proPicture.Image = ConvertCellToImage(dgvProduct.Rows[r].Cells[3].Value);
 
@@ -175,7 +184,11 @@ namespace daidi
         private void btnUpdatePro_Click(object sender, EventArgs e)
         {
             string err = "";
-            bool f = product.UpdateProduct(ref err, tbIdPro.Text, tbNamePro.Text, "LSP002", ConvertImgToByte(s));
+
+            // Lấy giá trị được chọn từ ComboBox
+            string maLoaiSP = cbTypePro.SelectedValue.ToString();
+
+            bool f = product.UpdateProduct(ref err, tbIdPro.Text, tbNamePro.Text, maLoaiSP, ConvertImgToByte(s));
 
             if (f)
             {
@@ -192,8 +205,38 @@ namespace daidi
 
         }
 
-        private void btnReload_Click(object sender, EventArgs e)
+
+        private void btnDeletePro_Click(object sender, EventArgs e)
         {
+            string err = "";
+            bool ktr = product.DeleteProduct(ref err, tbIdPro.Text);
+            if (ktr)
+            {
+                MessageBox.Show("Xóa thành công");
+                dt.Clear();
+                dt = product.GetProduct().Tables[0];
+                dgvProduct.DataSource = null;
+                dgvProduct.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show(err);
+            }
+        }
+
+        private void btnSearchPro_Click(object sender, EventArgs e)
+        {
+            DataTable dtPro = new DataTable();
+            dtPro = product.SearchProduct(tbSearchPro.Text);
+            if(dtPro.Rows.Count > 0)
+            {
+                dgvProduct.DataSource = null;
+                dgvProduct.DataSource = dtPro;
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy sản phẩm");
+            }    
         }
     }
 }

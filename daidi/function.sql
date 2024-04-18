@@ -102,7 +102,7 @@ GO
  SELECT * FROM KichCo
 
  GO
-
+ 
  -----------------------------------------------------------------------------------------------
  --FUNCT tìm kiếm theo tên sản phẩm
  CREATE OR ALTER FUNCTION fn_SearchProductName (@Name nvarchar(50))
@@ -110,7 +110,7 @@ RETURNS @Result TABLE (
     MaSP CHAR(10),
     TenSP NVARCHAR(30) NOT NULL,
     MaLoaiSP CHAR(10) NOT NULL,
-    HinhAnh NVARCHAR(MAX),
+    HinhAnh IMAGE,
     Size nvarchar(50),
 	DONGIA MONEY
 )
@@ -123,6 +123,22 @@ BEGIN
     WHERE sp.TenSP LIKE '%' + @Name + '%' 
     RETURN
 END
+--
+CREATE OR ALTER FUNCTION fn_SearchNameProduct (@Name nvarchar(50))
+RETURNS @Result TABLE (
+    MaSP CHAR(10),
+    TenSP NVARCHAR(30) NOT NULL,
+    MaLoaiSP CHAR(10) NOT NULL,
+    HinhAnh IMAGE
+)
+AS
+BEGIN   
+    INSERT INTO @Result 
+    SELECT * FROM SanPham sp 
+    WHERE sp.TenSP LIKE '%' + @Name + '%' 
+    RETURN
+END
+--
 GO
 SELECT * FROM dbo.fn_SearchProductName(N'co')
 GO
