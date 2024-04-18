@@ -98,6 +98,7 @@ BEGIN
 		RAISERROR('LỖI KHI XÓA NHÂN VIÊN', 16, 1); -- Phát sinh lỗi chung
 	END CATCH;
 END;
+ exec dbo.sp_DeleteEmployee 'NV008'
 
 GO
 -----------------------------------------------------------------------------------------------
@@ -399,11 +400,11 @@ go
 -----------------------------------------------------------------------------------------------
 --thêm xóa sửa sản phẩm
 go
-CREATE PROCEDURE sp_AddSanPham
+CREATE OR ALTER PROCEDURE sp_AddSanPham
     @MaSP CHAR(10),
     @TenSP NVARCHAR(30),
     @MaLoaiSP CHAR(10),
-    @HinhAnh NVARCHAR(MAX)
+    @HinhAnh IMAGE
 AS
 BEGIN
     BEGIN TRY
@@ -412,7 +413,7 @@ BEGIN
     END TRY
     BEGIN CATCH
         ROLLBACK TRANSACTION;
-        RAISERROR('Thêm thông tin sản phẩm không thành công', 25, 1);
+        RAISERROR('Thêm thông tin sản phẩm không thành công', 16, 1);
     END CATCH
 END;
 
@@ -421,7 +422,7 @@ CREATE PROCEDURE sp_UpdateSanPham
     @MaSP CHAR(10),
     @TenSP NVARCHAR(30),
     @MaLoaiSP CHAR(10),
-    @HinhAnh NVARCHAR(MAX)
+    @HinhAnh IMAGE
 AS
 BEGIN
     BEGIN TRY
@@ -438,7 +439,7 @@ BEGIN
 END;
 
 go
-CREATE PROCEDURE sp_DeleteSanPham
+CREATE OR ALTER PROCEDURE sp_DeleteSanPham
     @MaSP CHAR(10)
 AS
 BEGIN
@@ -448,7 +449,7 @@ BEGIN
     END TRY
     BEGIN CATCH
         ROLLBACK TRANSACTION;
-        RAISERROR('Xóa thông tin sản phẩm không thành công', 25, 1);
+        RAISERROR('Xóa thông tin sản phẩm không thành công', 16, 1);
     END CATCH
 END;
 go

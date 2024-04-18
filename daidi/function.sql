@@ -2,11 +2,12 @@
 
 --------------------FUNCTION-------------------
 --FUNCT check login
-select * from NhanVien
+--select * from NhanVien
 --các optitnon:Ma NV, tên NV, mã CV,
 go
------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 --Tìm kiếm nhân viên
+GO
 CREATE FUNCTION fn_searchEmployee(@option nvarchar(50), @key nvarchar(50))
 RETURNS  @Result TABLE (
         MaNV CHAR(10),
@@ -43,11 +44,11 @@ BEGIN
 END
 go
 
-drop function fn_searchEmployee
-select * from [dbo].[NhanVien]
-select * from [dbo].[vw_XemThongTinNhanVien]
-select * from  dbo.fn_searchEmployee('job ID', 'CV002')
-go
+--drop function fn_searchEmployee
+--select * from [dbo].[NhanVien]
+--select * from [dbo].[vw_XemThongTinNhanVien]
+--select * from  dbo.fn_searchEmployee('job ID', 'CV002')
+
 
 -----------------------------------------------------------------------------------------------
 --tìm kiếm nhân viên trong form quản lí ca trực
@@ -72,9 +73,9 @@ BEGIN
 	RETURN
 END
 GO
-select * from Ca
-EXEC [dbo].[fn_SearchEployeeIDOrShiftID]('NV001', 'CV001')
-select * from  [dbo].[fn_SearchEployeeIDOrShiftID]('NV001', '')
+--select * from Ca
+--EXEC [dbo].[fn_SearchEployeeIDOrShiftID]('NV001', 'CV001')
+--select * from  [dbo].[fn_SearchEployeeIDOrShiftID]('NV001', '')
 GO
 -----------------------------------------------------------------------------------------------
 --func tìm kiếm theo size
@@ -96,33 +97,34 @@ BEGIN
 	RETURN
 END
 GO
- SELECT * FROM dbo.fn_SearchSize(N'Lớ')
- SELECT * FROM ChiTietKichCo
- SELECT * FROM SanPham
- SELECT * FROM KichCo
+ --SELECT * FROM dbo.fn_SearchSize(N'Lớ')
+ --SELECT * FROM ChiTietKichCo
+ --SELECT * FROM SanPham
+ --SELECT * FROM KichCo
 
  GO
  
  -----------------------------------------------------------------------------------------------
  --FUNCT tìm kiếm theo tên sản phẩm
- CREATE OR ALTER FUNCTION fn_SearchProductName (@Name nvarchar(50))
-RETURNS @Result TABLE (
-    MaSP CHAR(10),
-    TenSP NVARCHAR(30) NOT NULL,
-    MaLoaiSP CHAR(10) NOT NULL,
-    HinhAnh IMAGE,
-    Size nvarchar(50),
-	DONGIA MONEY
-)
-AS
-BEGIN   
-    INSERT INTO @Result 
-    SELECT sp.*, kc.TenKichCo,ct.DonGia FROM SanPham sp 
-    JOIN ChiTietKichCo ct ON ct.MaSP = sp.MaSP
-    JOIN KichCo kc ON kc.MaKichCo = ct.MaKichCo
-    WHERE sp.TenSP LIKE '%' + @Name + '%' 
-    RETURN
-END
+-- CREATE OR ALTER FUNCTION fn_SearchProductName (@Name nvarchar(50))
+--RETURNS @Result TABLE (
+--    MaSP CHAR(10),
+--    TenSP NVARCHAR(30) NOT NULL,
+--    MaLoaiSP CHAR(10) NOT NULL,
+--    HinhAnh IMAGE,
+--    Size nvarchar(50),
+--	DONGIA MONEY
+--)
+--AS
+--BEGIN   
+--    INSERT INTO @Result 
+--    SELECT sp.*, kc.TenKichCo,ct.DonGia FROM SanPham sp 
+--    JOIN ChiTietKichCo ct ON ct.MaSP = sp.MaSP
+--    JOIN KichCo kc ON kc.MaKichCo = ct.MaKichCo
+--    WHERE sp.TenSP LIKE '%' + @Name + '%' 
+--    RETURN
+--END
+GO
 --
 CREATE OR ALTER FUNCTION fn_SearchNameProduct (@Name nvarchar(50))
 RETURNS @Result TABLE (
@@ -138,9 +140,9 @@ BEGIN
     WHERE sp.TenSP LIKE '%' + @Name + '%' 
     RETURN
 END
---
+--a
 GO
-SELECT * FROM dbo.fn_SearchProductName(N'co')
+--SELECT * FROM dbo.fn_SearchProductName(N'co')
 GO
 -----------------------------------------------------------------------------------------------
 --func tìm kiếm theo loại sản phẩm
@@ -149,7 +151,7 @@ RETURNS @Result TABLE (
     MaSP CHAR(10),
     TenSP NVARCHAR(30) NOT NULL,
     MaLoaiSP CHAR(10) NOT NULL,
-    HinhAnh NVARCHAR(MAX),
+    HinhAnh IMAGE,
 	TenLoaiSP NVARCHAR(30) NOT NULL,
     Size nvarchar(50),
 	DONGIA MONEY
@@ -165,8 +167,8 @@ BEGIN
     RETURN
 END
 GO
-select * from LoaiSanPham
-SELECT * FROM dbo.fn_SearchProductType(N'ăn')
+--select * from LoaiSanPham
+--SELECT * FROM dbo.fn_SearchProductType(N'ăn')
 -----------------------------------------------------------------------------------------------
 --FUNC tìm kiếm theo giá sản phẩm
 GO
@@ -175,7 +177,7 @@ RETURNS @Result TABLE (
 	MaSP CHAR(10),
     TenSP NVARCHAR(30) NOT NULL,
     MaLoaiSP CHAR(10) NOT NULL,
-    HinhAnh NVARCHAR(MAX),
+	HinhAnh IMAGE,
     Size nvarchar(50),
 	DONGIA MONEY
 )
@@ -190,7 +192,7 @@ BEGIN
 END
 GO
 
-SELECT * FROM dbo.fn_SearchProductPrice(35000,100000000)
+--SELECT * FROM dbo.fn_SearchProductPrice(35000,100000000)
 
 -----------------------------------------------------------------------------------------------
 -----FUNC tìm kiếm theo tên và giá sản phẩm
@@ -200,7 +202,7 @@ RETURNS @Result TABLE (
    MaSP CHAR(10),
     TenSP NVARCHAR(30) NOT NULL,
     MaLoaiSP CHAR(10) NOT NULL,
-    HinhAnh NVARCHAR(MAX),
+    HinhAnh IMAGE,
     Size nvarchar(50),
 	DONGIA MONEY
 )
@@ -214,7 +216,7 @@ BEGIN
     RETURN
 END
 GO
-SELECT * FROM dbo.fn_SearchProductPriceAndName(35000,100000000,N'Nh')
+--SELECT * FROM dbo.fn_SearchProductPriceAndName(35000,100000000,N'Nh')
 -----------------------------------------------------------------------------------------------
 --FUNC tìm kiếm theo tên khách hàng
 GO
@@ -232,7 +234,7 @@ BEGIN
     RETURN
 END
 GO
-select * from dbo.fn_SearchCustomerName(N'Na')
+--select * from dbo.fn_SearchCustomerName(N'Na')
 
 -----------------------------------------------------------------------------------------------
 --FUNC tìm kiếm theo tên nhà cung cấp
@@ -259,7 +261,7 @@ BEGIN
 	RETURN 
 END
 GO
-SELECT * FROM dbo.fn_SearchNameProvider(N'Thực phẩm')
+--SELECT * FROM dbo.fn_SearchNameProvider(N'Thực phẩm')
 -----------------------------------------------------------------------------------------------
 --tìm kiếm giá theo nhà cung cấp
 GO
@@ -286,7 +288,7 @@ BEGIN
 	RETURN 
 END
 GO
-SELECT * FROM dbo.fn_SearchPriceProvider(15000,100000000000)
+--SELECT * FROM dbo.fn_SearchPriceProvider(15000,100000000000)
 -----------------------------------------------------------------------------------------------
 --FUNCT tìm kiếm theo giá và tên nhà cung cấp
 GO
@@ -345,6 +347,6 @@ BEGIN
     RETURN;
 END
 GO
-select * from HoaDonBanHang
-SELECT * FROM dbo.fn_SearchOrderOfDate('01/01/2015', '01/01/2017')
+--select * from HoaDonBanHang
+--SELECT * FROM dbo.fn_SearchOrderOfDate('01/01/2015', '01/01/2017')
 

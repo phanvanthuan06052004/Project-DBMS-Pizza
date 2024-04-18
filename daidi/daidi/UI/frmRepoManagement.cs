@@ -1,4 +1,5 @@
-﻿using daidi.SERVICE;
+﻿using daidi.DAL;
+using daidi.SERVICE;
 using Microsoft.Data.SqlClient;
 using Microsoft.Win32;
 using System;
@@ -17,10 +18,8 @@ namespace daidi
     public partial class frmRepoManagement : Form
     {
         DBRepoProduct product = new DBRepoProduct();
-        DBSize DBSize = new DBSize();
         DBType DBType = new DBType();
         DataTable dt;
-        DataTable dtSize;
         DataTable dtType;
         String s;
         public frmRepoManagement()
@@ -31,21 +30,14 @@ namespace daidi
         {
             try
             {
+
                 dt = new DataTable();
-                //dtSize = new DataTable();
                 dtType = new DataTable();
                 dt.Clear();
-                //dtSize.Clear();
                 dtType.Clear();
                 dt = product.GetProduct().Tables[0];
-                //dtSize = DBSize.GetSize().Tables[0];
                 dtType = DBType.GetType().Tables[0];
                 dgvProduct.DataSource = dt;
-                // dgvProduct.AutoResizeColumns();
-                // Đổi tên các cột trong DataGridView
-                //cbSizePro.DataSource = dtSize;
-                //cbSizePro.DisplayMember = "TenKichCo";
-                //cbSizePro.ValueMember = "MaKichCo";
                 cbTypePro.DataSource = dtType;
                 cbTypePro.DisplayMember = "TenLoaiSP";
                 cbTypePro.ValueMember = "MaLoaiSP";
@@ -53,7 +45,7 @@ namespace daidi
             catch (SqlException)
             {
                 this.Close();
-                MessageBox.Show("You do not have permission to perform this action!", "Infomation", MessageBoxButtons.OK);
+                MessageBox.Show("Không lấy được data!", "Infomation", MessageBoxButtons.OK);
             }
         }
 

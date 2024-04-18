@@ -23,7 +23,7 @@ BEGIN
 		ROLLBACK
 	END CATCH
 END
-delete from NhanVien where MaNV = 'NV003'
+--delete from NhanVien where MaNV = 'NV003'
 GO
 -----------------------------------------------------------------------------------------------
 --Trigger khi xuất ra n hóa đơn thì số lượng sản phẩm trong chi tiết kích cỡ giảm đi n, 
@@ -56,8 +56,8 @@ BEGIN
 	END CATCH
 END
 GO
-INSERT INTO ChiTietHD(SoLuong,TriGia,MaHD,MaKichCo,MaSP) VALUES (1, 100000, 'HD006', 'KC001','SP001')
-SELECT * FROM ChiTietKichCo
+--INSERT INTO ChiTietHD(SoLuong,TriGia,MaHD,MaKichCo,MaSP) VALUES (1, 100000, 'HD006', 'KC001','SP001')
+--SELECT * FROM ChiTietKichCo
 -----------------------------------------------------------------------------------------------
 --TRIGGER Khách hàng order nhưng hiện không đủ sản phẩm, mà nguyên liệu hết d. -- mai suy nghĩ
 -- gộp cái trên
@@ -86,22 +86,22 @@ END
 -----------------------------------------------------------------------------------------------
 -- Trigger bắt lỗi khi thêm khách hàng mới, xem cần không
 GO
-select * from NhanVien
-select * from TaiKhoan
+--select * from NhanVien
+--select * from TaiKhoan
 
 
-GO
-select * from HoaDonBanHang
-select * from ChiTiethd
-select * from ChiTietKichCo
-select * from ChiTietCaTruc
-select * from PhieuNhap
-select * from CheBien
-SELECT * FROM SanPham
-select * from ChiTietKichCo
-SELECT * FROM NguyenLieu
-SELECT * FROM ChiTietCaTruc
-SELECT * FROM ChucVu
+--GO
+--select * from HoaDonBanHang
+--select * from ChiTiethd
+--select * from ChiTietKichCo
+--select * from ChiTietCaTruc
+--select * from PhieuNhap
+--select * from CheBien
+--SELECT * FROM SanPham
+--select * from ChiTietKichCo
+--SELECT * FROM NguyenLieu
+--SELECT * FROM ChiTietCaTruc
+--SELECT * FROM ChucVu
 GO
 -----------------------------------------------------------------------------------------------
 --TRIGGER kiểm tra lúc nhập sản phẩm vào không được trùng tên
@@ -148,6 +148,6 @@ BEGIN
 END
 GO
 --TEST
-INSERT INTO ChiTietPN (SoLuong, MaPhieu, MaNL, DonGia)
-VALUES 
-(70, 'PN002', 'NL001',30000 )
+--INSERT INTO ChiTietPN (SoLuong, MaPhieu, MaNL, DonGia)
+--VALUES 
+--(70, 'PN002', 'NL001',30000 )

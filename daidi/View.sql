@@ -126,8 +126,14 @@ GROUP BY
     NguyenLieu.TenNL,NguyenLieu.DonVi;
 
 	go
-select * from vw_XemSoLuongNguyenLieuDaNhapTrongNgay
+--select * from vw_XemSoLuongNguyenLieuDaNhapTrongNgay
 go
+
 --view xem thông tin tài khoản nhân viên
 CREATE VIEW vw_InfoAccountEmployee AS 
 SELECT  * FROM [dbo].[TaiKhoan]
+--select * from vw_InfoAccountEmployee
+--select * from TaiKhoan
+--delete from TaiKhoan where UserName = ''
+CREATE VIEW vw_XemLoaiSP AS 
+SELECT  * FROM LoaiSanPham

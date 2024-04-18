@@ -17,6 +17,7 @@ namespace daidi.DAL
 
         public GetConnection()
         {
+            
             //chuỗi kết nối
             conn = new SqlConnection("Data Source=LAPTOP-PTKCCTJC;" +
                 "Initial Catalog=QuanLyPizza;Integrated Security=True;" +
@@ -86,53 +87,8 @@ namespace daidi.DAL
 
 
 
-        public T ExecuteScalarFunction<T>(string functionName, CommandType ct, params SqlParameter[] param)
-        {
-            T result = default(T);
-            try
-            {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
-                conn.Open();
-                cmd.Parameters.Clear();
-                string commandText = "SELECT " + functionName + "(";
-                if (param != null)
-                {
-                    foreach (SqlParameter p in param)
-                    {
-                        commandText += p.ParameterName + ",";
-                        cmd.Parameters.Add(p);
-                    }
-                    commandText = commandText.TrimEnd(',') + ")";
-                }
-                else
-                {
-                    commandText += ")";
-                }
-
-                cmd.CommandText = commandText;
-                cmd.CommandType = ct;
-                object scalarValue = cmd.ExecuteScalar();
-                if (scalarValue != null && scalarValue != DBNull.Value)
-                {
-                    result = (T)scalarValue;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return result;
-        }
-        //Phương thức này được sử dụng để thực thi một hàm trả
-        //về một giá trị đơn lẻ và trả về giá trị đó.
-
+       
+        //dùng cho function trả về kiểu Table
         public DataTable ExcuteTableFunction(string strSQL, CommandType ct, params SqlParameter[] p)
         {
             DataTable dt = new DataTable();
@@ -143,8 +99,8 @@ namespace daidi.DAL
                     conn.Close();
                 }
                 conn.Open();
-                cmd.Parameters.Clear();
-                string commandText = string.Format("SELECT * FROM {0}(", strSQL);
+                cmd.Parameters.Clear();//dọn sạch cái củ
+                string commandText = string.Format("SELECT * FROM {0}(", strSQL); //câu lệnh được thực thi theo cấu trúc select
 
                 if (p != null)
                 {
@@ -176,81 +132,7 @@ namespace daidi.DAL
             }
             return dt;
         }
-        //Phương thức này được sử dụng để thực thi một truy vấn SQL và trả
-        //về một DataTable chứa kết quả của truy vấn.
-
-
-        public List<T> GetListModels<T>(Func<SqlDataReader, T> converter, string sqlStr, CommandType commandType)
-        {
-            List<T> list = new List<T>();
-            try
-            {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
-                conn.Open();
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandType = commandType;
-                cmd.CommandText = sqlStr;
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                    list.Add(converter(reader));
-                cmd.Dispose();
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return list;
-        }
-       // Phương thức này được sử dụng để thực thi một
-       // truy vấn SQL và trả về một danh sách các đối tượng T.
-
-
-        public T GetSingleObject<T>(Func<SqlDataReader, T> converter, string sqlStr, CommandType commandType)
-        {
-            T item;
-            List<T> list = GetListModels(converter, sqlStr, commandType);
-            item = list[0];
-            return item;
-        }
-        //Phương thức này được sử dụng để trả về một đối tượng đơn lẻ từ kết quả của một truy vấn SQL.
-
-
-
-        public object GetSingleValueFromFunction(string sqlStr, params SqlParameter[] param)
-        {
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = sqlStr;
-                if (param != null)
-                    foreach (SqlParameter p in param)
-                    {
-                        cmd.Parameters.Add(p);
-                    }
-                return cmd.ExecuteScalar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return 0;
-        }
-        //Phương thức này được sử dụng để lấy một giá trị đơn lẻ từ một hàm trong
-        //cơ sở dữ liệu và trả về giá trị đó.
+        
 
     }
 }

@@ -20,18 +20,18 @@ namespace daidi.SERVICE
                 new SqlParameter("@UserName", userName));
         }
 
-        //public DataTable GetAccount(string employee_id)
-        //{
-        //    return cnt.ExcuteTableFunction("vw_InfoAccountEmployee", CommandType.Text,
-        //        new SqlParameter("@employee_id", employee_id));
-        //}
-
-        public string KiemTraDangNhap(string user_name, string pass_word)
+        public DataSet GetAccount()
         {
-            return cnt.ExecuteScalarFunction<string>("", CommandType.Text,
-                new SqlParameter("@user_name", user_name),
-                new SqlParameter("@pass_word", pass_word));
+            return cnt.ExcuteQueryDataSet("select * from TaiKhoan", CommandType.Text, null);
+              
         }
+
+        //public string KiemTraDangNhap(string user_name, string pass_word)
+        //{
+        //    return cnt.ExecuteScalarFunction<string>("", CommandType.Text,
+        //        new SqlParameter("@user_name", user_name),
+        //        new SqlParameter("@pass_word", pass_word));
+        //}
 
         public bool AddAccount  (ref string err, string UserName, string Password, string MaNV, string Role)
         {
