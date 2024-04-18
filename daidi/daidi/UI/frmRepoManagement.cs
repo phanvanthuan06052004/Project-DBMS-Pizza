@@ -32,20 +32,20 @@ namespace daidi
             try
             {
                 dt = new DataTable();
-                dtSize = new DataTable();
+                //dtSize = new DataTable();
                 dtType = new DataTable();
                 dt.Clear();
-                dtSize.Clear();
+                //dtSize.Clear();
                 dtType.Clear();
                 dt = product.GetProduct().Tables[0];
-                dtSize = DBSize.GetSize().Tables[0];
+                //dtSize = DBSize.GetSize().Tables[0];
                 dtType = DBType.GetType().Tables[0];
                 dgvProduct.DataSource = dt;
                 // dgvProduct.AutoResizeColumns();
                 // Đổi tên các cột trong DataGridView
-                cbSizePro.DataSource = dtSize;
-                cbSizePro.DisplayMember = "TenKichCo";
-                cbSizePro.ValueMember = "MaKichCo";
+                //cbSizePro.DataSource = dtSize;
+                //cbSizePro.DisplayMember = "TenKichCo";
+                //cbSizePro.ValueMember = "MaKichCo";
                 cbTypePro.DataSource = dtType;
                 cbTypePro.DisplayMember = "TenLoaiSP";
                 cbTypePro.ValueMember = "MaLoaiSP";
@@ -164,11 +164,9 @@ namespace daidi
             int r = dgvProduct.CurrentCell.RowIndex;
             tbIdPro.Text = dgvProduct.Rows[r].Cells[0].Value.ToString();
             tbNamePro.Text = dgvProduct.Rows[r].Cells[1].Value.ToString();
-            tbPricePro.Text = dgvProduct.Rows[r].Cells[3].Value.ToString();
-            cbSizePro.Text = dgvProduct.Rows[r].Cells[2].Value.ToString();  
-            cbTypePro.Text = dgvProduct.Rows[r].Cells[4].Value.ToString();
-            if (dgvProduct.Rows[r].Cells[5].Value != null)
-                proPicture.Image = ConvertCellToImage(dgvProduct.Rows[r].Cells[5].Value);
+            cbTypePro.Text = dgvProduct.Rows[r].Cells[2].Value.ToString();
+            if (dgvProduct.Rows[r].Cells[3].Value != null)
+                proPicture.Image = ConvertCellToImage(dgvProduct.Rows[r].Cells[3].Value);
 
             // Lấy chỉ số của cột hình ảnh trong DataGridView
             // MessageBox.Show(dgvProduct.Rows[r].Cells[5].Value.GetType().ToString());

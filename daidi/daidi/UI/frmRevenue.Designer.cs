@@ -55,7 +55,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1285, 722);
+            panel1.Size = new Size(1520, 837);
             panel1.TabIndex = 0;
             // 
             // panel3
@@ -68,7 +68,7 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 34);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1285, 688);
+            panel3.Size = new Size(1520, 803);
             panel3.TabIndex = 2;
             // 
             // btnOk
@@ -117,7 +117,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1285, 34);
+            panel2.Size = new Size(1520, 34);
             panel2.TabIndex = 1;
             // 
             // guna2ControlBox2
@@ -130,7 +130,7 @@
             guna2ControlBox2.FillColor = Color.Transparent;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1213, 1);
+            guna2ControlBox2.Location = new Point(1448, 1);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox2.Size = new Size(65, 37);
@@ -160,7 +160,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1285, 722);
+            ClientSize = new Size(1520, 837);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmRevenue";

@@ -71,7 +71,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1285, 37);
+            panel1.Size = new Size(1520, 37);
             panel1.TabIndex = 1;
             // 
             // guna2ControlBox2
@@ -84,7 +84,7 @@
             guna2ControlBox2.FillColor = Color.Transparent;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1217, 0);
+            guna2ControlBox2.Location = new Point(1452, 0);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox2.Size = new Size(65, 37);
@@ -133,11 +133,11 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(114, 164);
+            guna2DataGridView1.Location = new Point(149, 195);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new Size(1077, 511);
+            guna2DataGridView1.Size = new Size(1243, 552);
             guna2DataGridView1.TabIndex = 2;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -171,7 +171,7 @@
             btnListEmploy.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnListEmploy.Font = new Font("Arial Rounded MT Bold", 9F);
             btnListEmploy.ForeColor = Color.White;
-            btnListEmploy.Location = new Point(285, 108);
+            btnListEmploy.Location = new Point(381, 109);
             btnListEmploy.Name = "btnListEmploy";
             btnListEmploy.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnListEmploy.Size = new Size(208, 45);
@@ -188,7 +188,7 @@
             btnListShift.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnListShift.Font = new Font("Arial Rounded MT Bold", 9F);
             btnListShift.ForeColor = Color.White;
-            btnListShift.Location = new Point(555, 108);
+            btnListShift.Location = new Point(651, 109);
             btnListShift.Name = "btnListShift";
             btnListShift.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnListShift.Size = new Size(208, 45);
@@ -205,7 +205,7 @@
             btnshiftEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnshiftEmployee.Font = new Font("Arial Rounded MT Bold", 9F);
             btnshiftEmployee.ForeColor = Color.White;
-            btnshiftEmployee.Location = new Point(806, 108);
+            btnshiftEmployee.Location = new Point(902, 109);
             btnshiftEmployee.Name = "btnshiftEmployee";
             btnshiftEmployee.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnshiftEmployee.Size = new Size(208, 45);
@@ -215,7 +215,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(392, 69);
+            label2.Location = new Point(488, 70);
             label2.Name = "label2";
             label2.Size = new Size(97, 20);
             label2.TabIndex = 6;
@@ -232,7 +232,7 @@
             txtEmployID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmployID.Font = new Font("Segoe UI", 9F);
             txtEmployID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmployID.Location = new Point(495, 65);
+            txtEmployID.Location = new Point(591, 66);
             txtEmployID.Margin = new Padding(3, 4, 3, 4);
             txtEmployID.Name = "txtEmployID";
             txtEmployID.PasswordChar = '\0';
@@ -253,7 +253,7 @@
             txtMaCa.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMaCa.Font = new Font("Segoe UI", 9F);
             txtMaCa.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMaCa.Location = new Point(737, 65);
+            txtMaCa.Location = new Point(833, 66);
             txtMaCa.Margin = new Padding(3, 4, 3, 4);
             txtMaCa.Name = "txtMaCa";
             txtMaCa.PasswordChar = '\0';
@@ -266,7 +266,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(651, 69);
+            label3.Location = new Point(747, 70);
             label3.Name = "label3";
             label3.Size = new Size(61, 20);
             label3.TabIndex = 8;
@@ -279,7 +279,7 @@
             btnSearch.IconChar = FontAwesome.Sharp.IconChar.None;
             btnSearch.IconColor = Color.Black;
             btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnSearch.Location = new Point(955, 59);
+            btnSearch.Location = new Point(1051, 60);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(69, 36);
             btnSearch.TabIndex = 28;
@@ -289,7 +289,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1285, 722);
+            ClientSize = new Size(1520, 837);
             Controls.Add(btnSearch);
             Controls.Add(txtMaCa);
             Controls.Add(label3);

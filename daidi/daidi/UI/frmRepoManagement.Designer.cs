@@ -50,10 +50,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label2 = new Label();
             tbSearchPro = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchPro = new Guna.UI2.WinForms.Guna2Button();
@@ -66,12 +62,8 @@
             label5 = new Label();
             tbNamePro = new Guna.UI2.WinForms.Guna2TextBox();
             label6 = new Label();
-            tbPricePro = new Guna.UI2.WinForms.Guna2TextBox();
-            label7 = new Label();
             label8 = new Label();
-            label9 = new Label();
             cbTypePro = new Guna.UI2.WinForms.Guna2ComboBox();
-            cbSizePro = new Guna.UI2.WinForms.Guna2ComboBox();
             btnAddPro = new Guna.UI2.WinForms.Guna2Button();
             btnDeletePro = new Guna.UI2.WinForms.Guna2Button();
             btnUpdatePro = new Guna.UI2.WinForms.Guna2Button();
@@ -221,7 +213,7 @@
             tbIdPro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbIdPro.Font = new Font("Segoe UI", 10.2F);
             tbIdPro.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbIdPro.Location = new Point(1220, 222);
+            tbIdPro.Location = new Point(1208, 289);
             tbIdPro.Margin = new Padding(3, 5, 3, 5);
             tbIdPro.Name = "tbIdPro";
             tbIdPro.PasswordChar = '\0';
@@ -235,7 +227,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial Rounded MT Bold", 10.2F);
-            label5.Location = new Point(1077, 227);
+            label5.Location = new Point(1065, 294);
             label5.Name = "label5";
             label5.Size = new Size(101, 20);
             label5.TabIndex = 11;
@@ -252,7 +244,7 @@
             tbNamePro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbNamePro.Font = new Font("Segoe UI", 10.2F);
             tbNamePro.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbNamePro.Location = new Point(1220, 298);
+            tbNamePro.Location = new Point(1208, 365);
             tbNamePro.Margin = new Padding(3, 5, 3, 5);
             tbNamePro.Name = "tbNamePro";
             tbNamePro.PasswordChar = '\0';
@@ -266,67 +258,26 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Arial Rounded MT Bold", 10.2F);
-            label6.Location = new Point(1077, 310);
+            label6.Location = new Point(1065, 377);
             label6.Name = "label6";
             label6.Size = new Size(128, 20);
             label6.TabIndex = 13;
             label6.Text = "Product name:";
             // 
-            // tbPricePro
-            // 
-            tbPricePro.CustomizableEdges = customizableEdges15;
-            tbPricePro.DefaultText = "";
-            tbPricePro.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbPricePro.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbPricePro.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbPricePro.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbPricePro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbPricePro.Font = new Font("Segoe UI", 10.2F);
-            tbPricePro.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbPricePro.Location = new Point(1220, 367);
-            tbPricePro.Margin = new Padding(3, 5, 3, 5);
-            tbPricePro.Name = "tbPricePro";
-            tbPricePro.PasswordChar = '\0';
-            tbPricePro.PlaceholderText = "";
-            tbPricePro.SelectedText = "";
-            tbPricePro.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            tbPricePro.Size = new Size(158, 32);
-            tbPricePro.TabIndex = 16;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Arial Rounded MT Bold", 10.2F);
-            label7.Location = new Point(1077, 372);
-            label7.Name = "label7";
-            label7.Size = new Size(57, 20);
-            label7.TabIndex = 15;
-            label7.Text = "Price:";
-            // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial Rounded MT Bold", 10.2F);
-            label8.Location = new Point(1077, 439);
+            label8.Location = new Point(1065, 445);
             label8.Name = "label8";
             label8.Size = new Size(55, 20);
             label8.TabIndex = 17;
             label8.Text = "Type:";
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Arial Rounded MT Bold", 10.2F);
-            label9.Location = new Point(1076, 511);
-            label9.Name = "label9";
-            label9.Size = new Size(49, 20);
-            label9.TabIndex = 18;
-            label9.Text = "Size:";
-            // 
             // cbTypePro
             // 
             cbTypePro.BackColor = Color.Transparent;
-            cbTypePro.CustomizableEdges = customizableEdges17;
+            cbTypePro.CustomizableEdges = customizableEdges15;
             cbTypePro.DrawMode = DrawMode.OwnerDrawFixed;
             cbTypePro.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTypePro.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -334,34 +285,17 @@
             cbTypePro.Font = new Font("Segoe UI", 10F);
             cbTypePro.ForeColor = Color.FromArgb(68, 88, 112);
             cbTypePro.ItemHeight = 30;
-            cbTypePro.Location = new Point(1219, 439);
+            cbTypePro.Location = new Point(1208, 429);
             cbTypePro.Name = "cbTypePro";
-            cbTypePro.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cbTypePro.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cbTypePro.Size = new Size(159, 36);
             cbTypePro.TabIndex = 19;
-            // 
-            // cbSizePro
-            // 
-            cbSizePro.BackColor = Color.Transparent;
-            cbSizePro.CustomizableEdges = customizableEdges19;
-            cbSizePro.DrawMode = DrawMode.OwnerDrawFixed;
-            cbSizePro.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbSizePro.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbSizePro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbSizePro.Font = new Font("Segoe UI", 10F);
-            cbSizePro.ForeColor = Color.FromArgb(68, 88, 112);
-            cbSizePro.ItemHeight = 30;
-            cbSizePro.Location = new Point(1219, 511);
-            cbSizePro.Name = "cbSizePro";
-            cbSizePro.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            cbSizePro.Size = new Size(159, 36);
-            cbSizePro.TabIndex = 20;
             // 
             // btnAddPro
             // 
             btnAddPro.BorderRadius = 12;
             btnAddPro.Cursor = Cursors.Hand;
-            btnAddPro.CustomizableEdges = customizableEdges21;
+            btnAddPro.CustomizableEdges = customizableEdges17;
             btnAddPro.DisabledState.BorderColor = Color.DarkGray;
             btnAddPro.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddPro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -370,7 +304,7 @@
             btnAddPro.ForeColor = Color.White;
             btnAddPro.Location = new Point(1045, 572);
             btnAddPro.Name = "btnAddPro";
-            btnAddPro.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnAddPro.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnAddPro.Size = new Size(98, 38);
             btnAddPro.TabIndex = 21;
             btnAddPro.Text = "Add";
@@ -380,7 +314,7 @@
             // 
             btnDeletePro.BorderRadius = 12;
             btnDeletePro.Cursor = Cursors.Hand;
-            btnDeletePro.CustomizableEdges = customizableEdges23;
+            btnDeletePro.CustomizableEdges = customizableEdges19;
             btnDeletePro.DisabledState.BorderColor = Color.DarkGray;
             btnDeletePro.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDeletePro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -390,7 +324,7 @@
             btnDeletePro.ForeColor = Color.White;
             btnDeletePro.Location = new Point(1176, 572);
             btnDeletePro.Name = "btnDeletePro";
-            btnDeletePro.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btnDeletePro.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnDeletePro.Size = new Size(98, 38);
             btnDeletePro.TabIndex = 22;
             btnDeletePro.Text = "Delete";
@@ -399,7 +333,7 @@
             // 
             btnUpdatePro.BorderRadius = 12;
             btnUpdatePro.Cursor = Cursors.Hand;
-            btnUpdatePro.CustomizableEdges = customizableEdges25;
+            btnUpdatePro.CustomizableEdges = customizableEdges21;
             btnUpdatePro.DisabledState.BorderColor = Color.DarkGray;
             btnUpdatePro.DisabledState.CustomBorderColor = Color.DarkGray;
             btnUpdatePro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -409,7 +343,7 @@
             btnUpdatePro.ForeColor = Color.White;
             btnUpdatePro.Location = new Point(1313, 572);
             btnUpdatePro.Name = "btnUpdatePro";
-            btnUpdatePro.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnUpdatePro.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnUpdatePro.Size = new Size(98, 38);
             btnUpdatePro.TabIndex = 23;
             btnUpdatePro.Text = "Update";
@@ -449,12 +383,8 @@
             Controls.Add(btnUpdatePro);
             Controls.Add(btnDeletePro);
             Controls.Add(btnAddPro);
-            Controls.Add(cbSizePro);
             Controls.Add(cbTypePro);
-            Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(tbPricePro);
-            Controls.Add(label7);
             Controls.Add(tbNamePro);
             Controls.Add(label6);
             Controls.Add(tbIdPro);
