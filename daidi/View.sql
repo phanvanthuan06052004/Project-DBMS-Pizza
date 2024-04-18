@@ -128,3 +128,6 @@ GROUP BY
 	go
 select * from vw_XemSoLuongNguyenLieuDaNhapTrongNgay
 go
+--view xem thông tin tài khoản nhân viên
+CREATE VIEW vw_InfoAccountEmployee AS 
+SELECT  * FROM [dbo].[TaiKhoan]

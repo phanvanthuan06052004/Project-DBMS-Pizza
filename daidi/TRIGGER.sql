@@ -1,6 +1,6 @@
 ﻿-------------TRIGGER---------------
 -----------------------------TRIGGER lúc thêm sản phẩm vào thì số lượng nguyên liệu để chế biến sản phẩm đó giảm
-use QuanLyPizza
+--use QuanLyPizza
 GO
 -----------------------------------------------------------------------------------------------
 --Trigger xóa nhân viên thì xóa luôn tài khoản

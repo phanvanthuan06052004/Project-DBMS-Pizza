@@ -5,10 +5,6 @@ VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "daidi", "daidi\daidi.csproj", "{0004A631-4963-4924-9D50-F629D835550E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{E033CA8B-8584-46D6-9795-1D55AF3A8C41}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repon", "Repon\Repon.csproj", "{E61222AB-A9C3-4F7B-A185-807D28A1F382}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{0004A631-4963-4924-9D50-F629D835550E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0004A631-4963-4924-9D50-F629D835550E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0004A631-4963-4924-9D50-F629D835550E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E033CA8B-8584-46D6-9795-1D55AF3A8C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E033CA8B-8584-46D6-9795-1D55AF3A8C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E033CA8B-8584-46D6-9795-1D55AF3A8C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E033CA8B-8584-46D6-9795-1D55AF3A8C41}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E61222AB-A9C3-4F7B-A185-807D28A1F382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E61222AB-A9C3-4F7B-A185-807D28A1F382}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E61222AB-A9C3-4F7B-A185-807D28A1F382}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E61222AB-A9C3-4F7B-A185-807D28A1F382}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -253,6 +253,16 @@ namespace daidi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OIP__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("OIP (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OIP__2_ {
             get {
                 object obj = ResourceManager.GetObject("OIP (2)", resourceCulture);
@@ -296,6 +306,16 @@ namespace daidi.Properties {
         internal static System.Drawing.Bitmap pizza_24_920x5181 {
             get {
                 object obj = ResourceManager.GetObject("pizza-24-920x5181", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pizza_24_920x5182 {
+            get {
+                object obj = ResourceManager.GetObject("pizza-24-920x5182", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

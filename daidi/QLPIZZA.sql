@@ -93,6 +93,13 @@ CREATE TABLE NhanVien
   CONSTRAINT Ck_NhanVien_CCCD CHECK(len(CCCD)=12),--CCCD đúng định dạng
   CONSTRAINT Ck_NhanVien_Email CHECK (Email like '%@gmail.com')
 );
+use QuanLyPizza
+ALTER TABLE NhanVien
+DROP CONSTRAINT Ck_NhanVien_Ngaysinh;
+
+ALTER TABLE NhanVien
+ADD CONSTRAINT Ck_NhanVien_Ngaysinh CHECK (DATEDIFF(YEAR, NgaySinh, GETDATE()) >= 19);
+
 GO
 CREATE TABLE TaiKhoan
 (

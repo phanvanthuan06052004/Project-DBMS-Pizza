@@ -1,49 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="frmEmployManagement.cs">
+    <Compile Update="UI\frmEmployManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmHomePizza.cs">
+    <Compile Update="UI\frmHomePizza.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmMenu.cs">
+    <Compile Update="UI\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmOption.cs">
+    <Compile Update="UI\frmOption.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmPizzaManagement.cs">
+    <Compile Update="UI\FrmPizzaManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmRepoManagement.cs">
+    <Compile Update="UI\frmRepoManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmRevenue.cs">
+    <Compile Update="UI\frmRevenue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmShiftManagement.cs">
+    <Compile Update="UI\frmShiftManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Login.cs">
+    <Compile Update="UI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Management.cs">
+    <Compile Update="UI\Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ManagementImport.cs">
+    <Compile Update="UI\ManagementImport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ManagementOrder.cs">
+    <Compile Update="UI\ManagementOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ManagemrentCustomer.cs">
+    <Compile Update="UI\ManagemrentCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ManageSize.cs">
+    <Compile Update="UI\ManageSize.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrolOrrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

@@ -1,6 +1,7 @@
 ﻿USE QuanLyPizza
 
 --------------------FUNCTION-------------------
+--FUNCT check login
 select * from NhanVien
 --các optitnon:Ma NV, tên NV, mã CV,
 go

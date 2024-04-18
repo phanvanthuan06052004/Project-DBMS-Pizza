@@ -3,7 +3,7 @@ USE QuanLyPizza
 -----------------------------------------------------------------------------------------------
 --Thêm nhân viên
 GO
-CREATE PROCEDURE sp_AddEmployee
+CREATE OR ALTER PROCEDURE sp_AddEmployee
 	@MaNV CHAR(10),
 	@HoNV NVARCHAR(10),
 	@TenNV NVARCHAR(20),
@@ -25,7 +25,7 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRAN
-		RAISERROR('KHÔNG THÊM ĐƯỢC NHÂN VIÊN', 25, 1)
+		RAISERROR('KHÔNG THÊM ĐƯỢC NHÂN VIÊN', 16, 1)
 	END CATCH
 END
 GO
@@ -342,7 +342,7 @@ END;
 -----------------------------------------------------------------------------------------------
 --thêm xóa sửa tài khoản
 go
-CREATE PROCEDURE sp_AddTaiKhoan
+CREATE or alter PROCEDURE sp_AddTaiKhoan
     @UserName VARCHAR(20),
     @Password VARCHAR(20),
     @MaNV CHAR(10),
@@ -355,9 +355,10 @@ BEGIN
     END TRY
     BEGIN CATCH
         ROLLBACK TRANSACTION;
-        RAISERROR('Thêm thông tin tài khoản không thành công', 25, 1);
+        RAISERROR('Thêm thông tin tài khoản không thành công', 16, 1);
     END CATCH
 END;
+
 
 go
 CREATE PROCEDURE sp_UpdateTaiKhoan
