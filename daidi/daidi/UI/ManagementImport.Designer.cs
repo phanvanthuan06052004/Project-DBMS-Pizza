@@ -36,9 +36,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -69,7 +66,6 @@
             label3 = new Label();
             tbSearchImp = new Guna.UI2.WinForms.Guna2TextBox();
             label2 = new Label();
-            gwPro = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             btnUpdateImp = new Guna.UI2.WinForms.Guna2Button();
@@ -79,7 +75,8 @@
             tbMaxImp = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchImp = new Guna.UI2.WinForms.Guna2Button();
             btnFilterImp = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)gwPro).BeginInit();
+            dgvProvider = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvProvider).BeginInit();
             SuspendLayout();
             // 
             // label9
@@ -163,7 +160,6 @@
             label6.Size = new Size(47, 17);
             label6.TabIndex = 35;
             label6.Text = "Date:";
-            label6.Click += label6_Click;
             // 
             // tbIdPro
             // 
@@ -246,58 +242,6 @@
             label2.Size = new Size(122, 17);
             label2.TabIndex = 25;
             label2.Text = "Provider Name:";
-            // 
-            // gwPro
-            // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            gwPro.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            gwPro.BorderStyle = BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.2F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            gwPro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            gwPro.ColumnHeadersHeight = 4;
-            gwPro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            gwPro.DefaultCellStyle = dataGridViewCellStyle3;
-            gwPro.GridColor = Color.FromArgb(231, 229, 255);
-            gwPro.Location = new Point(37, 169);
-            gwPro.Name = "gwPro";
-            gwPro.RowHeadersVisible = false;
-            gwPro.RowHeadersWidth = 51;
-            gwPro.Size = new Size(809, 457);
-            gwPro.TabIndex = 24;
-            gwPro.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            gwPro.ThemeStyle.AlternatingRowsStyle.Font = null;
-            gwPro.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            gwPro.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            gwPro.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            gwPro.ThemeStyle.BackColor = Color.White;
-            gwPro.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            gwPro.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            gwPro.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            gwPro.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            gwPro.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            gwPro.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            gwPro.ThemeStyle.HeaderStyle.Height = 4;
-            gwPro.ThemeStyle.ReadOnly = false;
-            gwPro.ThemeStyle.RowsStyle.BackColor = Color.White;
-            gwPro.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            gwPro.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            gwPro.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            gwPro.ThemeStyle.RowsStyle.Height = 29;
-            gwPro.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            gwPro.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // guna2TextBox1
             // 
@@ -388,6 +332,7 @@
             btnAddImp.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddImp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAddImp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAddImp.FillColor = Color.FromArgb(0, 192, 192);
             btnAddImp.Font = new Font("Arial Rounded MT Bold", 9F);
             btnAddImp.ForeColor = Color.White;
             btnAddImp.Location = new Point(964, 580);
@@ -474,13 +419,23 @@
             btnFilterImp.Size = new Size(98, 38);
             btnFilterImp.TabIndex = 54;
             btnFilterImp.Text = "Filter";
-            btnFilterImp.Click += guna2Button1_Click;
+            // 
+            // dgvProvider
+            // 
+            dgvProvider.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProvider.Location = new Point(43, 167);
+            dgvProvider.Name = "dgvProvider";
+            dgvProvider.RowHeadersWidth = 51;
+            dgvProvider.Size = new Size(809, 457);
+            dgvProvider.TabIndex = 55;
+            dgvProvider.CellClick += dgvProvider_CellClick;
             // 
             // ManagementImport
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1411, 636);
+            Controls.Add(dgvProvider);
             Controls.Add(btnFilterImp);
             Controls.Add(btnSearchImp);
             Controls.Add(tbMaxImp);
@@ -502,11 +457,11 @@
             Controls.Add(label3);
             Controls.Add(tbSearchImp);
             Controls.Add(label2);
-            Controls.Add(gwPro);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ManagementImport";
             Text = "ManagementImport";
-            ((System.ComponentModel.ISupportInitialize)gwPro).EndInit();
+            Load += ManagementImport_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -534,7 +489,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSearchPro;
         private Guna.UI2.WinForms.Guna2TextBox tbSearchImp;
         private Label label2;
-        private Guna.UI2.WinForms.Guna2DataGridView gwPro;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2Button btnUpdateImp;
@@ -544,5 +498,6 @@
         private Guna.UI2.WinForms.Guna2TextBox tbMaxImp;
         private Guna.UI2.WinForms.Guna2Button btnSearchImp;
         private Guna.UI2.WinForms.Guna2Button btnFilterImp;
+        private DataGridView dgvProvider;
     }
 }

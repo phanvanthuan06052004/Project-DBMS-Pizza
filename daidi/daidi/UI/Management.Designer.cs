@@ -57,6 +57,7 @@
             // 
             // pnManage
             // 
+            pnManage.BorderStyle = BorderStyle.FixedSingle;
             pnManage.Location = new Point(33, 127);
             pnManage.Name = "pnManage";
             pnManage.Size = new Size(1411, 706);
@@ -72,9 +73,10 @@
             btnProMana.DisabledState.CustomBorderColor = Color.DarkGray;
             btnProMana.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnProMana.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnProMana.FillColor = Color.FromArgb(255, 128, 128);
             btnProMana.Font = new Font("Arial Narrow", 10.2F, FontStyle.Bold);
             btnProMana.ForeColor = Color.White;
-            btnProMana.Location = new Point(263, 71);
+            btnProMana.Location = new Point(256, 52);
             btnProMana.Name = "btnProMana";
             btnProMana.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnProMana.Size = new Size(154, 50);
@@ -91,9 +93,10 @@
             btnSizeMana.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSizeMana.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSizeMana.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSizeMana.FillColor = Color.FromArgb(255, 128, 128);
             btnSizeMana.Font = new Font("Arial Narrow", 10.2F, FontStyle.Bold);
             btnSizeMana.ForeColor = Color.White;
-            btnSizeMana.Location = new Point(494, 71);
+            btnSizeMana.Location = new Point(487, 52);
             btnSizeMana.Name = "btnSizeMana";
             btnSizeMana.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnSizeMana.Size = new Size(154, 50);
@@ -110,9 +113,10 @@
             btnManaCus.DisabledState.CustomBorderColor = Color.DarkGray;
             btnManaCus.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnManaCus.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnManaCus.FillColor = Color.FromArgb(255, 128, 128);
             btnManaCus.Font = new Font("Arial Narrow", 10.2F, FontStyle.Bold);
             btnManaCus.ForeColor = Color.White;
-            btnManaCus.Location = new Point(728, 71);
+            btnManaCus.Location = new Point(721, 52);
             btnManaCus.Name = "btnManaCus";
             btnManaCus.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnManaCus.Size = new Size(154, 50);
@@ -129,14 +133,15 @@
             btnManaImp.DisabledState.CustomBorderColor = Color.DarkGray;
             btnManaImp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnManaImp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnManaImp.FillColor = Color.FromArgb(255, 128, 128);
             btnManaImp.Font = new Font("Arial Narrow", 10.2F, FontStyle.Bold);
             btnManaImp.ForeColor = Color.White;
-            btnManaImp.Location = new Point(964, 71);
+            btnManaImp.Location = new Point(957, 52);
             btnManaImp.Name = "btnManaImp";
             btnManaImp.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnManaImp.Size = new Size(154, 50);
             btnManaImp.TabIndex = 4;
-            btnManaImp.Text = "Import ";
+            btnManaImp.Text = "Provider";
             btnManaImp.Click += btnManaImp_Click;
             // 
             // btnManaOrder
@@ -148,9 +153,10 @@
             btnManaOrder.DisabledState.CustomBorderColor = Color.DarkGray;
             btnManaOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnManaOrder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnManaOrder.FillColor = Color.FromArgb(255, 128, 128);
             btnManaOrder.Font = new Font("Arial Narrow", 10.2F, FontStyle.Bold);
             btnManaOrder.ForeColor = Color.White;
-            btnManaOrder.Location = new Point(1181, 71);
+            btnManaOrder.Location = new Point(1174, 52);
             btnManaOrder.Name = "btnManaOrder";
             btnManaOrder.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnManaOrder.Size = new Size(154, 50);

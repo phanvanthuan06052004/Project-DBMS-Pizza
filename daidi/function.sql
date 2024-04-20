@@ -8,7 +8,7 @@ go
 ----------------------------------------------------------------------------------------------
 --Tìm kiếm nhân viên
 GO
-CREATE FUNCTION fn_searchEmployee(@option nvarchar(50), @key nvarchar(50))
+CREATE or alter FUNCTION fn_searchEmployee(@option nvarchar(50), @key nvarchar(50))
 RETURNS  @Result TABLE (
         MaNV CHAR(10),
         HoNV NVARCHAR(10),
@@ -19,7 +19,9 @@ RETURNS  @Result TABLE (
         DiaChi NVARCHAR(50),
         Email VARCHAR(30),
         CCCD CHAR(12),
-        MaChucVu CHAR(10)
+        MaChucVu CHAR(10),
+		TenChucVu NVARCHAR(30),
+		Luong Money
     )
 	AS 
 BEGIN
@@ -32,7 +34,7 @@ BEGIN
     ELSE IF @option = 'employee name'
     BEGIN
         INSERT INTO @Result
-        SELECT * FROM [dbo].[vw_XemThongTinNhanVien] WHERE TenNV = @key
+        SELECT * FROM [dbo].[vw_XemThongTinNhanVien] WHERE TenNV like '%' + @key + '%' OR HoNV like '%' + @key + '%' 
     END
     ELSE IF @option = 'job ID'
     BEGIN
@@ -44,10 +46,13 @@ BEGIN
 END
 go
 
+
+select * from ChucVu
+
 --drop function fn_searchEmployee
 --select * from [dbo].[NhanVien]
 --select * from [dbo].[vw_XemThongTinNhanVien]
---select * from  dbo.fn_searchEmployee('job ID', 'CV002')
+--select * from  dbo.fn_searchEmployee('employee name', 'Mai')
 
 
 -----------------------------------------------------------------------------------------------
@@ -79,7 +84,7 @@ GO
 GO
 -----------------------------------------------------------------------------------------------
 --func tìm kiếm theo size
-CREATE OR ALTER FUNCTION fn_SearchSize (@SizeName nvarchar(50))
+CREATE OR ALTER FUNCTION fn_SearchSizeFlowProduct (@SizeName nvarchar(50))
 RETURNS @Result TABLE (
 		MaSP CHAR(10),
 		TenSP NVARCHAR(30) NOT NULL,
@@ -96,6 +101,22 @@ BEGIN
 				WHERE kc.TenKichCo  LIKE '%' + @SizeName + '%' 
 	RETURN
 END
+-----------------------------------------------------------------------------------------------
+--func tìm kiếm  size
+GO
+CREATE OR ALTER FUNCTION fn_SearchSize (@Key nvarchar(50))
+RETURNS @Result TABLE (
+		MaKichCo CHAR(10),
+		TenKichCo NVARCHAR(30) 
+		)
+AS
+BEGIN	
+	INSERT INTO @Result 
+		SELECT * FROM KichCo
+				WHERE TenKichCo  LIKE '%' + @Key + '%' OR MaKichCo  LIKE '%' + @Key + '%' 
+	RETURN
+END
+
 GO
  --SELECT * FROM dbo.fn_SearchSize(N'Lớ')
  --SELECT * FROM ChiTietKichCo
@@ -220,19 +241,7 @@ GO
 -----------------------------------------------------------------------------------------------
 --FUNC tìm kiếm theo tên khách hàng
 GO
-CREATE OR ALTER FUNCTION fn_SearchCustomerName (@Name nvarchar(50))
-RETURNS @Result TABLE (
-	MaKH CHAR(10),
-	TenKH NVARCHAR(30) NOT NULL,
-	SoDT CHAR(10) not null
-)
-AS
-BEGIN   
-    INSERT INTO @Result 
-    SELECT *FROM KhachHang
-    WHERE KhachHang.TenKH like '%' + @NAME +'%'
-    RETURN
-END
+
 GO
 --select * from dbo.fn_SearchCustomerName(N'Na')
 
@@ -315,38 +324,117 @@ BEGIN
 	RETURN 
 END
 GO
+
+
 -----------------------------------------------------------------------------------------------
- --funct tìm kiếm hóa đơn theo ngày
-CREATE OR ALTER FUNCTION fn_SearchOrderOfDate (@Min varchar(20), @Max varchar(20))
+ --funct tìm kiếm hóa đơn theo Order ID
+CREATE OR ALTER FUNCTION fn_SearchOrderID (@OrderID varchar(50))
 RETURNS @Result TABLE (
-    MaHD CHAR(10),
-    NgayGioDat DATETIME NOT NULL,
-    MaNV CHAR(10),
-    MaKH CHAR(10) NOT NULL,
-    SoLuong INT NOT NULL,
-    TriGia MONEY NOT NULL,
-    MaKichCo CHAR(10) NOT NULL,
-    TenSP NVARCHAR(30)
+    MaHD CHAR(10), 
+	NgayGioDat DATE,
+	TenNV NVARCHAR(20), 
+	TenKH NVARCHAR(30), 
+	TenSP NVARCHAR(30), 
+	TenKichCo NVARCHAR(30), 
+	SoLuong INT, 
+	TriGia MONEY
 )
 AS
 BEGIN   
-    DECLARE @MinDate DATETIME
-    DECLARE @MaxDate DATETIME
-
-    -- Chuyển đổi ngày/tháng/năm từ chuỗi sang kiểu DATETIME
-    SET @MinDate = CONVERT(DATETIME, @Min, 103)
-    SET @MaxDate = CONVERT(DATETIME, @Max, 103)
-
     INSERT INTO @Result 
-    SELECT hd.MaHD, hd.NgayGioDat, hd.MaNV, hd.MaKH, ct.SoLuong, ct.TriGia, ct.MaKichCo, sp.TenSP
-    FROM HoaDonBanHang hd 
-    JOIN ChiTietHD ct ON hd.MaHD = ct.MaHD 
-	JOIN SanPham sp ON sp.MaSP = ct.MaSP
-    WHERE hd.NgayGioDat BETWEEN @MinDate AND @MaxDate
-
+	SELECT hd.MaHD, hd.NgayGioDat, nv.TenNV, kh.TenKH, sp.TenSP, kc.TenKichCo, cthd.SoLuong, cthd.TriGia  FROM HoaDonBanHang hd 
+	JOIN ChiTietHD cthd ON hd.MaHD = cthd.MaHD 
+	JOIN KhachHang kh ON kh.MaKH = hd.MaKH 
+	JOIN NhanVien nv ON hd.MaNV = nv.MaNV
+	JOIN KichCo kc ON kc.MaKichCo = cthd.MaKichCo
+	JOIN SanPham sp ON sp.MaSP = cthd.MaSP
+	WHERE hd.MaHD = @OrderID
+	GROUP BY hd.MaHD, hd.NgayGioDat, nv.TenNV, kh.TenKH, sp.TenSP, kc.TenKichCo, cthd.SoLuong, cthd.TriGia
+	
     RETURN;
 END
 GO
+
+
+-----------------------------------------------------------------------------------------------
+ --funct tìm kiếm hóa đơn theo ngày
+CREATE OR ALTER FUNCTION fn_SearchOrderDate ( @Min DateTime, @Max DateTime	)
+RETURNS @Result TABLE (
+    MaHD CHAR(10), 
+	NgayGioDat DATE,
+	TenNV NVARCHAR(20), 
+	TenKH NVARCHAR(30), 
+	TenSP NVARCHAR(30), 
+	TenKichCo NVARCHAR(30), 
+	SoLuong INT, 
+	TriGia MONEY
+)
+AS
+BEGIN   
+    INSERT INTO @Result 
+	SELECT hd.MaHD, hd.NgayGioDat, nv.TenNV, kh.TenKH, sp.TenSP, kc.TenKichCo, cthd.SoLuong, cthd.TriGia FROM HoaDonBanHang hd 
+	JOIN ChiTietHD cthd ON hd.MaHD = cthd.MaHD 
+	JOIN KhachHang kh ON kh.MaKH = hd.MaKH 
+	JOIN NhanVien nv ON hd.MaNV = nv.MaNV
+	JOIN KichCo kc ON kc.MaKichCo = cthd.MaKichCo
+	JOIN SanPham sp ON sp.MaSP = cthd.MaSP
+	WHERE hd.NgayGioDat between @Min and @Max
+	GROUP BY hd.MaHD,hd.NgayGioDat, nv.TenNV, kh.TenKH, sp.TenSP, kc.TenKichCo, cthd.SoLuong, cthd.TriGia
+    RETURN;
+END
+GO
+
+ --funct tìm kiếm hóa đơn theo Order ID và ngày 
+CREATE OR ALTER FUNCTION fn_SearchOrderIDAndDate (@OrderID varchar(50) , @Min DateTime, @Max DateTime)
+RETURNS @Result TABLE (
+    MaHD CHAR(10), 
+	NgayGioDat DATE,
+	TenNV NVARCHAR(20), 
+	TenKH NVARCHAR(30), 
+	TenSP NVARCHAR(30), 
+	TenKichCo NVARCHAR(30), 
+	SoLuong INT, 
+	TriGia MONEY
+)
+AS
+BEGIN   
+    INSERT INTO @Result 
+	SELECT hd.MaHD, hd.NgayGioDat, nv.TenNV, kh.TenKH, sp.TenSP, kc.TenKichCo, cthd.SoLuong, cthd.TriGia FROM HoaDonBanHang hd 
+	JOIN ChiTietHD cthd ON hd.MaHD = cthd.MaHD 
+	JOIN KhachHang kh ON kh.MaKH = hd.MaKH 
+	JOIN NhanVien nv ON hd.MaNV = nv.MaNV
+	JOIN KichCo kc ON kc.MaKichCo = cthd.MaKichCo
+	JOIN SanPham sp ON sp.MaSP = cthd.MaSP
+	WHERE hd.MaHD = @OrderID and hd.NgayGioDat between @Min and @Max
+	GROUP BY hd.MaHD,hd.NgayGioDat, nv.TenNV, kh.TenKH, sp.TenSP, kc.TenKichCo, cthd.SoLuong, cthd.TriGia
+    RETURN;
+END
+GO
+
+
 --select * from HoaDonBanHang
 --SELECT * FROM dbo.fn_SearchOrderOfDate('01/01/2015', '01/01/2017')
 
+---------------tao ma tu dong
+CREATE OR ALTER FUNCTION fn_get_next_order()
+RETURN CHAR(10) 
+AS 
+BEGIN
+	DECLARE @s VARCHAR(20);
+	DECLARE @max_num INT;
+	SELECT TOP 1 @max_num = CAST(SUBSTRING([Customer_id], 5, LEN([Customer_id])) AS INT)
+	FROM vw_
+	WHERE SUBSTRING([Customer_id], 1, 5) = 'KH000'
+	ORDER BY CAST(SUBSTRING([Customer_id], 5, LEN([Customer_id])) AS INT) DESC;
+	IF (@max_num IS NULL)
+		BEGIN
+		 SET @s = 'KH0001';
+		END
+	ELSE
+		BEGIN
+		 SET @max_num = @max_num + 1;
+		 SET @s = 'KH000' + RIGHT(CAST(@max_num AS NVARCHAR(MAX)), LEN(CAST(@max_num AS
+		 NVARCHAR(MAX))));
+	    END
+	 RETURN @s;
+END

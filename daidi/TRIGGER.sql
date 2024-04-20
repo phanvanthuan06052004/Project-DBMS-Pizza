@@ -1,9 +1,10 @@
-﻿-------------TRIGGER---------------
+﻿	-------------TRIGGER---------------
 -----------------------------TRIGGER lúc thêm sản phẩm vào thì số lượng nguyên liệu để chế biến sản phẩm đó giảm
 --use QuanLyPizza
 GO
 -----------------------------------------------------------------------------------------------
 --Trigger xóa nhân viên thì xóa luôn tài khoản
+drop trigger tg_DeleteEmployeeThenDeleteAccount
 CREATE or alter TRIGGER tg_DeleteEmployeeThenDeleteAccount ON NhanVien
 AFTER DELETE 
 AS
@@ -151,3 +152,5 @@ GO
 --INSERT INTO ChiTietPN (SoLuong, MaPhieu, MaNL, DonGia)
 --VALUES 
 --(70, 'PN002', 'NL001',30000 )
+
+

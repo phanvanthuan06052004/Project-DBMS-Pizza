@@ -40,12 +40,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployManagement));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployManagement));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel2 = new Panel();
+            btnReload = new Guna.UI2.WinForms.Guna2Button();
+            cmbPosition = new ComboBox();
             label15 = new Label();
-            txtPositionID = new TextBox();
             label14 = new Label();
             label13 = new Label();
             label12 = new Label();
@@ -99,8 +102,9 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(255, 224, 192);
+            panel2.Controls.Add(btnReload);
+            panel2.Controls.Add(cmbPosition);
             panel2.Controls.Add(label15);
-            panel2.Controls.Add(txtPositionID);
             panel2.Controls.Add(label14);
             panel2.Controls.Add(label13);
             panel2.Controls.Add(label12);
@@ -136,22 +140,43 @@
             panel2.Size = new Size(469, 797);
             panel2.TabIndex = 3;
             // 
+            // btnReload
+            // 
+            btnReload.BorderRadius = 12;
+            btnReload.Cursor = Cursors.Hand;
+            btnReload.CustomizableEdges = customizableEdges1;
+            btnReload.DisabledState.BorderColor = Color.DarkGray;
+            btnReload.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnReload.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnReload.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnReload.FillColor = Color.Orange;
+            btnReload.Font = new Font("Arial Rounded MT Bold", 9F);
+            btnReload.ForeColor = Color.White;
+            btnReload.Location = new Point(348, 725);
+            btnReload.Name = "btnReload";
+            btnReload.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnReload.Size = new Size(98, 38);
+            btnReload.TabIndex = 63;
+            btnReload.Text = "Reload";
+            btnReload.Click += btnReload_Click;
+            // 
+            // cmbPosition
+            // 
+            cmbPosition.FormattingEnabled = true;
+            cmbPosition.Location = new Point(146, 549);
+            cmbPosition.Name = "cmbPosition";
+            cmbPosition.Size = new Size(224, 28);
+            cmbPosition.TabIndex = 17;
+            // 
             // label15
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Arial Rounded MT Bold", 9F);
             label15.Location = new Point(48, 549);
             label15.Name = "label15";
-            label15.Size = new Size(91, 17);
+            label15.Size = new Size(75, 17);
             label15.TabIndex = 61;
-            label15.Text = "Position ID:";
-            // 
-            // txtPositionID
-            // 
-            txtPositionID.Location = new Point(146, 546);
-            txtPositionID.Name = "txtPositionID";
-            txtPositionID.Size = new Size(224, 27);
-            txtPositionID.TabIndex = 60;
+            label15.Text = "Position :";
             // 
             // label14
             // 
@@ -188,27 +213,27 @@
             txtRole.Location = new Point(146, 673);
             txtRole.Name = "txtRole";
             txtRole.Size = new Size(224, 27);
-            txtRole.TabIndex = 56;
+            txtRole.TabIndex = 20;
             // 
             // txtPassword
             // 
             txtPassword.Location = new Point(146, 631);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(224, 27);
-            txtPassword.TabIndex = 55;
+            txtPassword.TabIndex = 19;
             // 
             // txtUsername
             // 
             txtUsername.Location = new Point(146, 587);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(224, 27);
-            txtUsername.TabIndex = 54;
+            txtUsername.TabIndex = 18;
             // 
             // btnUpdate
             // 
             btnUpdate.BorderRadius = 12;
             btnUpdate.Cursor = Cursors.Hand;
-            btnUpdate.CustomizableEdges = customizableEdges1;
+            btnUpdate.CustomizableEdges = customizableEdges3;
             btnUpdate.DisabledState.BorderColor = Color.DarkGray;
             btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
             btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -216,9 +241,9 @@
             btnUpdate.FillColor = Color.FromArgb(192, 192, 0);
             btnUpdate.Font = new Font("Arial Rounded MT Bold", 9F);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(295, 725);
+            btnUpdate.Location = new Point(240, 725);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnUpdate.Size = new Size(98, 38);
             btnUpdate.TabIndex = 53;
             btnUpdate.Text = "Update";
@@ -228,7 +253,7 @@
             // 
             btnDelete.BorderRadius = 12;
             btnDelete.Cursor = Cursors.Hand;
-            btnDelete.CustomizableEdges = customizableEdges3;
+            btnDelete.CustomizableEdges = customizableEdges5;
             btnDelete.DisabledState.BorderColor = Color.DarkGray;
             btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -236,9 +261,9 @@
             btnDelete.FillColor = Color.FromArgb(255, 128, 128);
             btnDelete.Font = new Font("Arial Rounded MT Bold", 9F);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(162, 725);
+            btnDelete.Location = new Point(131, 725);
             btnDelete.Name = "btnDelete";
-            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnDelete.Size = new Size(98, 38);
             btnDelete.TabIndex = 52;
             btnDelete.Text = "Delete";
@@ -248,16 +273,16 @@
             // 
             btnAdd.BorderRadius = 12;
             btnAdd.Cursor = Cursors.Hand;
-            btnAdd.CustomizableEdges = customizableEdges5;
+            btnAdd.CustomizableEdges = customizableEdges7;
             btnAdd.DisabledState.BorderColor = Color.DarkGray;
             btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnAdd.Font = new Font("Arial Rounded MT Bold", 9F);
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(35, 725);
+            btnAdd.Location = new Point(23, 725);
             btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnAdd.Size = new Size(98, 38);
             btnAdd.TabIndex = 51;
             btnAdd.Text = "Add";
@@ -278,7 +303,7 @@
             txtFIrstName.Location = new Point(146, 176);
             txtFIrstName.Name = "txtFIrstName";
             txtFIrstName.Size = new Size(224, 27);
-            txtFIrstName.TabIndex = 24;
+            txtFIrstName.TabIndex = 10;
             // 
             // label9
             // 
@@ -295,7 +320,7 @@
             txtCCCD.Location = new Point(146, 506);
             txtCCCD.Name = "txtCCCD";
             txtCCCD.Size = new Size(224, 27);
-            txtCCCD.TabIndex = 18;
+            txtCCCD.TabIndex = 16;
             // 
             // label8
             // 
@@ -312,7 +337,7 @@
             txtEmail.Location = new Point(146, 454);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(224, 27);
-            txtEmail.TabIndex = 16;
+            txtEmail.TabIndex = 15;
             // 
             // label7
             // 
@@ -346,14 +371,15 @@
             txtPhone.Location = new Point(146, 357);
             txtPhone.Name = "txtPhone";
             txtPhone.Size = new Size(224, 27);
-            txtPhone.TabIndex = 12;
+            txtPhone.TabIndex = 13;
             // 
             // dtBirth
             // 
             dtBirth.Location = new Point(146, 311);
             dtBirth.Name = "dtBirth";
             dtBirth.Size = new Size(224, 27);
-            dtBirth.TabIndex = 11;
+            dtBirth.TabIndex = 12;
+            dtBirth.ValueChanged += dtBirth_ValueChanged;
             // 
             // label5
             // 
@@ -374,6 +400,8 @@
             CkWomen.TabIndex = 8;
             CkWomen.Text = "Women";
             CkWomen.UseVisualStyleBackColor = true;
+            CkWomen.CheckedChanged += CkWomen_CheckedChanged;
+            CkWomen.CheckStateChanged += CkWomen_CheckStateChanged;
             // 
             // CkMen
             // 
@@ -384,6 +412,8 @@
             CkMen.TabIndex = 7;
             CkMen.Text = "Men";
             CkMen.UseVisualStyleBackColor = true;
+            CkMen.CheckedChanged += CkMen_CheckedChanged;
+            CkMen.CheckStateChanged += CkMen_CheckStateChanged;
             // 
             // label4
             // 
@@ -410,7 +440,7 @@
             txtLastName.Location = new Point(146, 223);
             txtLastName.Name = "txtLastName";
             txtLastName.Size = new Size(224, 27);
-            txtLastName.TabIndex = 3;
+            txtLastName.TabIndex = 11;
             // 
             // label2
             // 
@@ -427,7 +457,7 @@
             txtID.Location = new Point(146, 128);
             txtID.Name = "txtID";
             txtID.Size = new Size(224, 27);
-            txtID.TabIndex = 1;
+            txtID.TabIndex = 9;
             // 
             // pictureBox2
             // 
@@ -451,6 +481,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(1051, 167);
             panel3.TabIndex = 4;
+            panel3.Paint += panel3_Paint;
             // 
             // btnSearch
             // 
@@ -468,7 +499,7 @@
             // 
             // txtKeySearach
             // 
-            txtKeySearach.CustomizableEdges = customizableEdges7;
+            txtKeySearach.CustomizableEdges = customizableEdges9;
             txtKeySearach.DefaultText = "";
             txtKeySearach.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtKeySearach.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -483,14 +514,14 @@
             txtKeySearach.PasswordChar = '\0';
             txtKeySearach.PlaceholderText = "";
             txtKeySearach.SelectedText = "";
-            txtKeySearach.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtKeySearach.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtKeySearach.Size = new Size(187, 36);
             txtKeySearach.TabIndex = 26;
             // 
             // cmbSearchOption
             // 
             cmbSearchOption.BackColor = Color.Transparent;
-            cmbSearchOption.CustomizableEdges = customizableEdges9;
+            cmbSearchOption.CustomizableEdges = customizableEdges11;
             cmbSearchOption.DrawMode = DrawMode.OwnerDrawFixed;
             cmbSearchOption.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSearchOption.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -500,7 +531,7 @@
             cmbSearchOption.ItemHeight = 30;
             cmbSearchOption.Location = new Point(121, 28);
             cmbSearchOption.Name = "cmbSearchOption";
-            cmbSearchOption.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cmbSearchOption.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cmbSearchOption.Size = new Size(181, 36);
             cmbSearchOption.TabIndex = 25;
             cmbSearchOption.SelectedIndexChanged += cmbSearchOption_SelectedIndexChanged;
@@ -528,13 +559,16 @@
             // 
             // dgvEmployee
             // 
+            dgvEmployee.BackgroundColor = Color.FromArgb(255, 239, 239);
             dgvEmployee.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEmployee.Location = new Point(138, 111);
+            dgvEmployee.Dock = DockStyle.Fill;
+            dgvEmployee.Location = new Point(0, 0);
             dgvEmployee.Name = "dgvEmployee";
             dgvEmployee.RowHeadersWidth = 51;
             dgvEmployee.ScrollBars = ScrollBars.Horizontal;
-            dgvEmployee.Size = new Size(848, 402);
+            dgvEmployee.Size = new Size(1049, 628);
             dgvEmployee.TabIndex = 0;
+            dgvEmployee.CellContentClick += dgvEmployee_CellContentClick;
             dgvEmployee.Click += dgvEmployee_Click;
             // 
             // guna2ControlBox2
@@ -543,7 +577,7 @@
             guna2ControlBox2.BackColor = Color.Transparent;
             guna2ControlBox2.Cursor = Cursors.Hand;
             guna2ControlBox2.CustomIconSize = 20F;
-            guna2ControlBox2.CustomizableEdges = customizableEdges11;
+            guna2ControlBox2.CustomizableEdges = customizableEdges13;
             guna2ControlBox2.FillColor = Color.IndianRed;
             guna2ControlBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox2.ForeColor = Color.IndianRed;
@@ -551,7 +585,7 @@
             guna2ControlBox2.Location = new Point(2343, 2);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.PressedColor = Color.IndianRed;
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2ControlBox2.Size = new Size(65, 37);
             guna2ControlBox2.TabIndex = 2;
             // 
@@ -581,13 +615,13 @@
             guna2ControlBox1.BackColor = Color.Transparent;
             guna2ControlBox1.Cursor = Cursors.Hand;
             guna2ControlBox1.CustomIconSize = 20F;
-            guna2ControlBox1.CustomizableEdges = customizableEdges13;
+            guna2ControlBox1.CustomizableEdges = customizableEdges15;
             guna2ControlBox1.FillColor = Color.Transparent;
             guna2ControlBox1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox1.IconColor = Color.Black;
             guna2ControlBox1.Location = new Point(1443, 1);
             guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2ControlBox1.Size = new Size(65, 37);
             guna2ControlBox1.TabIndex = 3;
             // 
@@ -617,7 +651,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmEmployManagement";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmEmployManagement";
             Load += frmEmployManagement_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -678,7 +711,8 @@
         private Label label13;
         private Label label12;
         private Label label15;
-        private TextBox txtPositionID;
         private DataGridView dgvEmployee;
+        private ComboBox cmbPosition;
+        private Guna.UI2.WinForms.Guna2Button btnReload;
     }
 }

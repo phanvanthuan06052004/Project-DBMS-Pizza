@@ -144,13 +144,6 @@ namespace daidi
             }
         }
 
-
-        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-        }
-
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = dgvProduct.CurrentCell.RowIndex;

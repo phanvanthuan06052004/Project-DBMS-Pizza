@@ -38,7 +38,8 @@ namespace daidi.SERVICE
         //    return cnt.ExecuteScalarFunction<string>("[dbo].[ftGet_next_employee_id]", CommandType.Text, null);
         //}
 
-        public bool Add_Employee(ref string err, string Manv, string HoNV, string TenNV, DateTime NgaySinh, string GioiTinh, string SoDT, string DiaChi, string Email, string CCCD, string MaChucVu)
+        public bool Add_Employee(ref string err, string Manv, string HoNV, string TenNV, 
+            DateTime NgaySinh, string GioiTinh, string SoDT, string DiaChi, string Email, string CCCD, string MaChucVu)
         {
             return cnt.MyExecuteNonQuery("sp_AddEmployee",
                 CommandType.StoredProcedure, ref err,
@@ -56,7 +57,7 @@ namespace daidi.SERVICE
         }
 
 
-        public bool Update_Employee(ref string err, string Manv, string HoNV, string TenNV, DateTime NgaySinh, string GioiTinh, string SoDT, string DiaChi, string Email, string CCCD, string MaChucVu)
+        public bool Update_Employee(ref string err, string Manv, string HoNV, string TenNV, DateTime NgaySinh, string GioiTinh, string SoDT, string DiaChi, string Email, string CCCD)
         {
             return cnt.MyExecuteNonQuery("sp_UpdateEmployee",
                 CommandType.StoredProcedure, ref err,
@@ -68,8 +69,7 @@ namespace daidi.SERVICE
                 new SqlParameter("@SoDT", SoDT),
                 new SqlParameter("@DiaChi", DiaChi),
                 new SqlParameter("@Email", Email),
-                new SqlParameter("@CCCD", CCCD),
-                new SqlParameter("@MaChucVu", MaChucVu)
+                new SqlParameter("@CCCD", CCCD)
                 );
         }
 

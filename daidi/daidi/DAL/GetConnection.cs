@@ -122,7 +122,7 @@ namespace daidi.DAL
                 da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }

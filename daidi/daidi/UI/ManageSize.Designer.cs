@@ -39,23 +39,25 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnUpdateSize = new Guna.UI2.WinForms.Guna2Button();
             btnDeleteSize = new Guna.UI2.WinForms.Guna2Button();
             btnAddSize = new Guna.UI2.WinForms.Guna2Button();
             tbNameSize = new Guna.UI2.WinForms.Guna2TextBox();
             label6 = new Label();
             btnSearchSize = new Guna.UI2.WinForms.Guna2Button();
-            tbSizePro = new Guna.UI2.WinForms.Guna2TextBox();
+            tbKeySize = new Guna.UI2.WinForms.Guna2TextBox();
             label2 = new Label();
-            gwSize = new Guna.UI2.WinForms.Guna2DataGridView();
             label5 = new Label();
             tbIdSize = new Guna.UI2.WinForms.Guna2TextBox();
-            ((System.ComponentModel.ISupportInitialize)gwSize).BeginInit();
+            dgvSize = new DataGridView();
+            MaKichCo = new DataGridViewTextBoxColumn();
+            TenKichCo = new DataGridViewTextBoxColumn();
+            btnReload = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)dgvSize).BeginInit();
             SuspendLayout();
             // 
             // btnUpdateSize
@@ -70,12 +72,13 @@
             btnUpdateSize.FillColor = Color.FromArgb(192, 192, 0);
             btnUpdateSize.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnUpdateSize.ForeColor = Color.White;
-            btnUpdateSize.Location = new Point(1258, 581);
+            btnUpdateSize.Location = new Point(1308, 569);
             btnUpdateSize.Name = "btnUpdateSize";
             btnUpdateSize.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnUpdateSize.Size = new Size(98, 38);
             btnUpdateSize.TabIndex = 45;
             btnUpdateSize.Text = "Update";
+            btnUpdateSize.Click += btnUpdateSize_Click;
             // 
             // btnDeleteSize
             // 
@@ -89,12 +92,13 @@
             btnDeleteSize.FillColor = Color.FromArgb(255, 128, 128);
             btnDeleteSize.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnDeleteSize.ForeColor = Color.White;
-            btnDeleteSize.Location = new Point(1121, 581);
+            btnDeleteSize.Location = new Point(1171, 569);
             btnDeleteSize.Name = "btnDeleteSize";
             btnDeleteSize.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnDeleteSize.Size = new Size(98, 38);
             btnDeleteSize.TabIndex = 44;
             btnDeleteSize.Text = "Delete";
+            btnDeleteSize.Click += btnDeleteSize_Click;
             // 
             // btnAddSize
             // 
@@ -105,14 +109,16 @@
             btnAddSize.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddSize.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAddSize.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAddSize.FillColor = Color.FromArgb(0, 192, 192);
             btnAddSize.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnAddSize.ForeColor = Color.White;
-            btnAddSize.Location = new Point(990, 581);
+            btnAddSize.Location = new Point(1040, 569);
             btnAddSize.Name = "btnAddSize";
             btnAddSize.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnAddSize.Size = new Size(98, 38);
             btnAddSize.TabIndex = 43;
             btnAddSize.Text = "Add";
+            btnAddSize.Click += btnAddSize_Click;
             // 
             // tbNameSize
             // 
@@ -125,7 +131,7 @@
             tbNameSize.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbNameSize.Font = new Font("Segoe UI", 10.2F);
             tbNameSize.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbNameSize.Location = new Point(1161, 393);
+            tbNameSize.Location = new Point(1211, 381);
             tbNameSize.Margin = new Padding(3, 5, 3, 5);
             tbNameSize.Name = "tbNameSize";
             tbNameSize.PasswordChar = '\0';
@@ -139,7 +145,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Arial Rounded MT Bold", 9F);
-            label6.Location = new Point(1016, 402);
+            label6.Location = new Point(1066, 390);
             label6.Name = "label6";
             label6.Size = new Size(91, 17);
             label6.TabIndex = 35;
@@ -162,27 +168,28 @@
             btnSearchSize.Size = new Size(98, 38);
             btnSearchSize.TabIndex = 27;
             btnSearchSize.Text = "OK";
+            btnSearchSize.Click += btnSearchSize_Click;
             // 
-            // tbSizePro
+            // tbKeySize
             // 
-            tbSizePro.CustomizableEdges = customizableEdges11;
-            tbSizePro.DefaultText = "";
-            tbSizePro.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbSizePro.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbSizePro.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbSizePro.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbSizePro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbSizePro.Font = new Font("Segoe UI", 10.2F);
-            tbSizePro.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbSizePro.Location = new Point(274, 44);
-            tbSizePro.Margin = new Padding(3, 5, 3, 5);
-            tbSizePro.Name = "tbSizePro";
-            tbSizePro.PasswordChar = '\0';
-            tbSizePro.PlaceholderText = "";
-            tbSizePro.SelectedText = "";
-            tbSizePro.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            tbSizePro.Size = new Size(221, 32);
-            tbSizePro.TabIndex = 26;
+            tbKeySize.CustomizableEdges = customizableEdges11;
+            tbKeySize.DefaultText = "";
+            tbKeySize.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbKeySize.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbKeySize.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbKeySize.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbKeySize.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbKeySize.Font = new Font("Segoe UI", 10.2F);
+            tbKeySize.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbKeySize.Location = new Point(274, 44);
+            tbKeySize.Margin = new Padding(3, 5, 3, 5);
+            tbKeySize.Name = "tbKeySize";
+            tbKeySize.PasswordChar = '\0';
+            tbKeySize.PlaceholderText = "";
+            tbKeySize.SelectedText = "";
+            tbKeySize.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            tbKeySize.Size = new Size(221, 32);
+            tbKeySize.TabIndex = 26;
             // 
             // label2
             // 
@@ -194,63 +201,11 @@
             label2.TabIndex = 25;
             label2.Text = "Size name: ";
             // 
-            // gwSize
-            // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            gwSize.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            gwSize.BorderStyle = BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.2F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            gwSize.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            gwSize.ColumnHeadersHeight = 4;
-            gwSize.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            gwSize.DefaultCellStyle = dataGridViewCellStyle3;
-            gwSize.GridColor = Color.FromArgb(231, 229, 255);
-            gwSize.Location = new Point(22, 104);
-            gwSize.Name = "gwSize";
-            gwSize.RowHeadersVisible = false;
-            gwSize.RowHeadersWidth = 51;
-            gwSize.Size = new Size(901, 515);
-            gwSize.TabIndex = 24;
-            gwSize.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            gwSize.ThemeStyle.AlternatingRowsStyle.Font = null;
-            gwSize.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            gwSize.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            gwSize.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            gwSize.ThemeStyle.BackColor = Color.White;
-            gwSize.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            gwSize.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            gwSize.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            gwSize.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            gwSize.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            gwSize.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            gwSize.ThemeStyle.HeaderStyle.Height = 4;
-            gwSize.ThemeStyle.ReadOnly = false;
-            gwSize.ThemeStyle.RowsStyle.BackColor = Color.White;
-            gwSize.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            gwSize.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            gwSize.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            gwSize.ThemeStyle.RowsStyle.Height = 29;
-            gwSize.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            gwSize.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial Rounded MT Bold", 9F);
-            label5.Location = new Point(1016, 326);
+            label5.Location = new Point(1066, 314);
             label5.Name = "label5";
             label5.Size = new Size(64, 17);
             label5.TabIndex = 33;
@@ -267,7 +222,7 @@
             tbIdSize.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbIdSize.Font = new Font("Segoe UI", 10.2F);
             tbIdSize.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbIdSize.Location = new Point(1161, 317);
+            tbIdSize.Location = new Point(1211, 305);
             tbIdSize.Margin = new Padding(3, 5, 3, 5);
             tbIdSize.Name = "tbIdSize";
             tbIdSize.PasswordChar = '\0';
@@ -277,11 +232,59 @@
             tbIdSize.Size = new Size(158, 32);
             tbIdSize.TabIndex = 34;
             // 
+            // dgvSize
+            // 
+            dgvSize.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSize.Columns.AddRange(new DataGridViewColumn[] { MaKichCo, TenKichCo });
+            dgvSize.Location = new Point(38, 134);
+            dgvSize.Name = "dgvSize";
+            dgvSize.RowHeadersWidth = 51;
+            dgvSize.Size = new Size(931, 485);
+            dgvSize.TabIndex = 46;
+            dgvSize.CellClick += dgvSize_CellClick;
+            // 
+            // MaKichCo
+            // 
+            MaKichCo.DataPropertyName = "MaKichCo";
+            MaKichCo.HeaderText = "Size ID";
+            MaKichCo.MinimumWidth = 6;
+            MaKichCo.Name = "MaKichCo";
+            MaKichCo.Width = 438;
+            // 
+            // TenKichCo
+            // 
+            TenKichCo.DataPropertyName = "TenKichCo";
+            TenKichCo.HeaderText = "Size Name";
+            TenKichCo.MinimumWidth = 6;
+            TenKichCo.Name = "TenKichCo";
+            TenKichCo.Width = 438;
+            // 
+            // btnReload
+            // 
+            btnReload.BorderRadius = 12;
+            btnReload.Cursor = Cursors.Hand;
+            btnReload.CustomizableEdges = customizableEdges15;
+            btnReload.DisabledState.BorderColor = Color.DarkGray;
+            btnReload.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnReload.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnReload.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnReload.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            btnReload.ForeColor = Color.White;
+            btnReload.Location = new Point(674, 44);
+            btnReload.Name = "btnReload";
+            btnReload.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnReload.Size = new Size(98, 38);
+            btnReload.TabIndex = 47;
+            btnReload.Text = "Reload";
+            btnReload.Click += btnReload_Click;
+            // 
             // ManageSize
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1411, 636);
+            Controls.Add(btnReload);
+            Controls.Add(dgvSize);
             Controls.Add(btnUpdateSize);
             Controls.Add(btnDeleteSize);
             Controls.Add(btnAddSize);
@@ -290,9 +293,8 @@
             Controls.Add(tbIdSize);
             Controls.Add(label5);
             Controls.Add(btnSearchSize);
-            Controls.Add(tbSizePro);
+            Controls.Add(tbKeySize);
             Controls.Add(label2);
-            Controls.Add(gwSize);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
@@ -303,7 +305,8 @@
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "ManageSize";
-            ((System.ComponentModel.ISupportInitialize)gwSize).EndInit();
+            Load += ManageSize_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvSize).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -316,10 +319,13 @@
         private Guna.UI2.WinForms.Guna2TextBox tbNameSize;
         private Label label6;
         private Guna.UI2.WinForms.Guna2Button btnSearchSize;
-        private Guna.UI2.WinForms.Guna2TextBox tbSizePro;
+        private Guna.UI2.WinForms.Guna2TextBox tbKeySize;
         private Label label2;
-        private Guna.UI2.WinForms.Guna2DataGridView gwSize;
         private Label label5;
         private Guna.UI2.WinForms.Guna2TextBox tbIdSize;
+        private DataGridView dgvSize;
+        private DataGridViewTextBoxColumn MaKichCo;
+        private DataGridViewTextBoxColumn TenKichCo;
+        private Guna.UI2.WinForms.Guna2Button btnReload;
     }
 }

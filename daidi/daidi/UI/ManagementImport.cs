@@ -1,4 +1,5 @@
-﻿using System;
+﻿using daidi.SERVICE;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,22 @@ namespace daidi
 {
     public partial class ManagementImport : Form
     {
+        DBProvider dbProvider = new DBProvider();
         public ManagementImport()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
 
+        private void ManagementImport_Load(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable();
+            table = dbProvider.GetProvider().Tables[0];
+            dgvProvider.DataSource = table;
+            dgvProvider.AutoResizeColumns();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void dgvProvider_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

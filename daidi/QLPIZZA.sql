@@ -226,14 +226,16 @@ VALUES
 ('NCC002', N'Công ty TNHH Thực phẩm Việt Nam Food', N'567 Đường STU, Quận 8, TP. Hồ Chí Minh', '0896541237'),
 ('NCC003', N'Công ty TNHH Nước giải khát SUNTORY PEPSICO VN', N'890 Đường VWX, Quận 9, TP. Hồ Chí Minh', '0456987312')
 GO
+
+
 -- Chèn dữ liệu vào bảng KhachHang
-INSERT INTO KhachHang (MaKH, TenKH, SoDT)
+INSERT INTO KhachHang (TenKH, SoDT)
 VALUES 
-('KH001', N'Nguyễn Văn Phát', '0123456789'),
-('KH002', N'Trần Thị Dung', '0987654321'),
-('KH003', N'Lê Văn Nam', '0369852147'),
-('KH004', N'Phạm Thị Nghĩa', '0541236987'),
-('KH005', N'Huỳnh Văn Kiệt', '0321456987')
+(N'Nguyễn Văn Phát', '0123456789'),
+(N'Trần Thị Dung', '0987654321'),
+(N'Lê Văn Nam', '0369852147'),
+(N'Phạm Thị Nghĩa', '0541236987'),
+(N'Huỳnh Văn Kiệt', '0321456987')
 GO
 
 -- Chèn dữ liệu vào bảng Ca
@@ -279,7 +281,7 @@ GO
 -- Chèn dữ liệu vào bảng NhanVien
 INSERT INTO NhanVien (MaNV, HoNV, TenNV, NgaySinh, GioiTinh, SoDT, DiaChi, Email, CCCD, MaChucVu)
 VALUES 
-('NV001', N'Nguyễn', N'Thuận', '1990-05-15', N'Nam', '0123456789', N'123 Đường ABC, Quận 1, TP. Hồ Chí Minh', 'nva@gmail.com', '123456789012', 'CV001'),
+('NV010', N'Nguyễn', N'Thuận', '1990-05-15', N'Nam', '0123456789', N'123 Đường ABC, Quận 1, TP. Hồ Chí Minh', 'nva@gmail.com', '123456789012', 'CV001'),
 ('NV002', N'Trần', N'Nam', '1995-08-20', N'Nam', '0987654321', N'456 Đường XYZ, Quận 2, TP. Hồ Chí Minh', 'ttb@gmail.com', '234567890123', 'CV002'),
 ('NV003', N'Lê', N'Phát', '1988-03-10', N'Nam', '0369852147', N'789 Đường DEF, Quận 3, TP. Hồ Chí Minh', 'lvc@gmail.com', '345678901234', 'CV002'),
 ('NV004', N'Phạm', N'Ngọc', '1992-11-25', N'Nam', '0541236987', N'321 Đường GHI, Quận 4, TP. Hồ Chí Minh', 'ptd@gmail.com', '456789012345', 'CV002'),
@@ -292,7 +294,7 @@ GO
 -- Chèn dữ liệu vào bảng TaiKhoan
 INSERT INTO TaiKhoan (UserName, Password, MaNV, Role)
 VALUES 
-('user1', 'pass1', 'NV001', 1),
+('user1', 'pass1', 'NV010', 1),
 ('user2', 'pass2', 'NV002', 2),
 ('user3', 'pass3', 'NV003', 2),
 ('user4', 'pass4', 'NV004', 2),
@@ -310,6 +312,7 @@ VALUES
 ('SP004', N'Nước Suối', 'LSP002'),
 ('SP005', N'CoCa', 'LSP002')
 GO
+
 -- Chèn dữ liệu vào bảng HoaDonBanHang
 INSERT INTO HoaDonBanHang (MaHD, NgayGioDat, MaNV, MaKH)
 VALUES 
@@ -320,13 +323,12 @@ VALUES
 ('HD005', '2018-04-21 12:40:00', 'NV009', 'KH005'),
 ('HD006', '2020-06-23 13:55:00', 'NV008', 'KH005')
 GO
-
 -- Chèn dữ liệu vào bảng PhieuNhap
 INSERT INTO PhieuNhap (MaPhieu, NgayNhap, TriGiaDonNH, MaNV, MaNCC)
 VALUES 
-('PN001', '2015-03-18', 10760000, 'NV001', 'NCC001'),
-('PN002', '2016-03-19', 8000000, 'NV001', 'NCC002'),
-('PN003', '2017-03-20', 3550000, 'NV001', 'NCC003')
+('PN001', '2015-03-18', 10760000, 'NV010', 'NCC001'),
+('PN002', '2016-03-19', 8000000, 'NV010', 'NCC002'),
+('PN003', '2017-03-20', 3550000, 'NV010', 'NCC003')
 GO
 
 -- Chèn dữ liệu vào bảng ChiTietPN
@@ -344,19 +346,21 @@ VALUES
 (10, 'PN003', 'NL0010', 235000),
 (10, 'PN003', 'NL0011', 120000)
 GO
+Alter table ChiTietHD add CONSTRAINT Fk_ChiTietHD_HoaDonBanHang_MaHD FOREIGN KEY (MaHD) REFERENCES HoaDonBanHang(MaHD)
 -- Chèn dữ liệu vào bảng ChiTietHD
+
 INSERT INTO ChiTietHD(SoLuong,TriGia,MaHD,MaKichCo,MaSP)
 VALUES 
 (2, 200000, 'HD001', 'KC001', 'SP001'),
 (3, 180000, 'HD001', 'KC002', 'SP002'),
 (4, 400000, 'HD001', 'KC001','SP003'),
-(3, 120000, 'HD002', 'KC003','SP002'),
+(3, 240000, 'HD002', 'KC003','SP002'),
 (3, 180000, 'HD002', 'KC002','SP002'),
 (4, 280000, 'HD003', 'KC002','SP003'),
 (5, 500000, 'HD004', 'KC001','SP003'),
 (6, 480000, 'HD004', 'KC001','SP002'),
 (7, 350000, 'HD005', 'KC003','SP001'),
-(8, 320000, 'HD005', 'KC003','SP002'),
+(8, 640000, 'HD005', 'KC003','SP002'),
 (9, 540000, 'HD006', 'KC002','SP002'),
 (10, 500000, 'HD006', 'KC003','SP001'),
 (5, 100000, 'HD006', 'KC002','SP005')
@@ -403,7 +407,7 @@ VALUES
 (3, 50000, 'SP001', 'KC003'),
 (4, 80000, 'SP002', 'KC001'),
 (5, 60000, 'SP002', 'KC002'),
-(6, 40000, 'SP002', 'KC003'),
+(6, 80000, 'SP002', 'KC003'),
 (7, 100000, 'SP003', 'KC001'),
 (8, 70000, 'SP003', 'KC002'),
 (9, 50000, 'SP003', 'KC003'),

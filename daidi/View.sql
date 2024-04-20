@@ -1,4 +1,4 @@
-﻿---------------------------VIEW----------------------------
+﻿	---------------------------VIEW----------------------------
 USE QuanLyPizza
 select * from ChiTietCaTruc
 select * from Ca
@@ -23,9 +23,9 @@ GO
 GO
 -----------------------------------------------------------------------------------------------
 --Xem thông tin nhân viên
-CREATE VIEW vw_XemThongTinNhanVien
+CREATE OR ALTER VIEW vw_XemThongTinNhanVien
 		AS
-		SELECT * FROM [dbo].[NhanVien];
+		SELECT NhanVien.*, ChucVu.TenChucVu,ChucVu.Luong FROM [dbo].[NhanVien] join ChucVu on NhanVien.MaChucVu = ChucVu.MaChucVu;
 
 GO
 
@@ -132,8 +132,53 @@ go
 --view xem thông tin tài khoản nhân viên
 CREATE VIEW vw_InfoAccountEmployee AS 
 SELECT  * FROM [dbo].[TaiKhoan]
+GO
 --select * from vw_InfoAccountEmployee
 --select * from TaiKhoan
 --delete from TaiKhoan where UserName = ''
 CREATE VIEW vw_XemLoaiSP AS 
 SELECT  * FROM LoaiSanPham
+Go
+USE QuanLyPizza
+CREATE VIEW vw_ChucVu AS 
+SELECT TenChucVu FROM ChucVu
+
+CREATE VIEW vw_XemKichCo AS 
+SELECT * FROM KichCo
+
+
+CREATE VIEW vw_XemKhachHang AS 
+SELECT * FROM KhachHang
+
+go
+CREATE OR ALTER VIEW vw_XemHoaDon AS
+SELECT hd.MaHD, hd.NgayGioDat, nv.TenNV, kh.TenKH, sp.TenSP, kc.TenKichCo, cthd.SoLuong, cthd.TriGia FROM HoaDonBanHang hd 
+	JOIN ChiTietHD cthd ON hd.MaHD = cthd.MaHD 
+	JOIN KhachHang kh ON kh.MaKH = hd.MaKH 
+	JOIN NhanVien nv ON hd.MaNV = nv.MaNV
+	JOIN KichCo kc ON kc.MaKichCo = cthd.MaKichCo
+	JOIN SanPham sp ON sp.MaSP = cthd.MaSP
+	GROUP BY hd.MaHD,hd.NgayGioDat, nv.TenNV, kh.TenKH, sp.TenSP, kc.TenKichCo, cthd.SoLuong, cthd.TriGia
+GO
+	
+--select * from NhaCungCap
+--select * from NguyenLieu
+--select * from PhieuNhap
+--select * from NhanVien
+--select * from ChiTietCungCap
+--select * from ChiTietPN
+
+--MaPhieu, tenNV, SoLuong, tenNL, tenNCC, donGia
+--NhanVien, PhieuNhap, ChiTietPN, NguyenLieu, NhaCungCap, ChiTietCungCap
+
+CREATE OR ALTER VIEW vw_XemChiTietCungCap AS
+SELECT pn.MaPhieu, nv.TenNV, ctpn.SoLuong, nl.TenNL, ncc.TenNCC, ctpn.DonGia from NhanVien nv
+	JOIN PhieuNhap pn ON nv.MaNV = pn.MaNV
+	JOIN ChiTietPN ctpn ON ctpn.MaPhieu = pn.MaPhieu
+	JOIN NguyenLieu nl ON nl.MaNL = ctpn.MaNL
+	JOIN ChiTietCungCap ctcc ON ctcc.MaNL = nl.MaNL
+	JOIN NhaCungCap ncc ON ncc.MaNCC = ctcc.MaNCC
+
+	--select * from vw_XemChiTietCungCap
+	select * from KhachHang
+

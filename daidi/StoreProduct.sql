@@ -68,7 +68,7 @@ END;
 --Xóa nhân viên
 GO
 
-CREATE PROCEDURE sp_DeleteEmployee
+CREATE or alter PROCEDURE sp_DeleteEmployee
 	@MaNV CHAR(10)
 AS
 BEGIN
@@ -90,15 +90,17 @@ BEGIN
 			-- Nếu xóa thành công, commit giao dịch
 			COMMIT TRANSACTION;
 			PRINT 'ĐÃ XÓA NHÂN VIÊN CÓ MaNV = ' + @MaNV; -- Thông báo xóa thành công
+			RETURN 
 		END
 	END TRY
 	BEGIN CATCH
 		-- Nếu có lỗi xảy ra, rollback giao dịch và phát sinh lỗi
 		ROLLBACK TRANSACTION;
 		RAISERROR('LỖI KHI XÓA NHÂN VIÊN', 16, 1); -- Phát sinh lỗi chung
+		RETURN
 	END CATCH;
 END;
- exec dbo.sp_DeleteEmployee 'NV008'
+ exec dbo.sp_DeleteEmployee 'NV001'
 
 GO
 -----------------------------------------------------------------------------------------------
@@ -117,7 +119,7 @@ END;
 GO
 -----------------------------------------------------------------------------------------------
 --Thêm khách hàng
-CREATE PROCEDURE sp_ThemThongTinKhachHang
+CREATE OR ALTER PROCEDURE sp_ThemThongTinKhachHang
 	@MaKH char(10),
 	@TenKH nvarchar(30),
 	@SoDT char(10)
@@ -131,14 +133,14 @@ BEGIN
 	END TRY
 	BEGIN CATCH 
 		ROLLBACK TRANSACTION
-		RAISERROR('KHÁCH HÀNG ĐÃ TỒN TẠI', 25, 1)
+		RAISERROR('KHÁCH HÀNG ĐÃ TỒN TẠI', 16, 1)
 	END CATCH
 END
 
 GO
 -----------------------------------------------------------------------------------------------
 --Xóa thông tin khách hàng
-CREATE PROCEDURE sp_XoaThongTinKhachHang
+CREATE OR ALTER PROCEDURE sp_XoaThongTinKhachHang
 	@MaKH char(10)
 AS
 BEGIN
@@ -149,13 +151,13 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION
-		RAISERROR('Không xóa được khách hàng', 25, 1)
+		RAISERROR('Không xóa được khách hàng', 16, 1)
 	END CATCH
 END
 Go
 -----------------------------------------------------------------------------------------------
 --Sửa thông tin khách hàng
-CREATE PROCEDURE sp_CapNhatThongTinKhachHang
+CREATE OR ALTER PROCEDURE sp_CapNhatThongTinKhachHang
     @MaKH char(10),
     @TenKH nvarchar(30),
     @SoDT char(10)
@@ -171,7 +173,7 @@ BEGIN
     END TRY
     BEGIN CATCH 
         ROLLBACK TRANSACTION
-        RAISERROR('Cập nhật thông tin khách hàng không thành công', 25, 1)
+        RAISERROR('Cập nhật thông tin khách hàng không thành công', 16, 1)
     END CATCH
 END
 
@@ -418,7 +420,7 @@ BEGIN
 END;
 
 go
-CREATE PROCEDURE sp_UpdateSanPham
+CREATE OR ALTER PROCEDURE sp_UpdateSanPham
     @MaSP CHAR(10),
     @TenSP NVARCHAR(30),
     @MaLoaiSP CHAR(10),
@@ -434,7 +436,7 @@ BEGIN
     END TRY
     BEGIN CATCH
         ROLLBACK TRANSACTION;
-        RAISERROR('Cập nhật thông tin sản phẩm không thành công', 25, 1);
+        RAISERROR('Cập nhật thông tin sản phẩm không thành công', 16, 1);
     END CATCH
 END;
 
@@ -737,3 +739,58 @@ BEGIN
         RAISERROR('Cập nhật thông tin loại sản phẩm không thành công', 18, 1)
     END CATCH
 END
+--Thêm xóa sữa Kich Cỡ
+
+GO
+CREATE PROCEDURE sp_AddSize
+    @MaKichCo char(10),
+    @TenKichCo nvarchar(30)
+AS
+BEGIN
+    BEGIN TRANSACTION
+    BEGIN TRY
+        INSERT INTO KichCo(MaKichCo, TenKichCo)
+        VALUES (@MaKichCo, @TenKichCo)
+        COMMIT TRANSACTION 
+    END TRY
+    BEGIN CATCH 
+        ROLLBACK TRANSACTION
+        RAISERROR('Kích cỡ đã tồn tại', 18, 1)
+    END CATCH
+END
+GO
+
+CREATE PROCEDURE sp_DeleteSize
+    @MaKichCo char(10)
+AS
+BEGIN
+    BEGIN TRANSACTION
+    BEGIN TRY
+        DELETE FROM KichCo WHERE MaKichCo = @MaKichCo;
+        COMMIT TRANSACTION 
+    END TRY
+    BEGIN CATCH 
+        ROLLBACK TRANSACTION
+        RAISERROR('Không thể xóa kích cỡ', 18, 1)
+    END CATCH
+END
+GO
+
+CREATE PROCEDURE sp_UpdateSize
+    @MaKichCo char(10),
+    @TenKichCo nvarchar(30)
+AS
+BEGIN
+    BEGIN TRANSACTION
+    BEGIN TRY
+        UPDATE KichCo
+        SET TenKichCo = @TenKichCo
+        WHERE MaKichCo = @MaKichCo;
+        COMMIT TRANSACTION 
+    END TRY
+    BEGIN CATCH 
+        ROLLBACK TRANSACTION
+        RAISERROR('Cập nhật thông tin kích cỡ không thành công', 18, 1)
+    END CATCH
+END
+

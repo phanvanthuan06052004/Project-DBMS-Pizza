@@ -210,9 +210,10 @@
             btnAddPro.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddPro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAddPro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAddPro.FillColor = Color.FromArgb(0, 192, 192);
             btnAddPro.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnAddPro.ForeColor = Color.White;
-            btnAddPro.Location = new Point(1045, 572);
+            btnAddPro.Location = new Point(1039, 572);
             btnAddPro.Name = "btnAddPro";
             btnAddPro.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnAddPro.Size = new Size(98, 38);
@@ -232,7 +233,7 @@
             btnDeletePro.FillColor = Color.FromArgb(255, 128, 128);
             btnDeletePro.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnDeletePro.ForeColor = Color.White;
-            btnDeletePro.Location = new Point(1176, 572);
+            btnDeletePro.Location = new Point(1170, 572);
             btnDeletePro.Name = "btnDeletePro";
             btnDeletePro.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnDeletePro.Size = new Size(98, 38);
@@ -252,7 +253,7 @@
             btnUpdatePro.FillColor = Color.FromArgb(192, 192, 0);
             btnUpdatePro.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnUpdatePro.ForeColor = Color.White;
-            btnUpdatePro.Location = new Point(1313, 572);
+            btnUpdatePro.Location = new Point(1307, 572);
             btnUpdatePro.Name = "btnUpdatePro";
             btnUpdatePro.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnUpdatePro.Size = new Size(98, 38);
@@ -270,12 +271,12 @@
             dgvProduct.Size = new Size(1014, 486);
             dgvProduct.TabIndex = 24;
             dgvProduct.CellClick += dgvProduct_CellClick;
-            dgvProduct.CellContentClick += dgvProduct_CellContentClick;
             // 
             // proPicture
             // 
             proPicture.BackgroundImageLayout = ImageLayout.Stretch;
             proPicture.BorderStyle = BorderStyle.FixedSingle;
+            proPicture.Cursor = Cursors.Hand;
             proPicture.Location = new Point(1099, 19);
             proPicture.Name = "proPicture";
             proPicture.Size = new Size(300, 174);
